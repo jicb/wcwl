@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::get('/hello','HelloController@hello');
 
-Route::any('/wechat','Wechat/WechatController@serve')->name('wechat');
+Route::any('/wechat','Wechat\WechatController@serve')->name('wechat');
