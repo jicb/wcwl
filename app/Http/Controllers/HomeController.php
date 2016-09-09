@@ -23,6 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with('content','');
+    }
+
+    public function tables(){
+        return view('home')->with('content','wcwlgzh.tables');
+    }
+    
+    public function flot(){
+        return view('home')->with('content','wcwlgzh.flot');
     }
 }

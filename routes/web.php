@@ -22,3 +22,7 @@ Route::any('/wechat','Wechat\WechatController@serve')->name('wechat');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/home/tables', 'HomeController@tables');
+
+Route::get('/home/flot', 'HomeController@flot');
