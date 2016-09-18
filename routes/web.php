@@ -20,7 +20,7 @@ Route::get('/hello','HelloController@hello');
 Route::group(['as'=>'wechat::','prefix'=>'wechat','Admin'=>'Wechat'],function(){
     Route::any('/',['as'=>'serve','uses'=>'WechatController@serve']);
     Route::any('/register/{openid}',['as'=>'register','uses'=>'WechatController@registeruser']);
-    Route::any('/menuadd',['as'=>'serve','uses'=>'WechatController@menuadd']);
+    Route::any('/menuadd',['as'=>'menuadd','uses'=>'WechatController@menuadd']);
 });
 
 Auth::routes();
