@@ -11,7 +11,6 @@ use App\Http\Controllers\Controller;
 class WechatController extends Controller
 {
     //
-    private $openid = null;
 
     public function serve(){
         $wechat = app('wechat');
@@ -28,11 +27,12 @@ class WechatController extends Controller
     }
 
     private function register($message){
-        $this->openid = $message->FromUserName;
+
 
         $text = new Text();
         $content = "欢迎关注，请尽快完成\n";
         $content .= "<a href='http://123.206.198.227/wechat/register'>新用户注册</a>";
+        $content .= $message->FromUserName;
         $text->content = $content;
         return $text;
     }
