@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Wechat;
 
+use EasyWeChat\Message\Text;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,9 +14,54 @@ class WechatController extends Controller
     public function serve(){
         $wechat = app('wechat');
         $wechat->server->setMessageHandler(function($message){
-            return "欢迎关注 jcb！";
+            return $this->response($message);
         });
         
         return $wechat->server->serve();
+    }
+
+    private function register($message){
+        $text = new Text();
+        $content = "欢迎关注，请尽快完成\n";
+        $content .= "<a href='/wechat/registeruser'>新用户注册</a>";
+        $text->content = $content;
+        return $text;
+    }
+
+    private function response($message){
+        switch ($message->MsgType) {
+            case 'event':
+                if($message->Event == 'subscribe'){
+                    return $this->register($message);
+                }else{
+                    return "欢迎再次光临 jcb的小窝！";
+                }
+                break;
+            case 'text':
+                $text = new Text();
+                $text->content = $message->FromUserName;
+                return $text;
+                break;
+            case 'image':
+                # 图片消息...
+                break;
+            case 'voice':
+                # 语音消息...
+                break;
+            case 'video':
+                # 视频消息...
+                break;
+            case 'location':
+                # 坐标消息...
+                break;
+            case 'link':
+                # 链接消息...
+                break;
+            // ... 其它消息
+            default:
+                # code...
+                return "";
+                break;
+        }
     }
 }
