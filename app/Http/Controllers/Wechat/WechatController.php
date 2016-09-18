@@ -30,7 +30,7 @@ class WechatController extends Controller
         $openid = $message->FromUserName;
         $text = new Text();
         $content = "欢迎关注，请尽快完成\n";
-        $content .= "<a href='http://123.206.198.227/wechat/register/"+$openid+"'>新用户注册</a>";
+        $content .= "<a href='http://123.206.198.227/wechat/register/".$openid."'>新用户注册</a>";
         $text->content = $content;
         return $text;
     }
