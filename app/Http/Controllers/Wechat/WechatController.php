@@ -20,10 +20,14 @@ class WechatController extends Controller
         return $wechat->server->serve();
     }
 
+    public function registeruser(){
+        return view('auth.login');
+    }
+
     private function register($message){
         $text = new Text();
         $content = "欢迎关注，请尽快完成\n";
-        $content .= "<a href='/wechat/registeruser'>新用户注册</a>";
+        $content .= "<a href='http://123.206.198.227/wechat/register'>新用户注册</a>";
         $text->content = $content;
         return $text;
     }
