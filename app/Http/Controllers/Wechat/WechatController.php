@@ -12,6 +12,12 @@ class WechatController extends Controller
 {
     //
 
+    public function menuadd(Request $request){
+        $wechat = app('wechat');
+        $menu = $wechat->menu;
+        $menu->destroy();
+    }
+
     public function serve(){
         $wechat = app('wechat');
         $wechat->server->setMessageHandler(function($message){
