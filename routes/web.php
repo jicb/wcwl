@@ -17,10 +17,10 @@ Route::get('/', function () {
 
 Route::get('/hello','HelloController@hello');
 
-Route::group(['as'=>'wechat','prefix'=>'wechat'],function(){
-    Route::any('/','Wechat\WechatController@serve');
-    Route::any('/register/{openid}','Wechat\WechatController@registeruser');
-    Route::any('/menuadd','Wechat\WechatController@menuadd');
+Route::group(['as'=>'wechat::','prefix'=>'wechat','Admin'=>'Wechat'],function(){
+    Route::any('/',['as'=>'serve','uses'=>'WechatController@serve']);
+    Route::any('/register/{openid}',['as'=>'register','uses'=>'WechatController@registeruser']);
+    Route::any('/menuadd',['as'=>'serve','uses'=>'WechatController@menuadd']);
 });
 
 Auth::routes();

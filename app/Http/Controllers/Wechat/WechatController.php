@@ -87,8 +87,9 @@ class WechatController extends Controller
     {
         $openid = $message->FromUserName;
         $text = new Text();
-        $content = "欢迎关注，请尽快完成\n";
-        $content .= "<a href='http://123.206.198.227/wechat/register/" . $openid . "'>新用户注册</a>";
+        $content = "欢迎您的关注，请尽快完成\n";
+        $content .= "<a href='http://123.206.198.227/wechat/h5/register/" . $openid . "'>用户注册</a>";
+        $content .= "，以免影响使用";
         $text->content = $content;
         return $text;
     }
@@ -100,14 +101,11 @@ class WechatController extends Controller
                 if ($message->Event == 'subscribe') {
                     return $this->register($message);
                 } else {
-                    return "欢迎再次光临 jcb的小窝！";
+                    return "欢迎您再次光临！！！";
                 }
                 break;
             case 'text':
-                $text = new Text();
-                $text->content = $message->FromUserName;
-                return $text;
-                break;
+                return $this->replyText($message);
             case 'image':
                 # 图片消息...
                 break;
@@ -129,5 +127,9 @@ class WechatController extends Controller
                 return "";
                 break;
         }
+    }
+
+    private function replyText($message){
+        return $this->register($message);
     }
 }
