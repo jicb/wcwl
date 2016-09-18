@@ -19,7 +19,7 @@ Route::get('/hello','HelloController@hello');
 
 Route::group(['as'=>'wechat','prefix'=>'wechat'],function(){
     Route::any('/','Wechat\WechatController@serve');
-    Route::any('/register/*','Wechat\WechatController@registeruser');
+    Route::any('/register/{openid}','Wechat\WechatController@registeruser');
 });
 
 Auth::routes();
