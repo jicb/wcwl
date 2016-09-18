@@ -25,6 +25,7 @@ Route::group(['as'=>'wechat::','prefix'=>'wechat','namespace'=>'Wechat'],functio
 
 Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],function(){
     Route::any('/register/{openid}',['as'=>'register','uses'=>'RegisterController@register']);
+    Route::any('/register/validate',['as'=>'validate','uses'=>'RegisterController@validatecode']);
 });
 
 
