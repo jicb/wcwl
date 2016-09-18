@@ -76,12 +76,7 @@ class WechatController extends Controller
         });
 
         return $wechat->server->serve();
-    }
-
-    public function registeruser(Request $request, $openid)
-    {
-        return view('wechat.auth.register')->with('openid', $openid);
-    }
+    }    
 
     private function register($message)
     {
