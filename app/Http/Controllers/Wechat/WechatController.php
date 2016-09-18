@@ -76,14 +76,14 @@ class WechatController extends Controller
         });
 
         return $wechat->server->serve();
-    }    
+    }
 
     private function register($message)
     {
         $openid = $message->FromUserName;
         $text = new Text();
         $content = "欢迎您的关注，请尽快完成\n";
-        $content .= "<a href='http://123.206.198.227/wechat/h5/register/" . $openid . "'>用户注册</a>";
+        $content .= "<a href='http://123.206.198.227/h5/auth/register/" . $openid . "'>用户注册</a>";
         $content .= "，以免影响使用";
         $text->content = $content;
         return $text;

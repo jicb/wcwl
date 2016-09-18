@@ -23,7 +23,7 @@ Route::group(['as'=>'wechat::','prefix'=>'wechat','namespace'=>'Wechat'],functio
     Route::any('/menuadd',['as'=>'menuadd','uses'=>'WechatController@menuadd']);
 });
 
-Route::group(['as'=>'h5::','prefix'=>'h5','namespace'=>'Wechat\H5\Auth'],function(){
+Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],function(){
     Route::any('/register/{openid}',['as'=>'register','uses'=>'RegisterController@register']);
 });
 
