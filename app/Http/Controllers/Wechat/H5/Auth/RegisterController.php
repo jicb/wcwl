@@ -28,7 +28,7 @@ class RegisterController extends Controller
         //dd($member);
         $app = app('wechat');
         $broadcast = $app->broadcast;
-        $broadcast->sendText("你好，注册成功", [$member->openid]);
+        $broadcast->previewText("你好，注册成功", $member->openid);
     }
 
     public function regsend(Request $request){
