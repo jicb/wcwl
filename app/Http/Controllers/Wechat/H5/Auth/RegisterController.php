@@ -23,6 +23,11 @@ class RegisterController extends Controller
     private static $password = 'aijiexiyi';
     private static $msgUrl = "http://115.28.143.178:8080/sms/sendUtf.do";
     //
+    public function testmysql(){
+        $member = Member::find(1);
+        dd($member);
+    }
+
     public function regsend(Request $request){
         //validate msg
         if(!$this->validateMsg($request)){
