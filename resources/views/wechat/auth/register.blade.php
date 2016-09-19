@@ -64,43 +64,7 @@
                             },
                         }
                     },
-                    sex: {
-                        message: '性别不能为空',
-                        validators: {
-                            notEmpty: {
-                                message: '性别不能为空'
-                            },
-                        }
-                    },
-                    password: {
-                        message: '密码不正确',
-                        validators: {
-                            notEmpty: {
-                                message: '密码不能为空'
-                            },
-                            stringLength: {
-                                min: 6,
-                                max: 30,
-                                message: '密码长度在6到30个字符之间'
-                            },
-                        }
-                    },
-                    repassword: {
-                        validators: {
-                            notEmpty: {
-                                message: '确认密码不能为空'
-                            },
-                            stringLength: {
-                                min: 6,
-                                max: 30,
-                                message: '密码长度在6到30个字符之间'
-                            },
-                            identical: {
-                                field: 'password',
-                                message: '与支付密码不一致'
-                            }
-                        }
-                    },
+
                 }
 
             });
@@ -110,15 +74,31 @@
 </head>
 <body>
 <div class="container-fluid">
-    <form role="form" class="form-horizontal" id="hehe" method="post" action="{{url('/wechat/ppp')}}">
+    <form role="form" class="form-horizontal" id="hehe" method="post" action="{{url('/h5/auth/registersend')}}">
         {!! csrf_field() !!}
-        <div class="alert alert-success" style="display: none;">
-            <a href="#" class="close" data-dismiss="alert">&times;</a>
+
+        @if (isset($alert))
+            <div class="alert alert-info text-center">
+                {!! $alert !!}
+            </div>
+        @endif
+
+        <div class="form-group hidden">
+            <label for="openid" class="col-xs-3 control-label">openid</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="openid" id="openid" value="{!! $openid !!}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-xs-3 control-label">姓名</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="name" id="name" value = "<?php if(isset($name)) echo $name?>"/>
+            </div>
         </div>
         <div class="form-group">
             <label for="phone" class="col-xs-3 control-label">手机号</label>
             <div class="col-xs-8">
-                <input type="text" class="form-control" name="phone" id="phone"/>
+                <input type="text" class="form-control" name="phone" id="phone" value = "<?php if(isset($phone)) echo $phone?>"/>
             </div>
         </div>
         <div class="form-group">
@@ -133,37 +113,6 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="name" class="col-xs-3 control-label">姓名</label>
-            <div class="col-xs-8">
-                <input type="text" class="form-control" name="name" id="name"/>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="sex" class="col-xs-3 control-label">性别</label>
-            <div class="col-xs-8" id="sex">
-                <label class="checkbox-inline">
-                    <input type="radio" name="sex" id="man"
-                           value="man" checked> 男
-                </label>
-                <label class="checkbox-inline">
-                    <input type="radio" name="sex" id="woman"
-                           value="woman"> 女
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="password" class="col-xs-3 control-label">支付密码</label>
-            <div class="col-xs-8" id="password">
-                <input type="password" class="form-control" name="password" placeholder="用于支付，妥善保管"/>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="repassword" class="col-xs-3 control-label">确认密码</label>
-            <div class="col-xs-8" id="repassword">
-                <input type="password" class="form-control" name="repassword"/>
-            </div>
-        </div>
-        <div class="form-group">
             <button type="submit" class="btn btn-primary col-xs-10 col-xs-offset-1">提交</button>
         </div>
     </form>
@@ -171,9 +120,8 @@
 
 <script>
     function getCode(obj,n){
-        $.get('/h5/auth/register/validate?tel='+$('#phone').val(),function(res){
-
-        })
+        if(!getMsgCode())
+            return ;
         var t=obj.value;
         (function(){
             if(n>0){
@@ -185,6 +133,21 @@
                 obj.value=t;
             }
         })();
+    }
+    function getMsgCode(){
+        var reCat = /^1[3458]\d{9}$/;
+        var data = $('#phone').val();
+        if(reCat.test(data)){
+            $.get('/h5/auth/validate?tel='+$('#phone').val(),function(res){
+                if(res.flag != true){
+                    alert('获取验证码错误，请稍后再试！');
+                }
+            });
+        }else{
+            alert('请输入正确的手机号！');
+            return false;
+        }
+        return true;
     }
 </script>
 </body>
