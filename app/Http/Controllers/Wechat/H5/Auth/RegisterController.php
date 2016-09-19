@@ -13,6 +13,7 @@ use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
 
 use Illuminate\Support\Facades\Redis;
+use Log;
 
 class RegisterController extends Controller
 {
@@ -73,8 +74,10 @@ class RegisterController extends Controller
             $client->request('GET', $this::$msgUrl, ['query' => $data]);
             return array('flag'=>true);
         } catch (ClientException $ce) {
+            Log::error($ce);
             return array('flag'=>false);
         } catch (ConnectException $ce) {
+            Log::error($ce);
             return array('flag'=>false);
         }
     }
