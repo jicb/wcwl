@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Wechat\H5\Auth;
 
+use App\Wechat\Member;
 use EasyWeChat\Message\Text;
 use Illuminate\Http\Request;
 
@@ -31,6 +32,12 @@ class RegisterController extends Controller
                 ->with('name',$request->name)
                 ->with('phone',$request->phone);
         }
+
+        $member = new Member();
+        $member->name = $request->name;
+        $member->mobile = $request->phone;
+        $member->openid = $request->openid;
+        $member->save();
 
         return "good";
 
