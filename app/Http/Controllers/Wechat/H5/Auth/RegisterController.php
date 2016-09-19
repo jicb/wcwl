@@ -76,15 +76,19 @@ class RegisterController extends Controller
 
             $response = $client->request('GET', $this::$msgUrl, ['query' => $data]);
             $content = $response->getBody()->getContents();
-            dd($content);
+
+            if(strstr($content,'result=1033')){
+                return array('flag'=>false,'msg' => '您操作太频繁了，休息一下吧！');
+            }
+
         } catch (ClientException $ce) {            
             Log::error($ce);
-            return array('flag'=>false);
+            return array('flag'=>false,'msg' => '出错了，请稍后再试');
         } catch (ConnectException $ce) {            
             Log::error($ce);
-            return array('flag'=>false);
+            return array('flag'=>false,'msg' => '出错了，请稍后再试');
         }
-        //return array('flag'=>true);
+        return array('flag'=>true);
     }
 
     private function getContent($tel){

@@ -140,7 +140,7 @@
         if(reCat.test(data)){
             $.get('/h5/auth/validate?tel='+$('#phone').val(),function(res){
                 if(res.flag != true){
-                    alert('获取验证码错误，请稍后再试！');
+                    alert(res.msg);
                 }
             });
         }else{

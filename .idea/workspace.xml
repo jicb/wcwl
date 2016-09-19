@@ -6322,20 +6322,20 @@
       <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="141" column="37" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
+            <state relative-caret-position="504">
+              <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1474281303166" expanded="true" signature="4300:5134" placeholder="..." />
-                <marker date="1474281303166" expanded="true" signature="4329:4688" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4422:4678" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4443:4584" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4588:4668" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4714:5125" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4820:5024" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4896:5012" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="4934:4998" placeholder="{...}" />
-                <marker date="1474281303166" expanded="true" signature="5028:5098" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4300:5125" placeholder="..." />
+                <marker date="1474282977398" expanded="true" signature="4329:4688" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4422:4678" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4443:4584" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4588:4668" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4714:5116" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4820:5015" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4896:5003" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="4934:4989" placeholder="{...}" />
+                <marker date="1474282977398" expanded="true" signature="5019:5089" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -6354,8 +6354,8 @@
       <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="528">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="e#55#83#0#PHP" expanded="true" />
               </folding>
@@ -6395,8 +6395,8 @@
         <option value="$PROJECT_DIR$/vendor/bin/psysh" />
         <option value="$PROJECT_DIR$/vendor/bin/phpunit" />
         <option value="$PROJECT_DIR$/vendor/bin/php-parse" />
-        <option value="$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php" />
       </list>
     </option>
   </component>
@@ -6760,7 +6760,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42521000" />
+    <option name="totallyTimeSpent" value="43292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -7125,14 +7125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/bin/psysh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="747">
@@ -7183,28 +7175,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="141" column="37" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
+        <state relative-caret-position="504">
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1474281303166" expanded="true" signature="4300:5134" placeholder="..." />
-            <marker date="1474281303166" expanded="true" signature="4329:4688" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4422:4678" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4443:4584" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4588:4668" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4714:5125" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4820:5024" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4896:5012" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="4934:4998" placeholder="{...}" />
-            <marker date="1474281303166" expanded="true" signature="5028:5098" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4300:5125" placeholder="..." />
+            <marker date="1474282977398" expanded="true" signature="4329:4688" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4422:4678" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4443:4584" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4588:4668" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4714:5116" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4820:5015" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4896:5003" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="4934:4989" placeholder="{...}" />
+            <marker date="1474282977398" expanded="true" signature="5019:5089" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="528">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="e#55#83#0#PHP" expanded="true" />
           </folding>
