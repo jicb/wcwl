@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-<button type="type" id="closewindow">关闭网页</button>
+<button type="type" id="closeWindow">关闭网页</button>
 <script>
     var readyFunc = function onBridgeReady() {
         var curid;
