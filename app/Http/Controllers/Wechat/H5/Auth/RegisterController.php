@@ -30,6 +30,12 @@ class RegisterController extends Controller
         $broadcast = $app->broadcast;
         $broadcast->previewText("你好，注册成功", $member->openid);
     }
+    
+    public function registered(Request $request){
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $broadcast->previewText("你好，注册成功", $request->input('openid'));
+    }
 
     public function regsend(Request $request){
         //validate msg
@@ -48,7 +54,8 @@ class RegisterController extends Controller
         $member->role = 1;
         $member->save();
 
-        return "good";
+        //return "good";
+        return view('wechat.auth.returnwechat')->with('openid',$request->openid);
 
 
 
