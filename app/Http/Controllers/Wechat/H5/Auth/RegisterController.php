@@ -25,7 +25,10 @@ class RegisterController extends Controller
     //
     public function testmysql(){
         $member = Member::find(3);
-        dd($member);
+        //dd($member);
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $broadcast->sendText("你好，注册成功", [$member->openid]);
     }
 
     public function regsend(Request $request){
@@ -42,9 +45,12 @@ class RegisterController extends Controller
         $member->name = $request->name;
         $member->mobile = $request->phone;
         $member->openid = $request->openid;
+        $member->role = 1;
         $member->save();
 
         return "good";
+
+
 
         /*$wechat = app('wechat');
         $wechat->server->setMessageHandler(function ($message) {
