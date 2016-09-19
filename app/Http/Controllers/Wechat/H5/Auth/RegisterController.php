@@ -32,12 +32,14 @@ class RegisterController extends Controller
                 ->with('phone',$request->phone);
         }
 
-        $wechat = app('wechat');
+        return "good";
+
+        /*$wechat = app('wechat');
         $wechat->server->setMessageHandler(function ($message) {
             return "注册成功";
         });
 
-        return $wechat->server->serve();
+        return $wechat->server->serve();*/
 
     }
 
@@ -71,15 +73,18 @@ class RegisterController extends Controller
                 'subPort' => '',
             );
             $client = new Client();
-            $client->request('GET', $this::$msgUrl, ['query' => $data]);
-            return array('flag'=>true);
-        } catch (ClientException $ce) {
+
+            $response = $client->request('GET', $this::$msgUrl, ['query' => $data]);
+            $content = $response->getBody()->getContents();
+            dd($content);
+        } catch (ClientException $ce) {            
             Log::error($ce);
             return array('flag'=>false);
-        } catch (ConnectException $ce) {
+        } catch (ConnectException $ce) {            
             Log::error($ce);
             return array('flag'=>false);
         }
+        //return array('flag'=>true);
     }
 
     private function getContent($tel){
