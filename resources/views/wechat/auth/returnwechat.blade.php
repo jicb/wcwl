@@ -16,6 +16,7 @@
 
             });
             //wx.closeWindow();
+            
         }
     </script>
 </head>
