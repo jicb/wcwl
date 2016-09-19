@@ -26,9 +26,11 @@ class RegisterController extends Controller
     public function testmysql(){
         $member = Member::find(3);
         //dd($member);
-        $app = app('wechat');
+        /*$app = app('wechat');
         $broadcast = $app->broadcast;
-        $broadcast->previewText("你好，注册成功", $member->openid);
+        $broadcast->previewText("你好，注册成功", $member->openid);*/
+
+        return view('wechat.auth.returnwechat')->with('openid','gaga');
     }
     
     public function registered(Request $request){
