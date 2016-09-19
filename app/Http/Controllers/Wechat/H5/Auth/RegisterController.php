@@ -24,7 +24,7 @@ class RegisterController extends Controller
     private static $msgUrl = "http://115.28.143.178:8080/sms/sendUtf.do";
     //
     public function testmysql(){
-        $member = Member::find(1);
+        $member = Member::find(3);
         dd($member);
     }
 
