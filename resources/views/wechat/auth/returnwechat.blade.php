@@ -18,6 +18,7 @@
             //wx.closeWindow();
 
         }*/
+        window.onload = readyFunc;
     </script>
 </head>
 <body>
@@ -30,14 +31,14 @@
 
 
         // 关闭当前webview窗口 - closeWindow
-        document.querySelector('#closeWindow').addEventListener('click', function(e){
+        //document.querySelector('#closeWindow').addEventListener('click', function(e){
             WeixinJSBridge.invoke('closeWindow',{
             },function(res){
 
                 //alert(res.err_msg);
 
             });
-        });
+        //});
 
     }
 
