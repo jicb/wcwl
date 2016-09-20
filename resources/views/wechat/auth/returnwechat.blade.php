@@ -6,9 +6,11 @@
     <script>
         var readyFunc = function onBridgeReady() {
             $.get('/h5/auth/returnregistered?openid={!! $openid !!}',function(res){
-                WeixinJSBridge.invoke('closeWindow',{
-                },function(res){
-                });
+
+            });
+
+            WeixinJSBridge.invoke('closeWindow',{
+            },function(res){
             });
         }
 
