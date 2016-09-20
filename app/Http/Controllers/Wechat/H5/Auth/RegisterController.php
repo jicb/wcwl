@@ -73,7 +73,15 @@ class RegisterController extends Controller
     public function registeruser(Request $request, $openid)
     {
         return view('wechat.auth.register')->with('openid', $openid);       
-    }    
+    }
+
+    private function existUser($openid){
+        $member = Member::where('openid',$openid)->take(1)->get();
+        if(count($member) && $member[0]->exists && $member[0]->mobile){
+            return true;
+        }
+        return false;
+    }
 
     public function validatecode(Request $request)
     {
