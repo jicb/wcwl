@@ -14,7 +14,7 @@ class Controller extends BaseController
 
     public static function getOpenidFromCode($code){
         try {
-            $config = config['wechat'];
+            $config = config('wechat');
 
             $url = "https://api.weixin.qq.com/sns/oauth2/access_token";
 
