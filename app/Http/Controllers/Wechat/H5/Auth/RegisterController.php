@@ -57,7 +57,7 @@ class RegisterController extends Controller
         $member->save();
 
         //return "good";
-        return view('wechat.auth.returnwechat')->with('openid',$request->openid);
+        return view('wechat.auth.returnwechat');
 
 
 
@@ -129,6 +129,5 @@ class RegisterController extends Controller
         Redis::setex($tel,280,$time);
         return $time;
     }
-
 
 }

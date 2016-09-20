@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Wechat;
 
+use App\Wechat\Member;
 use EasyWeChat\Message\Text;
 use Illuminate\Http\Request;
 
@@ -82,11 +83,25 @@ class WechatController extends Controller
     {
         $openid = $message->FromUserName;
         $text = new Text();
-        $content = "欢迎您的关注，请尽快完成\n";
-        $content .= "<a href='http://123.206.198.227/h5/auth/register/" . $openid . "'>用户注册</a>";
-        $content .= "，以免影响使用";
+        if(!$this->existUser($openid)){
+            $content = "欢迎您的关注，请尽快完成\n";
+            $content .= "<a href='http://123.206.198.227/h5/auth/register/" . $openid . "'>用户注册</a>";
+            $content .= "，以免影响使用";
+        }else{
+            $content = "欢迎回来！";
+        }
+
         $text->content = $content;
         return $text;
+    }
+
+    private function existUser($openid){
+        $member = Member::where('openid',$openid)
+                        ->where('mobile','<>','');
+        if($member){
+            return true;
+        }
+        return false;
     }
 
     private function response($message)

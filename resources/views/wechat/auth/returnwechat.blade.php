@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>返回微信</title>
-    {{--<script src="/js/jweixin.js"></script>--}}
     <script>
         var readyFunc = function onBridgeReady() {
             WeixinJSBridge.invoke('closeWindow',{
@@ -11,8 +10,6 @@
 
             });
         }
-
-        //window.onload = readyFunc;
 
         if (typeof WeixinJSBridge === "undefined") {
             document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
