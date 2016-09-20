@@ -28,7 +28,6 @@ Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],fu
     Route::get('/validate',['as'=>'validate','uses'=>'RegisterController@validatecode']);
     Route::any('/registersend',['as'=>'registersend','uses'=>'RegisterController@regsend']);
     Route::any('/returnregistered',['as'=>'registered','uses'=>'RegisterController@registered']);
-
 });
 
 Route::any('/testmysql','Wechat\H5\Auth\RegisterController@testmysql');

@@ -57,7 +57,7 @@ class RegisterController extends Controller
         $member->save();
 
         //return "good";
-        return view('wechat.auth.returnwechat');
+        return view('wechat.auth.returnwechat')->$request->openid;
 
 
 
