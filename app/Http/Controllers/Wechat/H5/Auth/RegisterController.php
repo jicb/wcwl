@@ -47,16 +47,21 @@ class RegisterController extends Controller
                 ->with('openid',$request->openid)
                 ->with('name',$request->name)
                 ->with('phone',$request->phone);
+        }else{
+            Member::firstOrCreate(['name'=>$request->name,'mobile'=>$request->mobile,'openid'=>$request->openid,'role'=>1]);
+            return view('wechat.auth.returnwechat')->$request->openid;
         }
 
-        $member = new Member();
+
+
+        /*$member = new Member();
         $member->name = $request->name;
         $member->mobile = $request->phone;
         $member->openid = $request->openid;
         $member->role = 1;
-        $member->save();
+        $member->save();*/
 
-        return view('wechat.auth.returnwechat')->$request->openid;
+
     }
 
     public function registeruser(Request $request, $openid)
