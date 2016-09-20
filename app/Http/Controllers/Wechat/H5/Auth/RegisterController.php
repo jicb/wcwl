@@ -72,8 +72,8 @@ class RegisterController extends Controller
 
     public function registeruser(Request $request, $openid)
     {
-        return view('wechat.auth.register')->with('openid', $openid);
-    }
+        return view('wechat.auth.register')->with('openid', $openid);       
+    }    
 
     public function validatecode(Request $request)
     {
