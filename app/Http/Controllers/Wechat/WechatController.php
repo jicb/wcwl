@@ -22,7 +22,7 @@ class WechatController extends Controller
             [
                 "type" => "view",
                 "name" => "我要发货",
-                "url" => "http://123.206.198.227/wechat/h5/delivery"
+                "url" => "http://wx.wancheng.org/wechat/h5/delivery"
             ],
             [
                 "name" => "帮助",
@@ -30,17 +30,17 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "网点查询",
-                        "url" => "http://123.206.198.227/wechat/h5/help/netquery",
+                        "url" => "http://wx.wancheng.org/wechat/h5/help/netquery",
                     ],
                     [
                         "type" => "view",
                         "name" => "运单号查询",
-                        "url" => "http://123.206.198.227/wechat/h5/help/trackingquery",
+                        "url" => "http://wx.wancheng.org/wechat/h5/help/trackingquery",
                     ],
                     [
                         "type" => "view",
                         "name" => "运费时效",
-                        "url" => "http://123.206.198.227/wechat/h5/help/freightaging",
+                        "url" => "http://wx.wancheng.org/wechat/h5/help/freightaging",
                     ],
                 ],
             ],
@@ -50,17 +50,17 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "地址管理",
-                        "url" => "http://123.206.198.227/wechat/h5/help/addressmanagement",
+                        "url" => "http://wx.wancheng.org/wechat/h5/help/addressmanagement",
                     ],
                     [
                         "type" => "view",
                         "name" => "我的订单",
-                        "url" => "http://123.206.198.227/wechat/h5/help/myorder",
+                        "url" => "http://wx.wancheng.org/wechat/h5/help/myorder",
                     ],
                     [
                         "type" => "view",
                         "name" => "积分商城",
-                        "url" => "http://123.206.198.227/wechat/h5/help/integralshop",
+                        "url" => "http://wx.wancheng.org/wechat/h5/help/integralshop",
                     ],
                 ],
             ],
@@ -83,24 +83,11 @@ class WechatController extends Controller
     {
         $openid = $message->FromUserName;
         $text = new Text();
-        if(!$this->existUser($openid)){
-            $content = "欢迎您的关注，请尽快完成\n";
-            $content .= "<a href='http://123.206.198.227/h5/auth/register/" . $openid . "'>用户注册</a>";
-            $content .= "，以免影响使用";
-        }else{
-            $content = "欢迎回来！";
-        }
-
+        $content = "欢迎您的关注，请尽快完成\n";
+        $content .= "<a href='http://wx.wancheng.org/wechat/h5/register/" . $openid . "'>用户注册</a>";
+        $content .= "，以免影响使用";
         $text->content = $content;
         return $text;
-    }
-
-    private function existUser($openid){
-        $member = Member::where('openid',$openid)->take(1)->get();
-        if($member[0]->exists && $member[0]->mobile){
-            return true;
-        }
-        return false;
     }
 
     private function response($message)
