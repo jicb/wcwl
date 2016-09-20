@@ -32,7 +32,7 @@ class Controller extends BaseController
             $response = $client->request('GET',$url , ['query' => $data]);
             $content = $response->getBody()->getContents();
 
-            dd($content);
+            return $content->openid;
 
         } catch (ClientException $ce) {
             Log::error($ce);
@@ -40,7 +40,6 @@ class Controller extends BaseController
         } catch (ConnectException $ce) {
             Log::error($ce);
             return "";
-        }
-        return "";
+        }        
     }
 }
