@@ -27,7 +27,6 @@ class WechatController extends Controller
                         "type" => "click",
                         "name" => "我要发货",
                         "key" => "CLICK_BUTTON_DELIVERY",
-                        //"url" => "http://wx.wancheng.org/button/logistics/delivery",
                     ],
                     [
                         "type" => "view",
@@ -138,7 +137,8 @@ class WechatController extends Controller
     private function clickButtonEvent($message){
         switch($message->EventKey){
             case 'CLICK_BUTTON_DELIVERY':
-                return view('welcome');
+                //return view('welcome');
+                return "gaga";
         }
     }
 
@@ -154,7 +154,6 @@ class WechatController extends Controller
                     default:
                         return "Welcome！";
                 }
-
                 break;
             }
             case 'text':
