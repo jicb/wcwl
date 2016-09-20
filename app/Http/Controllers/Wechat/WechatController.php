@@ -85,7 +85,7 @@ class WechatController extends Controller
         $text = new Text();
         if(!$this->existUser($openid)){
             $content = "欢迎您的关注，请尽快完成\n";
-            $content .= "<a href='http://wx.wancheng.org/wechat/h5/register/" . $openid . "'>用户注册</a>";
+            $content .= "<a href='http://wx.wancheng.org/h5/auth/register/" . $openid . "'>用户注册</a>";
             $content .= "，以免影响使用";
         }else{
             $content = "欢迎回来";

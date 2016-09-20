@@ -56,32 +56,13 @@ class RegisterController extends Controller
         $member->role = 1;
         $member->save();
 
-        //return "good";
         return view('wechat.auth.returnwechat')->$request->openid;
-
-
-
-        /*$wechat = app('wechat');
-        $wechat->server->setMessageHandler(function ($message) {
-            return "注册成功";
-        });
-
-        return $wechat->server->serve();*/
-
     }
 
     public function registeruser(Request $request, $openid)
     {
         return view('wechat.auth.register')->with('openid', $openid);       
-    }
-
-    private function existUser($openid){
-        $member = Member::where('openid',$openid)->take(1)->get();
-        if(count($member) && $member[0]->exists && $member[0]->mobile){
-            return true;
-        }
-        return false;
-    }
+    }    
 
     public function validatecode(Request $request)
     {
