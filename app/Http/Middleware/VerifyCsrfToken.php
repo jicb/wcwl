@@ -16,5 +16,6 @@ class VerifyCsrfToken extends BaseVerifier
         'wechat',
         'wechat/menuadd',
         'h5/auth/register/validate',
+        'button/*',
     ];
 }

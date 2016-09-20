@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623bc0e5-222e-4e6a-b109-1641cf00e2eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
@@ -89,6 +87,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
@@ -297,6 +296,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wcwlgzh/tables.blade.php" afterPath="$PROJECT_DIR$/resources/views/wcwlgzh/tables.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/auth/returnwechat.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/auth/returnwechat.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/console.php" afterPath="$PROJECT_DIR$/routes/console.php" />
@@ -6553,8 +6553,18 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="33" column="95" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
+            <state relative-caret-position="513">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerifyCsrfToken.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -6578,16 +6588,6 @@
               <folding>
                 <element signature="e#55#77#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -6622,11 +6622,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WechatController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WechatController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="149" column="57" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
+            <state relative-caret-position="567">
+              <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
               <folding>
                 <element signature="e#47#69#0#PHP" expanded="true" />
               </folding>
@@ -6681,7 +6681,6 @@
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/auth/register.blade.php.html" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/vendor/bin/psysh" />
@@ -6701,6 +6700,7 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
       </list>
     </option>
   </component>
@@ -6721,7 +6721,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1999" />
+    <option name="x" value="47" />
     <option name="y" value="24" />
     <option name="width" value="1936" />
     <option name="height" value="1055" />
@@ -7224,6 +7224,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Middleware" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -7361,10 +7383,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72541000" />
+    <option name="totallyTimeSpent" value="73201000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1999" y="24" width="1936" height="1055" extended-state="0" />
+    <frame x="47" y="24" width="1936" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -7522,14 +7544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -7779,14 +7793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="95" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -7797,11 +7803,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="149" column="57" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
+        <state relative-caret-position="567">
+          <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
           <folding>
             <element signature="e#47#69#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
