@@ -34,7 +34,6 @@ class RegisterController extends Controller
     }
     
     public function registered($openid){
-        sleep(3);
         $app = app('wechat');
         $broadcast = $app->broadcast;
         $broadcast->previewText("你好，注册成功", $openid);

@@ -20,27 +20,47 @@ class WechatController extends Controller
         $menu->destroy();
         $button = [
             [
-                "type" => "view",
-                "name" => "我要发货",
-                "url" => "http://wx.wancheng.org/wechat/h5/delivery"
-            ],
-            [
-                "name" => "帮助",
+                "name" => "物流服务",
                 "sub_button" => [
                     [
                         "type" => "view",
+                        "name" => "我要发货",
+                        "url" => "http://wx.wancheng.org/button/logistics/delivery",
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "运单查询",
+                        "url" => "http://wx.wancheng.org/button/logistics/trackingquery",
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "运费计算",
+                        "url" => "http://wx.wancheng.org/button/logistics/freightaging",
+                    ],
+                    [
+                        "type" => "view",
                         "name" => "网点查询",
-                        "url" => "http://wx.wancheng.org/wechat/h5/help/netquery",
+                        "url" => "http://wx.wancheng.org/button/logistics/netquery",
                     ],
                     [
                         "type" => "view",
-                        "name" => "运单号查询",
-                        "url" => "http://wx.wancheng.org/wechat/h5/help/trackingquery",
+                        "name" => "收货范围",
+                        "url" => "http://wx.wancheng.org/button/logistics/takerange",
+                    ],
+                ],
+            ],
+            [
+                "name" => "优惠活动",
+                "sub_button" => [
+                    [
+                        "type" => "view",
+                        "name" => "积分商城",
+                        "url" => "http://wx.wancheng.org/button/benefit/numericalmall",
                     ],
                     [
                         "type" => "view",
-                        "name" => "运费时效",
-                        "url" => "http://wx.wancheng.org/wechat/h5/help/freightaging",
+                        "name" => "领取大厅",
+                        "url" => "http://wx.wancheng.org/button/benefit/dolehall",
                     ],
                 ],
             ],
@@ -49,18 +69,28 @@ class WechatController extends Controller
                 "sub_button" => [
                     [
                         "type" => "view",
-                        "name" => "地址管理",
-                        "url" => "http://wx.wancheng.org/wechat/h5/help/addressmanagement",
+                        "name" => "我的余额",
+                        "url" => "http://wx.wancheng.org/button/myself/balance",
                     ],
                     [
                         "type" => "view",
                         "name" => "我的订单",
-                        "url" => "http://wx.wancheng.org/wechat/h5/help/myorder",
+                        "url" => "http://wx.wancheng.org/button/myself/order",
                     ],
                     [
                         "type" => "view",
-                        "name" => "积分商城",
-                        "url" => "http://wx.wancheng.org/wechat/h5/help/integralshop",
+                        "name" => "我的积分",
+                        "url" => "http://wx.wancheng.org/button/myself/numerical",
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "我的优惠券",
+                        "url" => "http://wx.wancheng.org/button/myself/coupon",
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "常用地址",
+                        "url" => "http://wx.wancheng.org/button/myself/address",
                     ],
                 ],
             ],
