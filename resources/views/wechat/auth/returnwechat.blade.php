@@ -5,36 +5,29 @@
     <title>返回微信</title>
     {{--<script src="/js/jweixin.js"></script>--}}
     <script>
+        var readyFunc = function onBridgeReady() {
+            var curid;
+            var curAudioId;
+            var playStatus = 0;
+
+
+
+            WeixinJSBridge.invoke('closeWindow',{
+            },function(res){
+
+            });
+        }
+
         window.onload = readyFunc;
+
+        if (typeof WeixinJSBridge === "undefined") {
+            document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
+        } else {
+            readyFunc();
+        }
     </script>
 </head>
 <body>
-<button type="type" id="closeWindow">关闭网页</button>
-<script>
-    var readyFunc = function onBridgeReady() {
-        var curid;
-        var curAudioId;
-        var playStatus = 0;
 
-
-        // 关闭当前webview窗口 - closeWindow
-        //document.querySelector('#closeWindow').addEventListener('click', function(e){
-        WeixinJSBridge.invoke('closeWindow',{
-        },function(res){
-
-            //alert(res.err_msg);
-
-        });
-        //});
-
-    }
-
-
-    if (typeof WeixinJSBridge === "undefined") {
-        document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
-    } else {
-        readyFunc();
-    }
-</script>
 </body>
 </html>
