@@ -49,10 +49,12 @@ class RegisterController extends Controller
                 ->with('phone',$request->phone);
         }else{
             Member::firstOrCreate(['name'=>$request->name,'mobile'=>$request->phone,'openid'=>$request->openid,'role'=>1]);
+
+            /*$app = app('wechat');
+            $broadcast = $app->broadcast;
+            $broadcast->previewText("你好，注册成功", $request->input('openid'));*/
             
-            $this->registered($request);
-            
-            return view('wechat.auth.returnwechat')->with('openid',$request->openid);
+            return view('wechat.auth.returnwechat');
         }
 
         /*$member = new Member();

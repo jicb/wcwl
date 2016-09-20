@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <title>返回微信</title>
     <script>
-        /*$.get('/h5/auth/returnregistered?openid={!! $openid !!}',function(res){
-
-        });*/
         var readyFunc = function onBridgeReady() {
             WeixinJSBridge.invoke('closeWindow',{
             },function(res){
