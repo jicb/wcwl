@@ -23,9 +23,10 @@ class WechatController extends Controller
                 "name" => "物流服务",
                 "sub_button" => [
                     [
-                        "type" => "view",
+                        "type" => "click",
                         "name" => "我要发货",
-                        "url" => "http://wx.wancheng.org/button/logistics/delivery",
+                        "key" => "CLICK_BUTTON_DELIVERY",
+                        //"url" => "http://wx.wancheng.org/button/logistics/delivery",
                     ],
                     [
                         "type" => "view",
@@ -133,16 +134,28 @@ class WechatController extends Controller
         return false;
     }
 
+    private function clickButtonEvent($message){
+        switch($message->EventKey){
+            case 'CLICK_BUTTON_DELIVERY':
+                return view('home');
+        }
+    }
+
     private function response($message)
     {
         switch ($message->MsgType) {
-            case 'event':
-                if ($message->Event == 'subscribe') {
-                    return $this->register($message);
-                } else {
-                    return "欢迎您再次光临！！！";
+            case 'event':{
+                switch($message->Event){
+                    case 'subscribe':
+                        return $this->register($message);
+                    case "CLICK":
+                        return $this->clickButtonEvent($message);
+                    default:
+                        return "Welcome！";
                 }
+
                 break;
+            }
             case 'text':
                 return $this->replyText($message);
             case 'image':
