@@ -17,16 +17,15 @@ class WechatController extends Controller
     {
         $wechat = app('wechat');
         $menu = $wechat->menu;
-        dd($menu->current());
         $menu->destroy();
         $button = [
             [
                 "name" => "物流服务",
                 "sub_button" => [
                     [
-                        "type" => "click",
+                        "type" => "view",
                         "name" => "我要发货",
-                        "key" => "CLICK_BUTTON_DELIVERY",
+                        "url" => "http://wx.wancheng.org/button/logistics/delivery",
                     ],
                     [
                         "type" => "view",
@@ -149,8 +148,8 @@ class WechatController extends Controller
                 switch($message->Event){
                     case 'subscribe':
                         return $this->register($message);
-                    case "CLICK":
-                        return $this->clickButtonEvent($message);
+                    /*case "VIEW":
+                        return $this->viewButtonEvent($message);*/
                     default:
                         return "Welcome！";
                 }

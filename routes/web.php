@@ -30,6 +30,10 @@ Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],fu
     Route::any('/returnregistered',['as'=>'registered','uses'=>'RegisterController@registered']);
 });
 
+Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],function(){
+    Route::any('logistics/delivery',['as'=>'delivery','uses'=>'LogisticsController@delivery']);
+});
+
 Route::any('/testmysql','Wechat\H5\Auth\RegisterController@testmysql');
 
 
