@@ -17,6 +17,7 @@ class WechatController extends Controller
     {
         $wechat = app('wechat');
         $menu = $wechat->menu;
+        dd($menu->current);
         $menu->destroy();
         $button = [
             [
@@ -137,7 +138,7 @@ class WechatController extends Controller
     private function clickButtonEvent($message){
         switch($message->EventKey){
             case 'CLICK_BUTTON_DELIVERY':
-                return view('home');
+                return view('welcome');
         }
     }
 
