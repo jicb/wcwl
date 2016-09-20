@@ -48,11 +48,9 @@ class RegisterController extends Controller
                 ->with('name',$request->name)
                 ->with('phone',$request->phone);
         }else{
-            Member::firstOrCreate(['name'=>$request->name,'mobile'=>$request->mobile,'openid'=>$request->openid,'role'=>1]);
-            return view('wechat.auth.returnwechat')->$request->openid;
+            Member::firstOrCreate(['name'=>$request->name,'mobile'=>$request->phone,'openid'=>$request->openid,'role'=>1]);
+            return view('wechat.auth.returnwechat')->with('openid',$request->openid);
         }
-
-
 
         /*$member = new Member();
         $member->name = $request->name;
@@ -120,7 +118,7 @@ class RegisterController extends Controller
     private function getCode($tel){        
         Redis::del($tel);
         $time = date('hms');
-        Redis::setex($tel,280,$time);
+        Redis::setex($tel,28000,$time);
         return $time;
     }
 

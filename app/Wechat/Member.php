@@ -10,4 +10,5 @@ class Member extends Model
     protected $connection = "wcwlgzh";
     protected $table = "wc_member";
     protected $primaryKey = "member_id";    
+    protected $fillable = ['name','role','mobile','openid'];
 }
