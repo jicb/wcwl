@@ -7,15 +7,15 @@
         var readyFunc = function onBridgeReady() {
             WeixinJSBridge.invoke('closeWindow',{
             },function(res){
-                $.get('/h5/auth/returnregistered?openid={!! $openid !!}',function(res){
-
-                });
             });
         }
 
         if (typeof WeixinJSBridge === "undefined") {
             document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
         } else {
+            $.get('/h5/auth/returnregistered?openid={!! $openid !!}',function(res){
+
+            });
             readyFunc();
         }
     </script>
