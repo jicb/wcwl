@@ -15,6 +15,7 @@ class WechatController extends Controller
 
     public function menuadd(Request $request)
     {
+        $config = config('wechat');       
         $wechat = app('wechat');
         $menu = $wechat->menu;
         $menu->destroy();
@@ -25,7 +26,7 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "我要发货",
-                        "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxfd1fc36f173f66b8&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
+                        "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
                     ],
                     [
                         "type" => "view",

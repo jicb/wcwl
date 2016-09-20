@@ -11,7 +11,9 @@ class LogisticsController extends Controller
 {
     //
     public function delivery(Request $request){
-        dd($request->input('code'));
+        $code = $request->input('code');
+        
+        dd();
         return view('wechat.logistics.delivery');
     }
 }
