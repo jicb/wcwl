@@ -30,7 +30,7 @@ class RegisterController extends Controller
         $broadcast = $app->broadcast;
         $broadcast->previewText("你好，注册成功", $member->openid);*/
 
-        return view('wechat.auth.returnwechat')->with('openid','gaga');
+        return view('wechat.auth.returnwechat');
     }
     
     public function registered(Request $request){
