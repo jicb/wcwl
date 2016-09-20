@@ -88,7 +88,10 @@ class WechatController extends Controller
             $content .= "<a href='http://wx.wancheng.org/h5/auth/register/" . $openid . "'>用户注册</a>";
             $content .= "，以免影响使用";
         }else{
-            $content = "欢迎回来";
+            //$content = "欢迎回来";
+            $content = "欢迎您的关注，请尽快完成\n";
+            $content .= "<a href='http://wx.wancheng.org/h5/auth/register/" . $openid . "'>用户注册</a>";
+            $content .= "，以免影响使用";
         }
 
         $text->content = $content;
