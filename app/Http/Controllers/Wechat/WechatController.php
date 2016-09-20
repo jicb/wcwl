@@ -17,7 +17,7 @@ class WechatController extends Controller
     {
         $wechat = app('wechat');
         $menu = $wechat->menu;
-        dd($menu->current);
+        dd($menu->current());
         $menu->destroy();
         $button = [
             [
