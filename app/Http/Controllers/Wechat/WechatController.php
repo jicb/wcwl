@@ -83,6 +83,7 @@ class WechatController extends Controller
     {
         $openid = $message->FromUserName;
         $text = new Text();
+        $content = "";
         if(!$this->existUser($openid)){
             $content = "欢迎您的关注，请尽快完成\n";
             $content .= "<a href='http://123.206.198.227/h5/auth/register/" . $openid . "'>用户注册</a>";
@@ -96,9 +97,8 @@ class WechatController extends Controller
     }
 
     private function existUser($openid){
-        $member = Member::where('openid',$openid)
-                        ->where('mobile','<>','');
-        if($member){
+        $member = Member::where('openid',$openid);
+        if($member->mobile){
             return true;
         }
         return false;
