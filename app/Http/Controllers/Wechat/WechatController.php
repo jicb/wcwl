@@ -25,13 +25,13 @@ class WechatController extends Controller
                 "sub_button" => [
                     [
                         "type" => "view",
-                        "name" => "发货",
+                        "name" => "我要发货",
                         "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
                     ],
                     [
                         "type" => "view",
                         "name" => "运单查询",
-                        "url" => "http://wx.wancheng.org/button/logistics/trackingquery",
+                        "url" => "http://tydwx.1008656.com/LQWeiXin/index.jsp?id=58311",
                     ],
                     [
                         "type" => "view",
@@ -99,7 +99,7 @@ class WechatController extends Controller
         ];
         $menu->add($button);
 
-        $button = [
+       /* $button = [
             [
                 "name" => "物流服务",
                 "sub_button" => [
@@ -191,7 +191,7 @@ class WechatController extends Controller
             "city"                 => "",
             "client_platform_type" => ""
         ];
-        $menu->add($button,$matchRule);        
+        $menu->add($button,$matchRule);        */
 
     }
 

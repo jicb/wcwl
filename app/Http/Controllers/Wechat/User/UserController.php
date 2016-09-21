@@ -11,11 +11,11 @@ class UserController extends Controller
 {
     //
     public function adduser(Request $request){
-        $wechat = app('wechat');
-        /*$group = $wechat->user_group;
-        $group->moveUser("oLsBZxN9JI56Uv8RyD62DEc4_YYQ",101);*/
-
+        /*$wechat = app('wechat');
         $group = $wechat->user_group;
+        $group->moveUser("oLsBZxN9JI56Uv8RyD62DEc4_YYQ",101);
+
+        
         $group->moveUser("oLsBZxNMEZQEL8STHlrEaSu5mwD8",101);
         $menu = $wechat->menu;
         $data = [
@@ -26,7 +26,7 @@ class UserController extends Controller
             $group->userGroup("oLsBZxN9JI56Uv8RyD62DEc4_YYQ")
         ];
         
-        dd($data);
+        dd($data);*/
     }
 
     public function create(Request $request){
