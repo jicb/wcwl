@@ -193,12 +193,12 @@ class WechatController extends Controller
         ];
         $menu->add($button,$matchRule);
 
-        $tag = $wechat->user_tag;
+        $group = $wechat->user_group;
         $data = [
             $menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
-            $tag->userTags("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
+            $group->userGroup("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
             $menu->test("oLsBZxF7dknqqY9oGJtEVreG5Ot4"),
-            $tag->userTags("oLsBZxF7dknqqY9oGJtEVreG5Ot4")
+            $group->userGroup("oLsBZxF7dknqqY9oGJtEVreG5Ot4")
         ];
         dd($data);
 
