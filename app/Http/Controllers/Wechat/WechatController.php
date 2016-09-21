@@ -18,7 +18,7 @@ class WechatController extends Controller
         $config = config('wechat');       
         $wechat = app('wechat');
         $menu = $wechat->menu;
-        $menu->destroy();
+        /*$menu->destroy();
         $button = [
             [
                 "name" => "物流服务",
@@ -191,9 +191,12 @@ class WechatController extends Controller
             "city"                 => "",
             "client_platform_type" => ""
         ];
-        $menu->add($button,$matchRule);
-
-        dd($menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8"));
+        $menu->add($button,$matchRule);*/
+        $data = [
+            $menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
+            $menu->test("oLsBZxF7dknqqY9oGJtEVreG5Ot4"),
+        ];
+        dd($data);
 
     }
 
