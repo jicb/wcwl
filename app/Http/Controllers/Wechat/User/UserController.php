@@ -11,7 +11,9 @@ class UserController extends Controller
 {
     //
     public function adduser(Request $request){
-
+        $wechat = app('wechat');
+        $group = $wechat->user_group;
+        $group->moveUser("oLsBZxNMEZQEL8STHlrEaSu5mwD8",100);
     }
 
     public function creategroup(Request $request){
