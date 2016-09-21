@@ -25,7 +25,7 @@ Route::group(['as'=>'wechat::','prefix'=>'wechat','namespace'=>'Wechat'],functio
 
 Route::group(['as'=>'user::','prefix'=>'wechat/user','namespace'=>'Wechat\User'],function(){
     Route::any('/adduser',['as'=>'adduser','uses'=>'UserController@adduser']);
-    Route::any('/createtag',['as'=>'createtag','uses'=>'UserController@createtag']);
+    Route::any('/create',['as'=>'create','uses'=>'UserController@create']);
 });
 
 Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],function(){

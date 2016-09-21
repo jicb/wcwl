@@ -16,7 +16,7 @@ class UserController extends Controller
         $group->moveUser(["oLsBZxNMEZQEL8STHlrEaSu5mwD8"],101);
     }
 
-    public function createtag(Request $request){
+    public function create(Request $request){
         $wechat = app('wechat');
         $group = $wechat->user_group;
         dd($group->lists());
