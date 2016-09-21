@@ -25,7 +25,7 @@ class WechatController extends Controller
                 "sub_button" => [
                     [
                         "type" => "view",
-                        "name" => "我要发货",
+                        "name" => "发货",
                         "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
                     ],
                     [
@@ -184,7 +184,7 @@ class WechatController extends Controller
         ];
 
         $matchRule = [
-            "tag_id"             => "1",
+            "tag_id"             => "101",
             "sex"                  => "",
             "country"              => "",
             "province"             => "",
