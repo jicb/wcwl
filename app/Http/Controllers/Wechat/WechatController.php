@@ -191,16 +191,7 @@ class WechatController extends Controller
             "city"                 => "",
             "client_platform_type" => ""
         ];
-        $menu->add($button,$matchRule);
-
-        $group = $wechat->user_group;
-        $data = [
-            $menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
-            $group->userGroup("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
-            $menu->test("oLsBZxN9JI56Uv8RyD62DEc4_YYQ"),
-            $group->userGroup("oLsBZxN9JI56Uv8RyD62DEc4_YYQ")
-        ];
-        dd($data);
+        $menu->add($button,$matchRule);        
 
     }
 
