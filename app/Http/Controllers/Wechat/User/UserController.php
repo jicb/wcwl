@@ -16,6 +16,7 @@ class UserController extends Controller
         $group->moveUser("oLsBZxN9JI56Uv8RyD62DEc4_YYQ",101);*/
 
         $group = $wechat->user_group;
+        $group->moveUser("oLsBZxNMEZQEL8STHlrEaSu5mwD8",101);
         $menu = $wechat->menu;
         $data = [
             $menu->all(),
