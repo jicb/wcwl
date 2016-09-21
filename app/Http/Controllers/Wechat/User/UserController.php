@@ -13,8 +13,8 @@ class UserController extends Controller
     public function adduser(Request $request){
         $wechat = app('wechat');
         $group = $wechat->user_group;
-        $group->moveUser("oLsBZxF7dknqqY9oGJtEVreG5Ot4",101);
-        dd($group->userGroup("oLsBZxF7dknqqY9oGJtEVreG5Ot4"));
+        $group->moveUser("oLsBZxN9JI56Uv8RyD62DEc4_YYQ",101);
+        dd($group->userGroup("oLsBZxN9JI56Uv8RyD62DEc4_YYQ"));
     }
 
     public function create(Request $request){
