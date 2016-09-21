@@ -20,7 +20,12 @@ Route::get('/hello','HelloController@hello');
 Route::group(['as'=>'wechat::','prefix'=>'wechat','namespace'=>'Wechat'],function(){
     Route::any('/',['as'=>'serve','uses'=>'WechatController@serve']);
     Route::any('/register/{openid}',['as'=>'register','uses'=>'WechatController@registeruser']);
-    Route::any('/menuadd',['as'=>'menuadd','uses'=>'WechatController@menuadd']);
+    Route::any('/menuadd',['as'=>'menuadd','uses'=>'WechatController@menuadd']);   
+});
+
+Route::group(['as'=>'user::','prefix'=>'wechat/user','namespace'=>'Wechat\User'],function(){
+    Route::any('/adduser',['as'=>'adduser','uses'=>'UserController@adduser']);
+    Route::any('/creategroup',['as'=>'creategroup','uses'=>'UserController@creategroup']);
 });
 
 Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],function(){
