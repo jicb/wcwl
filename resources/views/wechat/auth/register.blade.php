@@ -24,6 +24,7 @@
             text-align: right;
             padding-right: 5px;
         }
+
     </style>
     <script>
         $(document).ready(function () {
