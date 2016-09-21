@@ -19,12 +19,10 @@
             display:table;
         }
         hr{
-            margin-left:-20%;
-            margin-right:-20%;
             margin-top:1px;
             margin-bottom: 1px;
-            padding:0;
-            width:200%;
+            padding:0 auto;
+            width:100%;
         }
         .vertical-middle{
             display:table-cell;
