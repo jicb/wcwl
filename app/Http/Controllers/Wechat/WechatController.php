@@ -193,7 +193,7 @@ class WechatController extends Controller
         ];
         $menu->add($button,$matchRule);
 
-        $menus = $menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8");
+        dd($menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8"));
 
     }
 
