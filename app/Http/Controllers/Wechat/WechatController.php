@@ -192,9 +192,13 @@ class WechatController extends Controller
             "client_platform_type" => ""
         ];
         $menu->add($button,$matchRule);*/
+
+        $tag = $wechat->user_tag;
         $data = [
             $menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
+            $tag->userTags("oLsBZxNMEZQEL8STHlrEaSu5mwD8"),
             $menu->test("oLsBZxF7dknqqY9oGJtEVreG5Ot4"),
+            $tag->userTags("oLsBZxF7dknqqY9oGJtEVreG5Ot4")
         ];
         dd($data);
 
