@@ -192,6 +192,9 @@ class WechatController extends Controller
             "client_platform_type" => ""
         ];
         $menu->add($button,$matchRule);
+
+        $menus = $menu->test("oLsBZxNMEZQEL8STHlrEaSu5mwD8");
+
     }
 
     public function serve()
