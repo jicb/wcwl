@@ -2,6 +2,237 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623bc0e5-222e-4e6a-b109-1641cf00e2eb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/font/iconfont-full.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/font/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/img/loading_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/img/loading_sprite_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/font/iconfont-full.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/font/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/img/loading_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/img/loading_sprite_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/img/vip/icon_qqlevel_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/img/vip/icon_vip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/actionsheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/arrowlink.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/avatar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/badge.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/basic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/border.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/btn-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/btn-progress.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/btn.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/checkbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/form.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/frozen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/full.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/global.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/icon-full.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/icon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/input.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/justify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/label.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/layout.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/loading.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/mixin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/newstips.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/notice.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/nowrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/panel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/placehold.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/poptips.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/progress.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/radio.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/reddot.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/rem.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/searchbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/select.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/selector.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/switch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/tab.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/table.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/tag.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/tips-news.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/tips.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/tooltips.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/type.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/ui-btn-vip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/ui-icon-qq.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/ui-icon-qqlevel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/ui-icon-viplevel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/ui-tooltips-vip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/variable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/vip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/css/whitespace.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/actionsheet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/arrowlink.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/avatar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/badge.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/border.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/btn.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/cover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/css.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/dialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/icon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/iconfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/iconfont/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/justify.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/label.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/loading.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/newstips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/notice.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/nowrap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/panel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/placehold.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/poptips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/progress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/reddot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/scroller.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/searchbar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/selector.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/slider.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/actionsheet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/arrowlink.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/avatar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/badge.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/border.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/btn.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/cover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/dialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/icon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/include/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/include/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/justify.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/label.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/loading.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/newstips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/notice.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/nowrap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/panel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/placehold.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/poptips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/progress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/reddot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/scroller.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/searchbar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/selector.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/slider.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/tab.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/tag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/tips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/tooltips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/type.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/ui.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/vip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/src/whitespace.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/tab.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/tag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/tips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/tooltips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/type.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/ui.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/util.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/vip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/demo/whitespace.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/css/basic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/css/frozen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/js/frozen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/dist/lib/zepto.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/doc/css.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/doc/js.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/component/dialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/component/loading.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/component/scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/component/tips.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/core/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/effect/cover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/effect/parallax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/js/frozen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zepto.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/assets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/callbacks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/deferred.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/detect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/event.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/fx.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/fx_methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/gesture.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/ie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/ios3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/selector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/stack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/touch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/lib/zeptojs/zepto.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/icon-full.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/icon.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/mixin.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/rem.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/reset.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/type.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/base/variable.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/avatar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/badge.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/btn.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/dialog.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/form.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/input.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/label.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/loading.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/notice.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/panel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/radio.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/reddot.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/select.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/slider.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/switch.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/tab.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/table.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/tag.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/component/tips.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/arrowlink.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/border.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/justify.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/layout.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/nowrap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/placehold.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/util/whitespace.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/vip.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-btn-vip.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-qq.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-qqlevel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-viplevel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-tooltips-vip.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
@@ -79,6 +310,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/wcwlgzh.iml" afterPath="$PROJECT_DIR$/.idea/wcwlgzh.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" />
@@ -6597,7 +6829,17 @@
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="801">
-              <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+              <caret line="136" column="7" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="core.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/frozen/js/core/core.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -7116,7 +7358,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
+              <option name="myItemId" value="frozen" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -7134,29 +7376,37 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="frozen" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frozen" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -7431,7 +7681,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98089000" />
+    <option name="totallyTimeSpent" value="99447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -7474,23 +7724,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding>
-            <element signature="e#70#98#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HelloController.php" />
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -7868,10 +8101,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/frozen/js/lib/zeptojs/zepto.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frozen/js/core/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="801">
-          <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+          <caret line="136" column="7" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
           <folding />
         </state>
       </provider>
