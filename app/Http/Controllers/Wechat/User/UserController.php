@@ -13,7 +13,7 @@ class UserController extends Controller
     public function adduser(Request $request){
         $wechat = app('wechat');
         $tag = $wechat->user_tag;
-        //$tag->batchTagUsers("oLsBZxNMEZQEL8STHlrEaSu5mwD8",100);
+        $tag->batchTagUsers("oLsBZxNMEZQEL8STHlrEaSu5mwD8",101);
     }
 
     public function createtag(Request $request){
