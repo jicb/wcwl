@@ -24,6 +24,7 @@ class UserController extends Controller
             $menu->test("oLsBZxN9JI56Uv8RyD62DEc4_YYQ"),
             $group->userGroup("oLsBZxN9JI56Uv8RyD62DEc4_YYQ")
         ];
+        
         dd($data);
     }
 
