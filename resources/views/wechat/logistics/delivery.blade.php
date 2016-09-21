@@ -29,6 +29,7 @@
         .vertical-middle{
             display:table-cell;
             vertical-align:middle;
+            font-size:12px;
         }
         .bottom0{
             margin-bottom: 0;
@@ -36,7 +37,7 @@
         }
         .btn-center{
             margin:0;
-            padding:4px 8px;
+            padding:2px 4px;
         }
 
         .border-right{
