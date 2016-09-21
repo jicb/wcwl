@@ -13,24 +13,36 @@
 
     <style>
         .height1{
-            height:100px;
+            height:57px;
+            max-height: 57px;
+            min-height: 57px;
+            display:table;
         }
-        .shuiping{
+        hr{
             margin-left:-20%;
             margin-right:-20%;
+            margin-top:1px;
+            margin-bottom: 1px;
             padding:0;
             width:200%;
-
         }
-        p{
+        .vertical-middle{
             display:table-cell;
             vertical-align:middle;
         }
-
-        .xxx{
-            border-left:1px solid red;
-            height:100px;
+        .bottom0{
+            margin-bottom: 0;
+            font-size: 12px;
         }
+        .btn-center{
+            margin:0;
+            padding:4px 8px;
+        }
+
+        .border-right{
+            border-right: 1px solid;
+        }
+
 
 
     </style>
@@ -38,22 +50,28 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-9 height1 " style="display:table;">
-            <p>请输入发货信息请输入发货信息请输入发货信息请输入发货信息请输入息请输入发货信息</p>
+        <div class="col-xs-9 height1">
+            <div class="vertical-middle border-right">
+                <p class="text-success bottom0">计长兵 15527219896</p>
+                <p class="text-info bottom0">湖北省 武汉市 江夏区</p>
+                <p class="text-info bottom0">万达小区 2号楼1单元4C</p>
+            </div>
         </div>
         <div class="col-xs-3 height1">
-                添加
+            <div class="vertical-middle"><button class="btn btn-warning btn-center vertical-middle"><span class="glyphicon glyphicon-pencil"></span> 更新</button></div>
         </div>
     </div>
-    <hr class="shuiping"/>
+    <hr />
     <div class="row">
         <div class="col-xs-9 height1 ">
-            请输入收货信息
+            <div class="vertical-middle border-right">请输入收货方信息</div>
         </div>
         <div class="col-xs-3 height1 ">
-            添加
+            <div class="vertical-middle"><button class="btn btn-warning btn-center vertical-middle"><span class="glyphicon glyphicon-pencil"></span> 更新</button></div>
         </div>
     </div>
+    <hr />
+
 </div>
 </body>
 </html>

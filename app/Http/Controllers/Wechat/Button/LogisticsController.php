@@ -13,11 +13,12 @@ class LogisticsController extends Controller
 {
     //
     public function delivery(Request $request){
-        $code = $request->input('code');
+        /*$code = $request->input('code');
         $openid = self::getOpenidFromCode($code);
         if($openid){
             return view('wechat.logistics.delivery')->with('openid',$openid);
         }
-        view('wechat.auth.returnwechat');
+        view('wechat.auth.returnwechat');*/
+        return view('wechat.logistics.delivery');
     }
 }
