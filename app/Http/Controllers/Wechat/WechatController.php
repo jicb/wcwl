@@ -184,7 +184,7 @@ class WechatController extends Controller
         ];
 
         $matchRule = [
-            "group_id"             => "100",
+            "tag_id"             => "1",
             "sex"                  => "",
             "country"              => "",
             "province"             => "",
