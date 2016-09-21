@@ -15,10 +15,10 @@ class WechatController extends Controller
 
     public function menuadd(Request $request)
     {
-        $config = config('wechat');       
+        $config = config('wechat');
         $wechat = app('wechat');
         $menu = $wechat->menu;
-        /*$menu->destroy();
+        $menu->destroy();
         $button = [
             [
                 "name" => "物流服务",
@@ -191,7 +191,7 @@ class WechatController extends Controller
             "city"                 => "",
             "client_platform_type" => ""
         ];
-        $menu->add($button,$matchRule);*/
+        $menu->add($button,$matchRule);
 
         $tag = $wechat->user_tag;
         $data = [

@@ -12,13 +12,14 @@ class UserController extends Controller
     //
     public function adduser(Request $request){
         $wechat = app('wechat');
-        $tag = $wechat->user_tag;
-        $tag->batchTagUsers(["oLsBZxNMEZQEL8STHlrEaSu5mwD8"],101);
+        $group = $wechat->user_group;
+        $group->moveUser(["oLsBZxNMEZQEL8STHlrEaSu5mwD8"],101);
     }
 
     public function createtag(Request $request){
         $wechat = app('wechat');
-        $tag = $wechat->user_tag;
-        $tag->create("揽件员");
+        $group = $wechat->user_group;
+        dd($group->lists());
+        //$group->create("揽件员");
     }
 }
