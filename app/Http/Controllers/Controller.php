@@ -32,7 +32,12 @@ class Controller extends BaseController
             $response = $client->request('GET',$url , ['query' => $data]);
             $content = $response->getBody()->getContents();
             $content = \GuzzleHttp\json_decode($content);
-            return $content->openid;
+            if(isset($content->openid,$content)){
+                return $content->openid;
+
+            }
+            Log::error("拉取用户信息错误");
+            return "";
 
         } catch (ClientException $ce) {
             Log::error($ce);
