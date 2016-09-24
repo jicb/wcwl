@@ -24,7 +24,6 @@
 <body>
 
 <div class="content">
-    <div class="content-block-title" style="margin-top: .75em;">发/收货方信息</div>
     <div class="list-block media-list">
         <ul>
             <li>
@@ -32,6 +31,7 @@
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">发货人信息</div>
+                            <div class="item-after">发货方</div>
                         </div>
                         <div class="item-subtitle">发货地址</div>
                         <div class="item-text">详细地址</div>
@@ -43,6 +43,7 @@
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">计长兵 15527219896</div>
+                            <div class="item-after">收货方</div>
                         </div>
                         <div class="item-subtitle">湖北 武汉 江夏区</div>
                         <div class="item-text">光谷大道金融港博彦科技五楼风行网</div>

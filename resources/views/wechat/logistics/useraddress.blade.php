@@ -18,6 +18,18 @@
         <ul>
             <!-- Text inputs -->
             <li>
+                <a class="item-link item-content goupi">
+                    <div class="item-inner">
+                        <div class="item-title">常用发货方信息</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="list-block">
+        <ul>
+            <!-- Text inputs -->
+            <li>
                 <div class="item-content">
                     <div class="item-media"><i class="icon icon-form-name"></i></div>
                     <div class="item-inner">
@@ -45,7 +57,7 @@
                     <div class="item-inner">
                         <div class="item-title label">地址</div>
                         <div class="item-input">
-                            <input type="text"  class='city-picker'/>
+                            <input type="text" class='city-picker'/>
                         </div>
                     </div>
                 </div>
@@ -72,18 +84,71 @@
 </div>
 
 
-
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
+<script type="text/javascript" src="/js/app.js"></script>
 <script>
+    Zepto(function(){
+       'use strict';
+        var _$ = Zepto;
+
+        $(document).on('click','.goupi', function () {
+            var buttons1 = [
+                {
+                    text: '请选择',
+                    label: true
+                },
+                {
+                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
+                    bold: true,
+                    color: 'danger',
+                    onClick: function() {
+                        $.alert("你选择了“卖出“");
+                    }
+                },
+                {
+                    text: '买入',
+                    onClick: function() {
+                        $.alert("你选择了“买入“");
+                    }
+                }
+            ];
+            var buttons2 = [
+                {
+                    text: '取消',
+                    bg: 'danger'
+                }
+            ];
+            var groups = [buttons1, buttons2];
+            _$.actions(groups);
+        });
+        Zepto.init();
+    });
+
+
     Zepto(function () {
 
         'use strict';
 
         var _$ = Zepto;
-        _$(".city-picker").cityPicker({
-            value: ['湖北', '武汉', '武昌区']
+        _$(".useraddress").picker({
+            toolbarTemplate: '<header class="bar bar-nav">\
+        <button class="button button-link pull-left">\
+      按钮\
+      </button>\
+      <button class="button button-link pull-right close-picker">\
+      确定\
+      </button>\
+      <h1 class="title">标题</h1>\
+      </header>',
+            cols: [
+                {
+                    textAlign: 'center',
+                    values: ['计长兵 15527219896 湖北 武汉 江夏区 光谷大道金融港博彦科技5楼风行网', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3'],
+                    cssClass: 'picker-items-col-normal'
+                }
+            ]
         });
 
 
