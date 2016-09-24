@@ -21,4 +21,8 @@ class LogisticsController extends Controller
         view('wechat.auth.returnwechat');*/
         return view('wechat.logistics.delivery');
     }
+    
+    public function useraddress(Request $request){
+        return view('wechat.logistics.useraddress');
+    }
 }

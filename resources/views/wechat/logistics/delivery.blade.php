@@ -28,7 +28,7 @@
     <div class="list-block media-list">
         <ul>
             <li>
-                <a class="item-link item-content"style="height:110px;" >
+                <a class="item-link item-content"style="height:110px;" href="useraddress">
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">发货人信息</div>
@@ -120,10 +120,8 @@
     <div class="col-25" style="height:4em;background-color: yellow;line-height: 4em;text-align: center">提交订单</div>
 </div>
 
-
-<script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
-<script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
+
 
 </body>
 </html>
