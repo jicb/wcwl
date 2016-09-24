@@ -11,15 +11,24 @@
     <title>我要发货</title>
     <link rel="stylesheet" href="{!! URL::asset('sui/dist/css/sm.min.css') !!}"/>
     {{--<link rel="stylesheet" href="dist/css/sm-extend.min.css"/>--}}
+    <style>
+        textarea::-ms-input-placeholder {
+            text-align: center;
+        }
+
+        textarea::-webkit-input-placeholder {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
 <div class="content">
-    <div class="content-block-title" style="margin-top: 0.5em;">发/收货方信息</div>
+    <div class="content-block-title">发/收货方信息</div>
     <div class="list-block media-list">
         <ul>
             <li>
-                <a class="item-link item-content">
+                <a class="item-link item-content"style="height:110px;" >
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">发货人信息</div>
@@ -30,7 +39,7 @@
                 </a>
             </li>
             <li>
-                <a class="item-link item-content">
+                <a class="item-link item-content" style="height:110px;">
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">计长兵 15527219896</div>
@@ -90,6 +99,21 @@
         </ul>
 
     </div>
+    <div class="list-block" style="margin-top: -1em">
+        <ul>
+            <li class="align-top">
+                <div class="item-content">
+                    <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <textarea placeholder="备注"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 </div>
 <div class="row no-gutter" style="position: fixed;left:0;bottom:0;z-index: 100;width:100%;">
     <div class="col-75" style="height:4em;background-color: darkseagreen;text-align: center;padding-top:0.5em;">订单总额：￥100元 仅供参考<br/>我同意万程运单条款</div>
