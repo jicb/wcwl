@@ -24,7 +24,7 @@
 <body>
 
 <div class="content">
-    <div class="content-block-title">发/收货方信息</div>
+    <div class="content-block-title" style="margin-top: .75em;">发/收货方信息</div>
     <div class="list-block media-list">
         <ul>
             <li>
