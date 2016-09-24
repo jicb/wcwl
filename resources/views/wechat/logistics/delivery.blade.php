@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    {{--<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
+    <meta http-equiv="expires" content="0">--}}
     <title>我要发货</title>
     <link rel="stylesheet" href="{!! URL::asset('sui/dist/css/sm.min.css') !!}"/>
     {{--<link rel="stylesheet" href="dist/css/sm-extend.min.css"/>--}}
@@ -92,51 +92,14 @@
     </div>
 </div>
 <div class="row no-gutter" style="position: fixed;left:0;bottom:0;z-index: 100;width:100%;">
-    <div class="col-75" style="height:4em;background-color: darkseagreen">50%</div>
+    <div class="col-75" style="height:4em;background-color: darkseagreen;text-align: center;padding-top:0.5em;">订单总额：￥100元 仅供参考<br/>我同意万程运单条款</div>
     <div class="col-25" style="height:4em;background-color: yellow;line-height: 4em;text-align: center">提交订单</div>
 </div>
 
 
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
-<script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js' !!}"></script>
+<script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
-{{--<script type="text/javascript">
 
-    /**
-     * 因为Zepto和jQuery框架的$冲突，又不想清掉jQuery的重置，所以改用Zepto调用
-     * 其中sm.js有修改
-     * 其中的dataPicker在官方文件中不存在，是自己加的
-     */
-
-    Zepto(function () {
-
-        'use strict';
-
-        var _$ = Zepto;
-        _$(".J-choose-address").cityPicker({
-            value: ['湖北', '武汉', '武昌区']
-        });
-
-        _$(".J-choose-sex").picker({
-            toolbarTemplate: '<header class="bar bar-nav">\
-              <button class="button button-link pull-right close-picker">确定</button>\
-              <h1 class="title">请选择性别</h1>\
-              </header>',
-            cols: [
-                {
-                    textAlign: 'center',
-                    values: ['男', '女']
-                }
-            ]
-        });
-
-        _$(".J-choose-birth").datePicker({
-            value: ["2000", "01", "01"]
-        });
-        Zepto.init();
-    });
-
-</script>
---}}
 </body>
 </html>

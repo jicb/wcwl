@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623bc0e5-222e-4e6a-b109-1641cf00e2eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/sui/img/logistics/supermarket7.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
@@ -22,6 +21,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/img/loading_sprite_white.png" afterPath="$PROJECT_DIR$/public/frozen/img/loading_sprite_white.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/img/vip/icon_qqlevel_sprite.png" afterPath="$PROJECT_DIR$/public/frozen/img/vip/icon_qqlevel_sprite.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/img/vip/icon_vip.png" afterPath="$PROJECT_DIR$/public/frozen/img/vip/icon_vip.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/img/logistics/supermarket7.png" afterPath="$PROJECT_DIR$/public/sui/img/logistics/supermarket7.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
@@ -395,6 +395,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jweixin.js" afterPath="$PROJECT_DIR$/public/js/jweixin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/css/sm-extend.css" afterPath="$PROJECT_DIR$/public/sui/dist/css/sm-extend.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/css/sm-extend.min.css" afterPath="$PROJECT_DIR$/public/sui/dist/css/sm-extend.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/css/sm.css" afterPath="$PROJECT_DIR$/public/sui/dist/css/sm.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/css/sm.min.css" afterPath="$PROJECT_DIR$/public/sui/dist/css/sm.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/sm-city-picker.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/sm-city-picker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/sm-city-picker.min.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/sm-city-picker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/sm-extend.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/sm-extend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/sm-extend.min.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/sm-extend.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/sm.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/sm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/sm.min.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/sm.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/js/zepto.js" afterPath="$PROJECT_DIR$/public/sui/dist/js/zepto.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/data/flot-data.js" afterPath="$PROJECT_DIR$/public/wcwl/data/flot-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/data/morris-data.js" afterPath="$PROJECT_DIR$/public/wcwl/data/morris-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/dist/css/bootstrapValidator.min.css" afterPath="$PROJECT_DIR$/public/wcwl/dist/css/bootstrapValidator.min.css" />
@@ -6852,8 +6863,8 @@
       <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+            <state relative-caret-position="567">
+              <caret line="94" column="110" selection-start-line="94" selection-start-column="110" selection-end-line="94" selection-end-column="110" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -6863,7 +6874,6 @@
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1474730044777" expanded="true" signature="4412:4567" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -6892,8 +6902,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="648">
+              <caret line="37" column="48" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -7525,12 +7535,12 @@
       <workItem from="1473330761993" duration="7502000" />
       <workItem from="1474170168863" duration="2091000" />
       <workItem from="1474178591565" duration="1039000" />
-      <workItem from="1474728630666" duration="1395000" />
+      <workItem from="1474728630666" duration="2142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105350000" />
+    <option name="totallyTimeSpent" value="106097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1936" height="1092" extended-state="0" />
@@ -7903,14 +7913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/frozen/demo/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -7927,10 +7929,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+        <state relative-caret-position="567">
+          <caret line="94" column="110" selection-start-line="94" selection-start-column="110" selection-end-line="94" selection-end-column="110" />
           <folding>
             <element signature="n#style#0;n#i#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -7940,7 +7950,6 @@
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1474730044777" expanded="true" signature="4412:4567" placeholder="..." />
           </folding>
         </state>
       </provider>
