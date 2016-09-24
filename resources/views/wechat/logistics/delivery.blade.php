@@ -15,7 +15,7 @@
 <body>
 
 <div class="content">
-    <div class="content-block-title">发/收货方信息</div>
+    <div class="content-block-title" style="margin-top: 0.5em;">发/收货方信息</div>
     <div class="list-block media-list">
         <ul>
             <li>
@@ -42,7 +42,7 @@
             </li>
         </ul>
     </div>
-    <div class="list-block media-list">
+    <div class="list-block media-list" style="margin-top: -1em">
         <ul>
             <li class="item-link item-content">
                 <div class="item-media">
@@ -55,7 +55,7 @@
         </ul>
     </div>
 
-    <div class="list-block">
+    <div class="list-block" style="margin-top:-1em">
         <ul>
             <li>
                 <a href="#" class="item-link item-content">
