@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="{!! URL::asset('sui/dist/css/sm.min.css') !!}"/>
     {{--<link rel="stylesheet" href="dist/css/sm-extend.min.css"/>--}}
     <style>
-        input::-ms-input-placeholder {
+        textarea::-ms-input-placeholder {
             text-align: center;
         }
 
-        input::-webkit-input-placeholder {
+        textarea::-webkit-input-placeholder {
             text-align: center;
         }
     </style>
@@ -106,7 +106,7 @@
                     <div class="item-media"><i class="icon icon-form-comment"></i></div>
                     <div class="item-inner">
                         <div class="item-input">
-                            <input type="text" placeholder="备注" style="height:5rem;width:100%;">
+                            <textarea placeholder="备注"></textarea>
                         </div>
                     </div>
                 </div>
