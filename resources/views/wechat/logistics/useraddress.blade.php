@@ -123,11 +123,17 @@
             var groups = [buttons1, buttons2];
             _$.actions(groups);
         });
+
+        _$(".city-picker").cityPicker({
+            value: ['湖北', '武汉', '武昌区']
+        });
+
+
         Zepto.init();
     });
 
 
-    Zepto(function () {
+ /*   Zepto(function () {
 
         'use strict';
 
@@ -153,7 +159,7 @@
 
 
         Zepto.init();
-    });
+    });*/
 </script>
 </body>
 </html>
