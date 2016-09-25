@@ -54,7 +54,7 @@
     </div>
     <div class="list-block media-list" style="margin-top: -1em">
         <ul>
-            <li class="item-link item-content">
+            <li class="item-link item-content huowuxinxi">
                 <div class="item-media">
                     <i class="icon" style="width:1.45em;height:1.45em;background-image:url({!! URL::asset('sui/img/logistics/supermarket7.png') !!})"></i>
                 </div>
@@ -68,7 +68,7 @@
     <div class="list-block" style="margin-top:-1em">
         <ul>
             <li>
-                <a href="#" class="item-link item-content">
+                <a href="#" class="item-link item-content fukuanfangshi">
                     <div class="item-inner">
                         <div class="item-title">付款方式<span style="padding-left:2em;">到付</span></div>
                     </div>
@@ -121,8 +121,58 @@
     <div class="col-25" style="height:4em;background-color: yellow;line-height: 4em;text-align: center">提交订单</div>
 </div>
 
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
 
+
+<script>
+    Zepto(function() {
+        'use strict';
+        var _$ = Zepto;
+        $(document).on('click', '.huowuxinxi', function () {
+            _$.prompt("请输入货物信息", function (value) {
+                _$.alert('你输入的货物信息是"' + value + '"');
+            });
+        });
+        $(document).on('click','.fukuanfangshi',function(){
+            var buttons1 = [
+                {
+                    text: '请选择付款方式',
+                    label: true
+                },
+               /* {
+                    text: '卖出',
+                    bold: true,
+                    color: 'danger',
+                    onClick: function() {
+                        $.alert("你选择了“卖出“");
+                    }
+                },*/
+                {
+                    text: '到付现金',
+                    onClick: function() {
+                        _$.alert("到付现金");
+                    }
+                },
+                {
+                    text: '到付微信支付',
+                    onClick: function() {
+                        _$.alert("到付微信支付");
+                    }
+                },
+            ];
+            var buttons2 = [
+                {
+                    text: '取消',
+                    bg: 'danger'
+                }
+            ];
+            var groups = [buttons1, buttons2];
+            _$.actions(groups);
+        })
+    });
+</script>
 
 </body>
 </html>

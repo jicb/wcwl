@@ -90,11 +90,11 @@
     </div>
 </div>
 
-
+<script type="text/javascript" src="/js/app.js"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
-<script type="text/javascript" src="/js/app.js"></script>
+
 <script>
     Zepto(function(){
        'use strict';
@@ -122,69 +122,6 @@
                         $.alert("你选择了“卖出“");
                     }
                 },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
-                {
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },{
-                    text: '计长兵 15527219896湖北省武汉市江夏区光谷大道金融港博彦科技',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },
             ];
             var buttons2 = [
                 {
@@ -201,7 +138,7 @@
         });
 
 
-        Zepto.init();
+        //Zepto.init();
     });
 
 
