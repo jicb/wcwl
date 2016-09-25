@@ -13,12 +13,19 @@
 </head>
 <body>
 
+<header class="bar bar-nav">
+    <a class="button button-link button-nav pull-left back" href="delivery">
+        <span class="icon icon-left"></span>
+        返回
+    </a>
+</header>
+
 <div class="content">
     <div class="list-block">
         <ul>
             <!-- Text inputs -->
             <li>
-                <a class="item-link item-content goupi">
+                <a class="item-link item-content" href="senduseraddress">
                     <div class="item-inner">
                         <div class="item-title">常用发货方信息</div>
                     </div>

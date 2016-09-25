@@ -25,4 +25,8 @@ class LogisticsController extends Controller
     public function useraddress(Request $request){
         return view('wechat.logistics.useraddress');
     }
+
+    public function senduseraddress(Request $request){
+        return view('wechat.logistics.senduseraddress');
+    }
 }
