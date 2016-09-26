@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
     <link rel="stylesheet" href="{!! URL::asset('sui/dist/css/sm.min.css') !!}"/>
 </head>
-<body>
+<body style="display:none;">
 <div  class="views">
     <div class="view view-main">
-        <div class="content" id="content">
+        <div class="content" id="content" style="margin-top:1.45em;">
             <div class="tabs">
                 <div id="tab1" class="tab active">
-                    <div class="content-block">
+                    <div class="content">
                         <div class="buttons-row">
                             <a href="#tab1-1" class="tab-link active button">@{{ send }}</a>
                             <a href="#tab1-2" class="tab-link button">收货方</a>
@@ -106,6 +106,10 @@
             send:"发货方"
         }
     })
+
+    document.addEventListener('DOMContentLoaded',function(){
+        document.body.style.display = 'block';
+    });
 </script>
 </body>
 </html>
