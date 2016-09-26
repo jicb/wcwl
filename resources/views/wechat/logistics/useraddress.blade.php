@@ -11,7 +11,7 @@
     <title>发货方信息</title>
     <link rel="stylesheet" href="{!! URL::asset('sui/dist/css/sm.min.css') !!}"/>
 </head>
-<body>
+<body style="display:none;">
 
 <header class="bar bar-nav">
     <a class="button button-link button-nav pull-left back" href="delivery">
@@ -180,6 +180,10 @@
 
         Zepto.init();
     });*/
+
+    document.addEventListener('DOMContentLoaded',function(){
+        document.body.style.display = 'block';
+    });
 </script>
 </body>
 </html>
