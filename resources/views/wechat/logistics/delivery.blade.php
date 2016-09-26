@@ -15,26 +15,8 @@
         }
     </style>
 
-    <script src="{!! URL::asset('js/vue.js') !!}"></script>
-    <script>
-        var vueSenduser = new Vue({
-            el:"#content",
-            data:{
-                senduser:"发货人信息",
-                sendaddress:"发货地址",
-                sendaddressdetail:"详细地址",
-
-                receiveuser:"收货人信息",
-                receiveaddress:"发货地址",
-                receiveaddressdetail:"详细地址",
-
-                huowu:"货物信息",
-
-            }
-        });
-    </script>
 </head>
-<body>
+<body style="display:none;">
 
 <div class="content" id="content">
     <div class="list-block media-list">
@@ -134,11 +116,36 @@
     <div class="col-25" style="height:4em;background-color: yellow;line-height: 4em;text-align: center">提交订单</div>
 </div>
 
-{{--<script type="text/javascript" src="/js/app.js"></script>--}}
+
+
+<script src="{!! URL::asset('js/vue.js') !!}"></script>
+
+
+<script>
+    var vueSenduser = new Vue({
+        el:"#content",
+        data:{
+            senduser:"发货人信息",
+            sendaddress:"发货地址",
+            sendaddressdetail:"详细地址",
+
+            receiveuser:"收货人信息",
+            receiveaddress:"发货地址",
+            receiveaddressdetail:"详细地址",
+
+            huowu:"货物信息",
+
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded',function(){
+        document.body.style.display = 'block';
+    })
+
+</script>
+
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
-{{--<script src="{!! URL::asset('js/vue.js') !!}"></script>--}}
-
 <script>
     Zepto(function() {
         'use strict';
@@ -153,14 +160,14 @@
                     text: '请选择付款方式',
                     label: true
                 },
-               /* {
-                    text: '卖出',
-                    bold: true,
-                    color: 'danger',
-                    onClick: function() {
-                        $.alert("你选择了“卖出“");
-                    }
-                },*/
+                /* {
+                 text: '卖出',
+                 bold: true,
+                 color: 'danger',
+                 onClick: function() {
+                 $.alert("你选择了“卖出“");
+                 }
+                 },*/
                 {
                     text: '到付现金',
                     onClick: function() {
@@ -185,25 +192,6 @@
         })
     });
 </script>
-{{--<script>
-    var vueSenduser = new Vue({
-        el:"#content",
-        data:{
-            senduser:"发货人信息",
-            sendaddress:"发货地址",
-            sendaddressdetail:"详细地址",
-
-            receiveuser:"收货人信息",
-            receiveaddress:"发货地址",
-            receiveaddressdetail:"详细地址",
-
-            huowu:"货物信息",
-
-        }
-    });
-</script>--}}
-
-
 
 </body>
 </html>
