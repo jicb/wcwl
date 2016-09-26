@@ -20,14 +20,14 @@
     </a>
 </header>
 
-<div class="content">
+<div class="content" id="content">
     <div class="list-block">
         <ul>
             <!-- Text inputs -->
             <li>
-                <a class="item-link item-content" href="senduseraddress">
+                <a class="item-link item-content" href="useraddressselect?openid={!! $openid !!}&method={!! $method !!}">
                     <div class="item-inner">
-                        <div class="item-title">常用发货方信息</div>
+                        <div class="item-title">@{{ method }}</div>
                     </div>
                 </a>
             </li>
@@ -90,15 +90,14 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/js/app.js"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
-
+<script type="text/javascript" src="{!! URL::asset('js/vue.min.js') !!}"></script>
 <script>
     Zepto(function(){
-       'use strict';
-        var _$ = Zepto;
+       /*'use strict';
+        var _$ = Zepto;*/
 
         $(document).on('click','.goupi', function () {
             var buttons1 = [
@@ -130,10 +129,10 @@
                 }
             ];
             var groups = [buttons1, buttons2];
-            _$.actions(groups);
+            $.actions(groups);
         });
 
-        _$(".city-picker").cityPicker({
+        $(".city-picker").cityPicker({
             value: ['湖北', '武汉', '武昌区']
         });
 
@@ -141,6 +140,18 @@
         //Zepto.init();
     });
 
+
+    var contentVue = new Vue({
+       el:"#content",
+        data:{
+            method:"常用发货方信息"
+        }
+    });
+
+    var method = '<?php echo $method ?>';
+    if(method = "receive"){
+        contentVue.method = "常用收货方信息";
+    }
 
  /*   Zepto(function () {
 

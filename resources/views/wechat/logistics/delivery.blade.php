@@ -3,14 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    {{--<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="no">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">--}}
     <title>我要发货</title>
     <link rel="stylesheet" href="{!! URL::asset('sui/dist/css/sm.min.css') !!}"/>
-    {{--<link rel="stylesheet" href="dist/css/sm-extend.min.css"/>--}}
     <style>
         textarea::-ms-input-placeholder {
             text-align: center;
@@ -23,18 +17,18 @@
 </head>
 <body>
 
-<div class="content">
+<div class="content" id="content">
     <div class="list-block media-list">
         <ul>
             <li>
-                <a class="item-link item-content"style="height:110px;" href="useraddress">
+                <a class="item-link item-content"style="height:110px;" href="useraddress?openid={!! $openid !!}&method=send">
                     <div class="item-inner">
                         <div class="item-title-row">
-                            <div class="item-title">发货人信息</div>
+                            <div class="item-title">@{{ senduser }}</div>
                             <div class="item-after">发货方</div>
                         </div>
-                        <div class="item-subtitle">发货地址</div>
-                        <div class="item-text">详细地址</div>
+                        <div class="item-subtitle">@{{ sendaddress }}</div>
+                        <div class="item-text">@{{ sendaddressdetail }}</div>
                     </div>
                 </a>
             </li>
@@ -42,11 +36,11 @@
                 <a class="item-link item-content" style="height:110px;">
                     <div class="item-inner">
                         <div class="item-title-row">
-                            <div class="item-title">计长兵 15527219896</div>
+                            <div class="item-title">@{{ receiveuser }}</div>
                             <div class="item-after">收货方</div>
                         </div>
-                        <div class="item-subtitle">湖北 武汉 江夏区</div>
-                        <div class="item-text">光谷大道金融港博彦科技五楼风行网</div>
+                        <div class="item-subtitle">@{{ receiveaddress }}</div>
+                        <div class="item-text">@{{ receiveaddressdetail }}</div>
                     </div>
                 </a>
             </li>
@@ -59,7 +53,7 @@
                     <i class="icon" style="width:1.45em;height:1.45em;background-image:url({!! URL::asset('sui/img/logistics/supermarket7.png') !!})"></i>
                 </div>
                 <div class="item-inner">
-                    <div class="item-title">货物信息</div>
+                    <div class="item-title">@{{ huowu }}</div>
                 </div>
             </li>
         </ul>
@@ -70,7 +64,7 @@
             <li>
                 <a href="#" class="item-link item-content fukuanfangshi">
                     <div class="item-inner">
-                        <div class="item-title">付款方式<span style="padding-left:2em;">到付</span></div>
+                        <div class="item-title">付款方式<span style="padding-left:2em;">付款方式</span></div>
                     </div>
                 </a>
             </li>
@@ -121,19 +115,18 @@
     <div class="col-25" style="height:4em;background-color: yellow;line-height: 4em;text-align: center">提交订单</div>
 </div>
 
-<script type="text/javascript" src="/js/app.js"></script>
+{{--<script type="text/javascript" src="/js/app.js"></script>--}}
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
-
+<script src="{!! URL::asset('js/vue.js') !!}"></script>
 
 <script>
     Zepto(function() {
         'use strict';
-        var _$ = Zepto;
         $(document).on('click', '.huowuxinxi', function () {
-            _$.prompt("请输入货物信息", function (value) {
-                _$.alert('你输入的货物信息是"' + value + '"');
-            });
+            $.prompt("请输入货物信息", function (value) {
+                vueSenduser.huowu = value;
+            })
         });
         $(document).on('click','.fukuanfangshi',function(){
             var buttons1 = [
@@ -152,13 +145,13 @@
                 {
                     text: '到付现金',
                     onClick: function() {
-                        _$.alert("到付现金");
+                        $.alert("到付现金");
                     }
                 },
                 {
                     text: '到付微信支付',
                     onClick: function() {
-                        _$.alert("到付微信支付");
+                        $.alert("到付微信支付");
                     }
                 },
             ];
@@ -169,10 +162,29 @@
                 }
             ];
             var groups = [buttons1, buttons2];
-            _$.actions(groups);
+            $.actions(groups);
         })
     });
 </script>
+<script>
+    var vueSenduser = new Vue({
+        el:"#content",
+        data:{
+            senduser:"发货人信息",
+            sendaddress:"发货地址",
+            sendaddressdetail:"详细地址",
+
+            receiveuser:"收货人信息",
+            receiveaddress:"发货地址",
+            receiveaddressdetail:"详细地址",
+
+            huowu:"货物信息",
+
+        }
+    });
+</script>
+
+
 
 </body>
 </html>
