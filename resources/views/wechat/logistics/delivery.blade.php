@@ -14,6 +14,25 @@
             text-align: center;
         }
     </style>
+
+    <script src="{!! URL::asset('js/vue.js') !!}"></script>
+    <script>
+        var vueSenduser = new Vue({
+            el:"#content",
+            data:{
+                senduser:"发货人信息",
+                sendaddress:"发货地址",
+                sendaddressdetail:"详细地址",
+
+                receiveuser:"收货人信息",
+                receiveaddress:"发货地址",
+                receiveaddressdetail:"详细地址",
+
+                huowu:"货物信息",
+
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -118,7 +137,7 @@
 {{--<script type="text/javascript" src="/js/app.js"></script>--}}
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/zepto.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm.js') !!}"></script>
-<script src="{!! URL::asset('js/vue.js') !!}"></script>
+{{--<script src="{!! URL::asset('js/vue.js') !!}"></script>--}}
 
 <script>
     Zepto(function() {
@@ -166,7 +185,7 @@
         })
     });
 </script>
-<script>
+{{--<script>
     var vueSenduser = new Vue({
         el:"#content",
         data:{
@@ -182,7 +201,7 @@
 
         }
     });
-</script>
+</script>--}}
 
 
 

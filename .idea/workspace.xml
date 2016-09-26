@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623bc0e5-222e-4e6a-b109-1641cf00e2eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/framework7.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/framework7.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/kitchen-sink.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/vue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
@@ -110,6 +104,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/User/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/User/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" />
@@ -155,6 +150,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/framework7.min.css" afterPath="$PROJECT_DIR$/public/css/framework7.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/.gitignore" afterPath="$PROJECT_DIR$/public/frozen/.gitignore" />
@@ -398,7 +394,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/sass/vip/ui-tooltips-vip.scss" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-tooltips-vip.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/framework7.min.js" afterPath="$PROJECT_DIR$/public/js/framework7.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jweixin.js" afterPath="$PROJECT_DIR$/public/js/jweixin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/kitchen-sink.js" afterPath="$PROJECT_DIR$/public/js/kitchen-sink.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vue.js" afterPath="$PROJECT_DIR$/public/js/vue.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vue.min.js" afterPath="$PROJECT_DIR$/public/js/vue.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/dist/css/sm-extend.css" afterPath="$PROJECT_DIR$/public/sui/dist/css/sm-extend.css" />
@@ -572,6 +571,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/auth/returnwechat.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/auth/returnwechat.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/logistics/useraddressselect.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/logistics/useraddressselect.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/console.php" afterPath="$PROJECT_DIR$/routes/console.php" />
@@ -6804,7 +6805,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/webmozart/assert/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/webmozart/assert/phpunit.xml.dist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/webmozart/assert/src/Assert.php" afterPath="$PROJECT_DIR$/vendor/webmozart/assert/src/Assert.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/webmozart/assert/tests/AssertTest.php" afterPath="$PROJECT_DIR$/vendor/webmozart/assert/tests/AssertTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/wechat/logistics/senduseraddress.blade.php" afterPath="$PROJECT_DIR$/resources/views/wechat/logistics/useraddressselect.blade.php" />
     </list>
     <ignored path="wcwlgzh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -6826,18 +6826,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="666">
+              <caret line="187" column="4" selection-start-line="187" selection-start-column="0" selection-end-line="203" selection-end-column="13" />
               <folding>
+                <element signature="n#script#1;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -6846,8 +6848,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="42" column="86" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+            <state relative-caret-position="513">
+              <caret line="37" column="91" selection-start-line="37" selection-start-column="91" selection-end-line="37" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -6863,15 +6865,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="address.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="address.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="666">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -6879,8 +6878,8 @@
       <file leaf-file-name="framework7.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/framework7.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="14" column="5380" selection-start-line="14" selection-start-column="5372" selection-end-line="14" selection-end-column="5380" />
+            <state relative-caret-position="629">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -6889,9 +6888,12 @@
       <file leaf-file-name="kitchen-sink.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/kitchen-sink.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="297">
+              <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+              <folding>
+                <marker date="1474877627630" expanded="true" signature="8265:8283" placeholder="..." />
+                <marker date="1474877627630" expanded="true" signature="8765:8783" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -6985,7 +6987,6 @@
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/senduseraddress.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/vuetest.blade.html" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/vuetest.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/useraddressselect.blade.php" />
@@ -6993,7 +6994,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php.html" />
         <option value="$PROJECT_DIR$/public/sui/dist/css/sm.css" />
+        <option value="$PROJECT_DIR$/public/js/kitchen-sink.js" />
+        <option value="$PROJECT_DIR$/public/js/framework7.min.js" />
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
       </list>
     </option>
   </component>
@@ -7516,12 +7520,12 @@
       <workItem from="1474170168863" duration="2091000" />
       <workItem from="1474178591565" duration="1039000" />
       <workItem from="1474728630666" duration="18645000" />
-      <workItem from="1474867616260" duration="12556000" />
+      <workItem from="1474867616260" duration="17935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135156000" />
+    <option name="totallyTimeSpent" value="140535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -7905,52 +7909,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/framework7.min.js">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="14" column="5380" selection-start-line="14" selection-start-column="5372" selection-end-line="14" selection-end-column="5380" />
+        <state relative-caret-position="513">
+          <caret line="37" column="91" selection-start-line="37" selection-start-column="91" selection-end-line="37" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/kitchen-sink.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="297">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding>
+            <marker date="1474877627630" expanded="true" signature="8265:8283" placeholder="..." />
+            <marker date="1474877627630" expanded="true" signature="8765:8783" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/framework7.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="42" column="86" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+        <state relative-caret-position="666">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="666">
+          <caret line="187" column="4" selection-start-line="187" selection-start-column="0" selection-end-line="203" selection-end-column="13" />
           <folding>
+            <element signature="n#script#1;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
