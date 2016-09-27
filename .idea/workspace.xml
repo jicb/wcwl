@@ -6853,8 +6853,8 @@
       <file leaf-file-name="address.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="168" column="6" selection-start-line="168" selection-start-column="6" selection-end-line="168" selection-end-column="6" />
+            <state relative-caret-position="540">
+              <caret line="218" column="35" selection-start-line="218" selection-start-column="35" selection-end-line="218" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -7667,12 +7667,12 @@
       <workItem from="1474178591565" duration="1039000" />
       <workItem from="1474728630666" duration="18645000" />
       <workItem from="1474867616260" duration="27102000" />
-      <workItem from="1474960606421" duration="12829000" />
+      <workItem from="1474960606421" duration="13973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162531000" />
+    <option name="totallyTimeSpent" value="163675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -7885,6 +7885,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="14" column="41416" selection-start-line="14" selection-start-column="41408" selection-end-line="14" selection-end-column="41416" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8096,8 +8097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="168" column="6" selection-start-line="168" selection-start-column="6" selection-end-line="168" selection-end-column="6" />
+        <state relative-caret-position="540">
+          <caret line="218" column="35" selection-start-line="218" selection-start-column="35" selection-end-line="218" selection-end-column="35" />
           <folding />
         </state>
       </provider>

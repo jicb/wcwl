@@ -118,7 +118,7 @@
                         <div class="item-inner">
                             <div class="item-title label">地址</div>
                             <div class="item-input">
-                                <input type="text" class='city-picker' v-model="pca"/>
+                                <input type="text" class='city-picker' v-model="pca" id="pca"/>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                         <div class="item-inner">
                             <div class="item-title label">详细地址</div>
                             <div class="item-input">
-                                <input type="text" placeholder="详细到门牌号" v-model="street">
+                                <input type="text" placeholder="详细到门牌号" v-model="street"
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                 var query = {
                     name: this.name,
                     phone: this.phone,
-                    pca: this.pca,
+                    pca:  $('#pca').val(),
                     street: this.street,
                     type: issend ? 1 : 2,
                     member_id: data.member_id,
@@ -212,6 +212,11 @@
                     } else {
                         sendreceive.receive = res.data;
                     }
+
+                    this.name="";
+                    this.phone="";
+                    this.pca="湖北 武汉 武昌区";
+                    this.street="";
                 });
             }
         }
