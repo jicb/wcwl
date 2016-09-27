@@ -13,8 +13,9 @@ class MyselfController extends Controller
     //
     public function address(Request $request){
         $code = $request->input('code');
+        dd($code);
         $openid = self::getOpenidFromCode($code);
-        dd($openid);
+
         return view('wechat.myself.address');
     }
 }
