@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Wechat\Button;
 
+use App\Services\Wechat\MyselfService;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,9 +14,10 @@ class MyselfController extends Controller
     //
     public function address(Request $request){
         $code = $request->input('code');
-        dd($code);
         $openid = self::getOpenidFromCode($code);
 
-        return view('wechat.myself.address');
+        $service = new MyselfService();
+        return $service->viewAddress($openid);
+        
     }
 }

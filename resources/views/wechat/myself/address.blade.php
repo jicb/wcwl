@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-   {{-- <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">--}}
     <title>常用地址管理</title>
 
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
@@ -18,114 +16,22 @@
                 <div id="tab1" class="tab active">
                     <div class="content">
                         <div class="buttons-row">
-                            <a href="#tab1-1" class="tab-link active button">@{{ send }}</a>
+                            <a href="#tab1-1" class="tab-link active button">发货方</a>
                             <a href="#tab1-2" class="tab-link button">收货方</a>
                         </div>
-                        <div class="tabs">
-
-
+                        <div class="tabs" id="sendreceive">
                             <div class='tab active' id='tab1-1'>
                                 <div class="list-block media-list">
                                     <ul>
-                                        <li class="swipeout">
+                                        <li class="swipeout" v-for="item in send">
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
+                                                        <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
                                                         <div class="item-after">发货方</div>
                                                     </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
-                                                </div>
-                                            </div>
-                                            <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
-                                            </div>
-                                        </li>
-                                        <li class="swipeout">
-                                            <div class="item-content swipeout-content">
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
-                                                        <div class="item-after">发货方</div>
-                                                    </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
-                                                </div>
-                                            </div>
-                                            <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
-                                            </div>
-                                        </li>
-                                        <li class="swipeout">
-                                            <div class="item-content swipeout-content">
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
-                                                        <div class="item-after">发货方</div>
-                                                    </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
-                                                </div>
-                                            </div>
-                                            <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
-                                            </div>
-                                        </li>
-                                        <li class="swipeout">
-                                            <div class="item-content swipeout-content">
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
-                                                        <div class="item-after">发货方</div>
-                                                    </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
-                                                </div>
-                                            </div>
-                                            <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
-                                            </div>
-                                        </li>
-                                        <li class="swipeout">
-                                            <div class="item-content swipeout-content">
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
-                                                        <div class="item-after">发货方</div>
-                                                    </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
-                                                </div>
-                                            </div>
-                                            <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
-                                            </div>
-                                        </li>
-                                        <li class="swipeout">
-                                            <div class="item-content swipeout-content">
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
-                                                        <div class="item-after">发货方</div>
-                                                    </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
+                                                    <div class="item-subtitle">@{{ item.pca }}</div>
+                                                    <div class="item-text">@{{ item.street }}</div>
                                                 </div>
                                             </div>
                                             <div class="swipeout-actions-right">
@@ -136,40 +42,36 @@
                                             </div>
                                         </li>
 
-                                        <li class="swipeout">
-                                            <div class="item-content swipeout-content">
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">Swipe left on me please</div>
-                                                        <div class="item-after">发货方</div>
-                                                    </div>
-                                                    <div class="item-subtitle">湖北省武汉市江夏区</div>
-                                                    <div class="item-text">光谷大道金融港博彦科技5楼风行网</div>
-                                                </div>
-                                            </div>
-                                            <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <p class='tab' id='tab1-2'>This is tab 1-2 content</p>
+                            <div class='tab' id='tab1-2'>
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li class="swipeout" v-for="item in receive">
+                                            <div class="item-content swipeout-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
+                                                        <div class="item-after">收货方</div>
+                                                    </div>
+                                                    <div class="item-subtitle">@{{ item.pca }}</div>
+                                                    <div class="item-text">@{{ item.street }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="swipeout-actions-right">
+                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
+                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
+                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
+                                                   class="swipeout-delete">删除</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
 
                         </div>
-                    </div>
-                </div>
-                <div id="tab2" class="tab">
-                    <div class="content-block">
-                        <p>This is tab 2 content</p>
-                    </div>
-                </div>
-                <div id="tab3" class="tab">
-                    <div class="content-block">
-                        <p>This is tab 3 content</p>
                     </div>
                 </div>
             </div>
@@ -259,12 +161,16 @@
 <script src="{!! URL::asset('js/kitchen-sink.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
 <script>
-    new Vue({
-        el:"#content",
+    var data = eval('('+'<?php echo $data;?>'+')');
+
+
+    var sendreceive = new Vue({
+       el:"#sendreceive",
         data:{
-            send:"发货方"
+            send:data.send,
+            receive:data.receive,
         }
-    })
+    });
     Zepto(function(){
         $(".city-picker").cityPicker({
             value: ['湖北', '武汉', '武昌区']

@@ -13,15 +13,12 @@ class LogisticsController extends Controller
 {
     //
     public function delivery(Request $request){
-        $code = $request->input('code');
-        dd($code);
+        $code = $request->input('code');        
         $openid = self::getOpenidFromCode($code);
         if($openid){
             return view('wechat.logistics.delivery')->with('openid',$openid);
-        }
-        view('wechat.auth.returnwechat');
-        return view('wechat.logistics.delivery')->with('openid','123456');
-        //return view('wechat.logistics.vuetest');
+        }       
+        
     }
     
     public function useraddress(Request $request){
@@ -31,7 +28,6 @@ class LogisticsController extends Controller
     }
 
     public function useraddressselect(Request $request){
-        return view('wechat.logistics.useraddressselect')
-            ->with('testArray',json_encode(['hello'=>'guizi','hehe'=>'gaga']));
+        return view('wechat.logistics.useraddressselect');
     }
 }
