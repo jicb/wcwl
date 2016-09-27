@@ -20,4 +20,9 @@ class MyselfController extends Controller
         return $service->viewAddress($openid);
         
     }
+
+    public function addressCreate(Request $request){
+        $service = new MyselfService();
+        return $service->addressCreate($request);
+    }
 }
