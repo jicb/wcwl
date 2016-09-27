@@ -14,6 +14,7 @@ class LogisticsController extends Controller
     //
     public function delivery(Request $request){
         $code = $request->input('code');
+        dd($code);
         $openid = self::getOpenidFromCode($code);
         if($openid){
             return view('wechat.logistics.delivery')->with('openid',$openid);
