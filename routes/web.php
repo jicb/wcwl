@@ -43,6 +43,7 @@ Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],
     Route::any('myself/address',['as'=>'address','uses'=>'MyselfController@address']);
     Route::any('myself/address/create',['as'=>'address::create','uses'=>'MyselfController@addressCreate']);
     Route::any('myself/address/delete',['as'=>'address::delete','uses'=>'MyselfController@addressDelete']);
+    Route::any('myself/address/totop',['as'=>'address::totop','uses'=>'MyselfController@addresstotop']);
 });
 
 Route::any('/testmysql','Wechat\H5\Auth\RegisterController@testmysql');

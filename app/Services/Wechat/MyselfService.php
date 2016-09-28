@@ -11,12 +11,29 @@ use App\Wechat\Address;
 use App\Wechat\Member;
 
 class MyselfService{
+    public function addressTotop($request){
+        $type = $request->input('type');
+        $addr_id = $request->input('addr_id');
+        $priority = $request->input('priority');
+        $member_id = $request->input('member_id');
+        
+        $addr = Address::find($addr_id);
+        $addr->priority = $priority;
+        $addr->save();
+
+        $data = Address::where('type',$type)->where('member_id',$member_id)->orderBy('priority','desc')->get();
+        $data = $this->getData($data);
+        $data = json_encode(array('data'=>$data));
+        return $data;
+    }
+
     public function addressDelete($request){
         $type = $request->input('type');
         $addr_id = $request->input('addr_id');
+        $member_id = $request->input('member_id');
         Address::destroy($addr_id);
 
-        $data = Address::where('type',$type)->orderBy('priority','desc')->get();
+        $data = Address::where('type',$type)->where('member_id',$member_id)->orderBy('priority','desc')->get();
         $data = $this->getData($data);
         $data = json_encode(array('data'=>$data));
         return $data;
@@ -80,6 +97,7 @@ class MyselfService{
             $temp['phone'] = $item->phone;
             $temp['pca'] = $item->pca;
             $temp['street'] = $item->street;
+            $temp['member_id'] = $item->member_id;
             $returnData[] = $temp;
         }
         return $returnData;

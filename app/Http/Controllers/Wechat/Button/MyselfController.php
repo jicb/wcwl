@@ -30,4 +30,9 @@ class MyselfController extends Controller
         $service = new MyselfService();        
         return $service->addressDelete($request);
     }
+    
+    public function addresstotop(Request $request){
+        $service = new MyselfService();
+        return $service->addressTotop($request);
+    }
 }
