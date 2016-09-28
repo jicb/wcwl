@@ -25,4 +25,9 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->addressCreate($request);
     }
+
+    public function addressDelete(Request $request){
+        $service = new MyselfService();        
+        return $service->addressDelete($request);
+    }
 }

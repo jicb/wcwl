@@ -27,6 +27,7 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
+                                                        <div class="item-title" style="display: none;">@{{ item.address_id }} </div>
                                                         <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
                                                         <div class="item-after">发货方</div>
                                                     </div>
@@ -35,10 +36,8 @@
                                                 </div>
                                             </div>
                                             <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
+                                                <a href="#" class="to-top" style="background-color: #00c795">置顶<span style="display: none;">@{{ item.addr_id }}</span></a>
+                                                <a href="#" style="background-color: red;" class="item-delete">删除<span style="display: none;">@{{ item.addr_id }}</span></a>
                                             </div>
                                         </li>
 
@@ -60,17 +59,13 @@
                                                 </div>
                                             </div>
                                             <div class="swipeout-actions-right">
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete" style="background-color: #00c795">置顶</a>
-                                                <a href="#" data-confirm="Are you sure you want to delete this item?"
-                                                   class="swipeout-delete">删除</a>
+                                                <a href="#" style="background-color: #00c795" class="to-top">置顶<span style="display: none;">@{{ item.addr_id }}</span></a>
+                                                <a href="#" class="item-delete" style="background-color: red;">删除<span style="display: none;">@{{ item.addr_id }}</span></a>
                                             </div>
                                         </li>
-
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -129,7 +124,7 @@
                         <div class="item-inner">
                             <div class="item-title label">详细地址</div>
                             <div class="item-input">
-                                <input type="text" placeholder="详细到门牌号" v-model="street"
+                                <input type="text" placeholder="详细到门牌号" v-model="street" />
                             </div>
                         </div>
                     </div>
@@ -162,11 +157,11 @@
 <script src="{!! URL::asset('js/kitchen-sink.js') !!}"></script>
 <script type="text/javascript" src="{!! URL::asset('sui/dist/js/sm-city-picker.js') !!}"></script>
 <script>
-    Zepto(function () {
+    /*Zepto(function () {*/
         $(".city-picker").cityPicker({
             value: ['湖北', '武汉', '武昌区']
         });
-    })
+    /*})*/
 
     var data = eval('(' + '<?php echo $data;?>' + ')');
     var issend = true;
@@ -221,14 +216,39 @@
             }
         }
 
-    })
+    });
 
-
-
+    var myApp = new Framework7();
+    var $$ = Dom7;
+    $$('.item-delete').on('click',function(){
+        var addr_id = this.lastChild.textContent;
+        myApp.confirm('确定要删除此条常用地址？','删除',function(){
+            var query = {
+                addr_id:addr_id,
+                type: issend ? 1:2,
+            };
+            $$.get('address/delete',query,function(res){
+                var res = eval('('+res+')');
+                if(issend){
+                    sendreceive.send = res.data;
+                }else{
+                    sendreceive.receive = res.data;
+                }
+            });
+        });
+        return false;
+    });
+    $$('.to-top').on('click',function(){
+        var addr_id = this.lastChild.textContent;
+        alert(addr_id);
+    });
 
     document.addEventListener('DOMContentLoaded', function () {
         document.body.style.display = 'block';
     });
+</script>
+<script>
+
 </script>
 </body>
 </html>

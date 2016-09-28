@@ -11,6 +11,17 @@ use App\Wechat\Address;
 use App\Wechat\Member;
 
 class MyselfService{
+    public function addressDelete($request){
+        $type = $request->input('type');
+        $addr_id = $request->input('addr_id');
+        Address::destroy($addr_id);
+
+        $data = Address::where('type',$type)->orderBy('priority','desc')->get();
+        $data = $this->getData($data);
+        $data = json_encode(array('data'=>$data));
+        return $data;
+    }
+
     public function addressCreate($request){
         $member_id = $request->input('member_id');
         $type = $request->input('type');
