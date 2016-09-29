@@ -2,40 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623bc0e5-222e-4e6a-b109-1641cf00e2eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-f7-ios.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-f7-material.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-f7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-calendar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-comment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-email.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-gender.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-name.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-password.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-tel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-toggle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-url.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-sortable-handler.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-calendar-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-calendar-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-comment-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-comment-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-email-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-email-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-gender-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-gender-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-name-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-name-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-password-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-password-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-settings-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-settings-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-tel-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-tel-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-toggle-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-toggle-material.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-url-ios.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-url-material.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
@@ -55,7 +21,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/img/loading_sprite_white.png" afterPath="$PROJECT_DIR$/public/frozen/img/loading_sprite_white.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/img/vip/icon_qqlevel_sprite.png" afterPath="$PROJECT_DIR$/public/frozen/img/vip/icon_qqlevel_sprite.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/img/vip/icon_vip.png" afterPath="$PROJECT_DIR$/public/frozen/img/vip/icon_vip.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-f7-ios.png" afterPath="$PROJECT_DIR$/public/img/i-f7-ios.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-f7-material.png" afterPath="$PROJECT_DIR$/public/img/i-f7-material.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-f7.png" afterPath="$PROJECT_DIR$/public/img/i-f7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-calendar.png" afterPath="$PROJECT_DIR$/public/img/i-form-calendar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-comment.png" afterPath="$PROJECT_DIR$/public/img/i-form-comment.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-email.png" afterPath="$PROJECT_DIR$/public/img/i-form-email.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-gender.png" afterPath="$PROJECT_DIR$/public/img/i-form-gender.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-name.png" afterPath="$PROJECT_DIR$/public/img/i-form-name.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-password.png" afterPath="$PROJECT_DIR$/public/img/i-form-password.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-settings.png" afterPath="$PROJECT_DIR$/public/img/i-form-settings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-tel.png" afterPath="$PROJECT_DIR$/public/img/i-form-tel.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-toggle.png" afterPath="$PROJECT_DIR$/public/img/i-form-toggle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-url.png" afterPath="$PROJECT_DIR$/public/img/i-form-url.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-list-chevron-right.png" afterPath="$PROJECT_DIR$/public/img/i-list-chevron-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-sortable-handler.png" afterPath="$PROJECT_DIR$/public/img/i-sortable-handler.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sui/img/logistics/supermarket7.png" afterPath="$PROJECT_DIR$/public/sui/img/logistics/supermarket7.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/wcwl/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
@@ -434,6 +414,26 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-qqlevel.scss" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-qqlevel.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-viplevel.scss" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-icon-viplevel.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frozen/sass/vip/ui-tooltips-vip.scss" afterPath="$PROJECT_DIR$/public/frozen/sass/vip/ui-tooltips-vip.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-calendar-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-calendar-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-calendar-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-calendar-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-comment-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-comment-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-comment-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-comment-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-email-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-email-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-email-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-email-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-gender-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-gender-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-gender-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-gender-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-name-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-name-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-name-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-name-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-password-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-password-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-password-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-password-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-settings-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-settings-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-settings-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-settings-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-tel-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-tel-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-tel-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-tel-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-toggle-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-toggle-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-toggle-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-toggle-material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-url-ios.svg" afterPath="$PROJECT_DIR$/public/img/i-form-url-ios.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/i-form-url-material.svg" afterPath="$PROJECT_DIR$/public/img/i-form-url-material.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/framework7.min.js" afterPath="$PROJECT_DIR$/public/js/framework7.min.js" />
@@ -6906,16 +6906,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyselfController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MyselfService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -6968,14 +6958,15 @@
       <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
+            <state relative-caret-position="339">
+              <caret line="355" column="62" selection-start-line="355" selection-start-column="62" selection-end-line="355" selection-end-column="62" />
               <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1475171140236" expanded="false" signature="6339:6395" placeholder="..." />
-                <marker date="1475171140236" expanded="false" signature="6429:6508" placeholder="..." />
-                <marker date="1475171140236" expanded="false" signature="6591:6662" placeholder="..." />
+                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1475172509200" expanded="false" signature="6339:6395" placeholder="..." />
+                <marker date="1475172509200" expanded="false" signature="6429:6508" placeholder="..." />
+                <marker date="1475172509200" expanded="false" signature="6591:6662" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -7018,7 +7009,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HelloController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
@@ -7068,6 +7058,7 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/public/css/wechat/common.css" />
+        <option value="$PROJECT_DIR$/storage/framework/views/c836586441a1b89b07c57d003eeb65dd0c2a9f80.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
       </list>
     </option>
@@ -7142,119 +7133,61 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wcwl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myself" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -7449,12 +7382,12 @@
       <workItem from="1474960606421" duration="14571000" />
       <workItem from="1475031164469" duration="7500000" />
       <workItem from="1475045533300" duration="3691000" />
-      <workItem from="1475050262224" duration="68552000" />
+      <workItem from="1475050262224" duration="69899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244016000" />
+    <option name="totallyTimeSpent" value="245363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -7518,20 +7451,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/overtrue/wechat/src/User/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/overtrue/laravel-wechat/src/Events/WeChatUserAuthorized.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -7898,16 +7817,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="670" column="0" selection-start-line="670" selection-start-column="0" selection-end-line="670" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/c836586441a1b89b07c57d003eeb65dd0c2a9f80.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
+        <state relative-caret-position="339">
+          <caret line="355" column="62" selection-start-line="355" selection-start-column="62" selection-end-line="355" selection-end-column="62" />
           <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1475171140236" expanded="false" signature="6339:6395" placeholder="..." />
-            <marker date="1475171140236" expanded="false" signature="6429:6508" placeholder="..." />
-            <marker date="1475171140236" expanded="false" signature="6591:6662" placeholder="..." />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1475172509200" expanded="false" signature="6339:6395" placeholder="..." />
+            <marker date="1475172509200" expanded="false" signature="6429:6508" placeholder="..." />
+            <marker date="1475172509200" expanded="false" signature="6591:6662" placeholder="..." />
           </folding>
         </state>
       </provider>

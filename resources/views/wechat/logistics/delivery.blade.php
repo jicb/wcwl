@@ -225,7 +225,7 @@
                     <div class="left"><a href="#" class="close-popup" data-popup="#popup-send-select">取消</a></div>
                     <div class="center">@{{ type }}</div>
                     <div class="right"><a href="#" class="close-popup" data-popup="#popup-send-select"
-                                          onclick="insertData()">确定</a>
+                                          onclick="insertSendData()">确定</a>
                     </div>
                 </div>
             </div>
@@ -527,14 +527,25 @@
     }
 
 
-    function itemSelected() {
+    function insertSendData() {
         var selected = $("input[type='radio']:checked");
         if (selected && selected.length) {
             var index = selected.val();
-            insertVue.name = items[index].name;
-            insertVue.phone = items[index].phone;
-            insertVue.pca = items[index].pca;
-            insertVue.street = items[index].street;
+            $('#send-insert-name').val(sendSelectVue.items[index].name);
+            $('#send-insert-phone').val(sendSelectVue.items[index].phone);
+            $('#send-insert-pca').val(sendSelectVue.items[index].pca);
+            $('#send-insert-street').val(sendSelectVue.items[index].street);
+        }
+    }
+
+    function insertReceiveData() {
+        var selected = $("input[type='radio']:checked");
+        if (selected && selected.length) {
+            var index = selected.val();
+            $('#receive-insert-name').val(receiveSelectVue.items[index].name);
+            $('#receive-insert-phone').val(receiveSelectVue.items[index].phone);
+            $('#receive-insert-pca').val(receiveSelectVue.items[index].pca);
+            $('#receive-insert-street').val(receiveSelectVue.items[index].street);
         }
     }
     document.addEventListener('DOMContentLoaded', function () {
