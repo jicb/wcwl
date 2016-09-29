@@ -106,11 +106,11 @@
                                     <div class="item-media"></div>
                                     <div class="item-inner">
                                         <div class="item-title-row">
-                                            <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
-                                            <div class="item-after">@{{ type }}</div>
+                                            <div class="item-title">nihao</div>
+                                            <div class="item-after">wohao</div>
                                         </div>
-                                        <div class="item-subtitle">@{{ item.pca }}</div>
-                                        <div class="item-text">@{{ item.street }}</div>
+                                        <div class="item-subtitle">dajiahao</div>
+                                        <div class="item-text">douhao</div>
                                     </div>
                                 </label>
                                 </li>
