@@ -146,14 +146,14 @@
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 <script>
-    var data = eval('(' + '<?php echo $data;?>' + ')');
+    var data = eval('(' + '<?php echo $data; ?>' + ')');
     var mydata = data.data;
     var type = '{!! $type !!}';
 
     var popupVue = new Vue({
         el: '#popup',
         data: {
-            items: "",
+            items: mydata,
             type: ""
         },
         methods:{
@@ -169,8 +169,6 @@
             }
         }
     });
-
-    popupVue.items = mydata;
 
     //items.type = type == 1 ? '发货方' : '收货方';
 

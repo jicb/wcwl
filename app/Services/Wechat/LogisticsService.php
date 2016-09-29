@@ -22,10 +22,12 @@ class LogisticsService{
         $type = $request->input('type');
         $data = CommonService::getSendOrReceiveData($member_id,$type);        
         $info = $type == 1 ? "发货方信息":"收货方信息";
+        $all = CommonService::getAllAddress("oLsBZxNMEZQEL8STHlrEaSu5mwD8");
 
         return view('wechat.logistics.useraddress')
             ->with('data',$data)
             ->with('title',$info)
-            ->with('type',$type);
+            ->with('type',$type)
+            ->with('all',$all);
     }
 }
