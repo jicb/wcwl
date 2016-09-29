@@ -195,7 +195,7 @@
         data: {
             name: "",
             phone: "",
-            pca: "",
+            pca: "安徽 合肥 蜀山",
             street: "",
         },
         methods: {
