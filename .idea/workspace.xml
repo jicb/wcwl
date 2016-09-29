@@ -6953,12 +6953,12 @@
       <file leaf-file-name="useraddress.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="117" column="46" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
+            <state relative-caret-position="27">
+              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1475160851436" expanded="true" signature="10670:10756" placeholder="..." />
-                <marker date="1475160851436" expanded="true" signature="10703:10755" placeholder="..." />
+                <marker date="1475161122833" expanded="true" signature="10674:10760" placeholder="..." />
+                <marker date="1475161122833" expanded="true" signature="10707:10759" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -7412,12 +7412,12 @@
       <workItem from="1474960606421" duration="14571000" />
       <workItem from="1475031164469" duration="7500000" />
       <workItem from="1475045533300" duration="3691000" />
-      <workItem from="1475050262224" duration="58294000" />
+      <workItem from="1475050262224" duration="58565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233758000" />
+    <option name="totallyTimeSpent" value="234029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -7860,12 +7860,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="117" column="46" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
+        <state relative-caret-position="27">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1475160851436" expanded="true" signature="10670:10756" placeholder="..." />
-            <marker date="1475160851436" expanded="true" signature="10703:10755" placeholder="..." />
+            <marker date="1475161122833" expanded="true" signature="10674:10760" placeholder="..." />
+            <marker date="1475161122833" expanded="true" signature="10707:10759" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -146,8 +146,34 @@
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 <script>
     var data = eval('(' + '<?php echo $data;?>' + ')');
-    var items = data.data;
+    var mydata = data.data;
     var type = '{!! $type !!}';
+
+    var popupVue = new Vue({
+        el: '#popup',
+        data: {
+            items: "",
+            type: ""
+        },
+        methods:{
+            insertData:function(){
+                var selected = $("input[type='radio']:checked");
+                if (selected && selected.length) {
+                    var index = selected.val();
+                    $('#insert-name').val(mydata[index].name);
+                    $('#insert-phone').val(mydata[index].phone);
+                    $('#insert-pca').val(mydata[index].pca);
+                    $('#insert-street').val(mydata[index].street);
+                }
+            }
+        }
+    });
+
+    popupVue.items = mydata;
+
+    //items.type = type == 1 ? '发货方' : '收货方';
+
+    popupVue.type = (type == 1 ? '发货方' : '收货方');
 
     var insertVue = new Vue({
         el: "#insertData",
@@ -166,38 +192,10 @@
             type: "常用发货方信息"
         }
     });
-    var popupVue = new Vue({
-        el: '#popup',
-        data: {
-            items: "",
-            type: ""
-        },
-        methods:{
-            insertData:function(){
-                var selected = $("input[type='radio']:checked");
-                if (selected && selected.length) {
-                    var index = selected.val();
-                    $('#insert-name').val(items[index].name);
-                    $('#insert-phone').val(items[index].phone);
-                    $('#insert-pca').val(items[index].pca);
-                    $('#insert-street').val(items[index].street);
-                }
-            }
-        }
-    });
-
-
-
-
-
     if (type == "2") {
         typeVue.type = "常用收货方信息";
     }
-    popupVue.items = items;
 
-    //items.type = type == 1 ? '发货方' : '收货方';
-
-    popupVue.type = (type == 1 ? '发货方' : '收货方');
 
 </script>
 <script>
