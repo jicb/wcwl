@@ -1,0 +1,30 @@
+.button-success {
+    border-color: #4cd964;
+    color: #4cd964;
+}
+.button-success:active {
+    border-color: #2ac845;
+    color: #2ac845;
+}
+.button-success.button-fill {
+    color: white;
+    background-color: #4cd964;
+}
+.button-success.button-fill:active {
+    background-color: #2ac845;
+}
+.button-danger {
+    border-color: #f6383a;
+    color: #f6383a;
+}
+.button-danger:active {
+    border-color: #f00b0d;
+    color: #f00b0d;
+}
+.button-danger.button-fill {
+    color: white;
+    background-color: #f6383a;
+}
+.button-danger.button-fill:active {
+    background-color: #f00b0d;
+}

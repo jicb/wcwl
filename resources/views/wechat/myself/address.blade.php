@@ -6,47 +6,8 @@
     <title>常用地址管理</title>
 
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
+    <link rel="stylesheet" href="{!! URL::asset('css/wechat/common.css') !!}" />
 
-    <style>
-        .button-success {
-            border-color: #4cd964;
-            color: #4cd964;
-        }
-        .button-success:active {
-            border-color: #2ac845;
-            color: #2ac845;
-        }
-        .button-success.button-fill {
-            color: white;
-            background-color: #4cd964;
-        }
-        .button-success.button-fill:active {
-            background-color: #2ac845;
-        }
-        .button-danger {
-            border-color: #f6383a;
-            color: #f6383a;
-        }
-        .button-danger:active {
-            border-color: #f00b0d;
-            color: #f00b0d;
-        }
-        .button-danger.button-fill {
-            color: white;
-            background-color: #f6383a;
-        }
-        .button-danger.button-fill:active {
-            background-color: #f00b0d;
-        }
-        .button-warning {
-            border-color: #f60;
-            color: #f60;
-        }
-        .button-warning:active {
-            border-color: #cc5200;
-            color: #cc5200;
-        }
-    </style>
 </head>
 <body style="display:none;">
 <div class="views">
