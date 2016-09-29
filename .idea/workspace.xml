@@ -6871,11 +6871,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="address.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="address.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="197" column="26" selection-start-line="197" selection-start-column="26" selection-end-line="197" selection-end-column="26" />
+            <state relative-caret-position="328">
+              <caret line="198" column="23" selection-start-line="198" selection-start-column="23" selection-end-line="198" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -6909,18 +6909,18 @@
       <file leaf-file-name="MyselfController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="675">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyselfService.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyselfService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="54" />
+            <state relative-caret-position="150">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
                 <element signature="e#118#141#0#PHP" expanded="true" />
               </folding>
@@ -6928,15 +6928,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogisticsService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
+      <file leaf-file-name="CommonService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Services/Wechat/CommonService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="4" selection-end-line="32" selection-end-column="7" />
-              <folding>
-                <element signature="e#6#85#0#PHP" expanded="true" />
-                <element signature="e#118#141#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="801">
+              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -7057,9 +7054,7 @@
         <option value="$PROJECT_DIR$/public/sui/dist/js/sm-city-picker.min.js" />
         <option value="$PROJECT_DIR$/resources/views/wechat/expect.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/BenefitController.php" />
-        <option value="$PROJECT_DIR$/app/Services/Wechat/MyselfService.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/CommonService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/public/css/wechat/common.css" />
@@ -7068,6 +7063,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
+        <option value="$PROJECT_DIR$/app/Services/Wechat/MyselfService.php" />
       </list>
     </option>
   </component>
@@ -7502,12 +7499,12 @@
       <workItem from="1474960606421" duration="14571000" />
       <workItem from="1475031164469" duration="7500000" />
       <workItem from="1475045533300" duration="3691000" />
-      <workItem from="1475050262224" duration="71731000" />
+      <workItem from="1475050262224" duration="72615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247195000" />
+    <option name="totallyTimeSpent" value="248079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -7830,27 +7827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/CommonService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="false" />
-            <element signature="e#118#140#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="54" />
-          <folding>
-            <element signature="e#118#141#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
@@ -7890,14 +7866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -7947,8 +7915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="197" column="26" selection-start-line="197" selection-start-column="26" selection-end-line="197" selection-end-column="26" />
+        <state relative-caret-position="328">
+          <caret line="198" column="23" selection-start-line="198" selection-start-column="23" selection-end-line="198" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -7962,6 +7930,32 @@
             <element signature="n#style#0;n#span#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#2;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#3;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/CommonService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#118#141#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

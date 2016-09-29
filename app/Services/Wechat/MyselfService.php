@@ -22,7 +22,7 @@ class MyselfService{
         $addr->save();
 
         $data = Address::where('type',$type)->where('member_id',$member_id)->orderBy('priority','desc')->get();
-        $data = $this->getData($data);
+        $data = CommonService::getData($data);
         $data = json_encode(array('data'=>$data));
         return $data;
     }
@@ -34,7 +34,7 @@ class MyselfService{
         Address::destroy($addr_id);
 
         $data = Address::where('type',$type)->where('member_id',$member_id)->orderBy('priority','desc')->get();
-        $data = $this->getData($data);
+        $data = CommonService::getData($data);
         $data = json_encode(array('data'=>$data));
         return $data;
     }
