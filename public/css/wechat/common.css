@@ -28,3 +28,11 @@
 .button-danger.button-fill:active {
     background-color: #f00b0d;
 }
+
+textarea::-ms-input-placeholder {
+    text-align: center;
+}
+
+textarea::-webkit-input-placeholder {
+    text-align: center;
+}

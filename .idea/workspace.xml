@@ -2,6 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623bc0e5-222e-4e6a-b109-1641cf00e2eb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-f7-ios.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-f7-material.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-f7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-email.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-gender.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-name.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-password.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-tel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-toggle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-url.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-sortable-handler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-calendar-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-calendar-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-comment-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-comment-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-email-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-email-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-gender-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-gender-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-name-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-name-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-password-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-password-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-settings-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-settings-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-tel-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-tel-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-toggle-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-toggle-material.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-url-ios.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/i-form-url-material.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
@@ -6840,8 +6874,8 @@
       <file leaf-file-name="address.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+            <state relative-caret-position="801">
+              <caret line="184" column="30" selection-start-line="184" selection-start-column="30" selection-end-line="184" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -6863,8 +6897,8 @@
       <file leaf-file-name="LogisticsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="351">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="e#54#95#0#PHP" expanded="true" />
               </folding>
@@ -6872,21 +6906,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MyselfController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="378">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -6896,7 +6920,7 @@
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="54" />
               <folding>
                 <element signature="e#118#141#0#PHP" expanded="true" />
               </folding>
@@ -6904,38 +6928,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogisticsService.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogisticsService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="501">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="4" selection-end-line="32" selection-end-column="7" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
                 <element signature="e#118#141#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/Wechat/CommonService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-              <folding>
-                <element signature="e#6#85#0#PHP" expanded="true" />
-                <element signature="e#118#140#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -6943,8 +6944,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="34" />
+            <state relative-caret-position="189">
+              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -6953,13 +6954,49 @@
       <file leaf-file-name="useraddress.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
+            <state relative-caret-position="126">
+              <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <marker date="1475162430464" expanded="true" signature="9489:9575" placeholder="..." />
                 <marker date="1475162430464" expanded="true" signature="9522:9574" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1475171140236" expanded="false" signature="6339:6395" placeholder="..." />
+                <marker date="1475171140236" expanded="false" signature="6429:6508" placeholder="..." />
+                <marker date="1475171140236" expanded="false" signature="6591:6662" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="framework7.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/framework7.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7619">
+              <caret line="14" column="43930" selection-start-line="14" selection-start-column="43921" selection-end-line="14" selection-end-column="43930" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/wechat/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="801">
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -7021,17 +7058,17 @@
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/addresstest.blade.php" />
         <option value="$PROJECT_DIR$/public/sui/dist/js/sm-city-picker.min.js" />
         <option value="$PROJECT_DIR$/resources/views/wechat/expect.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/BenefitController.php" />
-        <option value="$PROJECT_DIR$/public/css/wechat/common.css" />
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/MyselfService.php" />
-        <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/CommonService.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
+        <option value="$PROJECT_DIR$/public/css/wechat/common.css" />
+        <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
       </list>
     </option>
   </component>
@@ -7352,11 +7389,11 @@
       <recent name="Y:\home\web_root\wcwl\public\fonts\bootstrap" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\home\web_root\wcwl\public" />
       <recent name="Z:\home\web_root\wcwl\public\img" />
       <recent name="Z:\home\web_root\wcwl\resources\views\wechat\myself" />
       <recent name="Z:\home\web_root\wcwl\public\js" />
       <recent name="Z:\home\web_root\wcwl\public\css" />
-      <recent name="Z:\home\web_root\wcwl\public\sui\img\logistics" />
     </key>
   </component>
   <component name="RunManager">
@@ -7412,12 +7449,12 @@
       <workItem from="1474960606421" duration="14571000" />
       <workItem from="1475031164469" duration="7500000" />
       <workItem from="1475045533300" duration="3691000" />
-      <workItem from="1475050262224" duration="59870000" />
+      <workItem from="1475050262224" duration="68552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235334000" />
+    <option name="totallyTimeSpent" value="244016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -7576,14 +7613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/framework7.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="14" column="41416" selection-start-line="14" selection-start-column="41408" selection-end-line="14" selection-end-column="41416" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/kitchen-sink.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -7695,10 +7724,9 @@
           <caret line="105" column="0" selection-start-line="101" selection-start-column="4" selection-end-line="110" selection-end-column="7" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -7755,14 +7783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/wechat/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -7771,18 +7791,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/CommonService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="false" />
+            <element signature="e#118#140#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="54" />
+          <folding>
+            <element signature="e#118#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="4" selection-end-line="32" selection-end-column="7" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <element signature="e#118#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="34" />
+        <state relative-caret-position="189">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#54#95#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        <state relative-caret-position="801">
+          <caret line="184" column="30" selection-start-line="184" selection-start-column="30" selection-end-line="184" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -7800,33 +7870,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
+    <entry file="file://$PROJECT_DIR$/public/css/wechat/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-          <folding>
-            <element signature="e#118#141#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="801">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/CommonService.php">
+    <entry file="file://$PROJECT_DIR$/public/css/framework7.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <element signature="e#118#140#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-7619">
+          <caret line="14" column="43930" selection-start-line="14" selection-start-column="43921" selection-end-line="14" selection-end-column="43930" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/useraddress.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
+        <state relative-caret-position="126">
+          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <marker date="1475162430464" expanded="true" signature="9489:9575" placeholder="..." />
             <marker date="1475162430464" expanded="true" signature="9522:9574" placeholder="..." />
           </folding>
@@ -7835,37 +7900,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        <state relative-caret-position="437">
+          <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
           <folding>
-            <element signature="e#54#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <element signature="e#118#141#0#PHP" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1475171140236" expanded="false" signature="6339:6395" placeholder="..." />
+            <marker date="1475171140236" expanded="false" signature="6429:6508" placeholder="..." />
+            <marker date="1475171140236" expanded="false" signature="6591:6662" placeholder="..." />
           </folding>
         </state>
       </provider>

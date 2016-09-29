@@ -14,10 +14,13 @@ use Illuminate\Http\Request;
 class LogisticsService{
     public function delivery($openid){
         $member_id = CommonService::getMemberid($openid);
-        return view('wechat.logistics.delivery')->with('member_id',$member_id);        
+        $data = CommonService::getAllAddress($openid);
+        return view('wechat.logistics.delivery')
+            ->with('member_id',$member_id)
+            ->with('data',$data);        
     }
 
-    public function userAddress($request){
+    /*public function userAddress($request){
         $member_id = $request->input('member_id');
         $type = $request->input('type');
         $data = CommonService::getSendOrReceiveData($member_id,$type);        
@@ -27,5 +30,5 @@ class LogisticsService{
             ->with('data',$data)
             ->with('title',$info)
             ->with('type',$type);
-    }
+    }*/
 }
