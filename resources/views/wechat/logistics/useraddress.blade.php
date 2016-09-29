@@ -140,7 +140,7 @@
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 <script>
     var data = eval('(' + '<?php echo $data;?>' + ')');
-    var items = data.data;
+    var items = data.data.data;
     var type = '{!! $type !!}';
 
     var insertVue = new Vue({
