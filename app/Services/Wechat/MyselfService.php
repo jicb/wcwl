@@ -78,7 +78,6 @@ class MyselfService{
     }
 
     private function getMemberid($openid){
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member = Member::where('openid',$openid)->first();
         if(!$member){
 
