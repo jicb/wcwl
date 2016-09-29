@@ -58,7 +58,7 @@ class MyselfService{
         ]);        
         
         $data = Address::where('member_id',$member_id)->where('type',$type)->orderBy('priority','desc')->get();
-        $data = $this->getData($data);
+        $data = CommonService::getData($data);
         $data = json_encode(array('data'=>$data,'type'=>$type));
         return $data;
     }

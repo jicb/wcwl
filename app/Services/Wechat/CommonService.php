@@ -42,7 +42,7 @@ class CommonService{
     }   
     
 
-    private static function getData($data){
+    public static function getData($data){
         $returnData = [];
         foreach ($data as $item){
             $temp = [];
