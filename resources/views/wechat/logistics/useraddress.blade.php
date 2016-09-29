@@ -100,7 +100,7 @@
                     <div class="page-content">
                         <div class="list-block media-list" id="lists">
                             <ul>
-                                <li v-for="item in data">
+                                <li v-for="item in items">
                                     <label class="label-radio item-content">
                                         <input type="radio" name="my-radio" value="@{{ $index  }}"/>
                                         <div class="item-inner">
@@ -164,7 +164,7 @@
     var itemsVue = new Vue({
         el: '#lists',
         data: {
-            data: "",
+            items: "",
             type: ""
         }
     });
@@ -178,9 +178,9 @@
     if (type == "2") {
         typeVue.type = "常用收货方信息";
     }
-    itemsVue.data = items;
+    itemsVue.items = items;
 
-    items.type = type == 1 ? '发货方' : '收货方';
+    //items.type = type == 1 ? '发货方' : '收货方';
 
     titleVue.type = type == 1 ? '发货方' : '收货方';
 
