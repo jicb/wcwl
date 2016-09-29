@@ -21,7 +21,8 @@ class LogisticsService{
         $member_id = $request->input('member_id');
         $type = $request->input('type');
         $data = CommonService::getSendOrReceiveData($member_id,$type);        
-        $info = $type == 1 ? "发货方信息":"收货方信息";        
+        $info = $type == 1 ? "发货方信息":"收货方信息";
+        dd($data);
         return view('wechat.logistics.useraddress')
             ->with('data',$data)
             ->with('title',$info)
