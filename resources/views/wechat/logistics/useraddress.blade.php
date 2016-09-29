@@ -102,7 +102,7 @@
                             <ul>
                                 <li v-for="item in items">
                                     <label class="label-radio item-content">
-                                        <input type="radio" name="my-radio" value="@{{ $index  }}"/>
+                                        <input type="radio" name="my-radio" />
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
