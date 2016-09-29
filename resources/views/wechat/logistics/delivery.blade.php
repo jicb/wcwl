@@ -506,6 +506,7 @@
                 }
             },
             {
+                textAlign: 'left',
                 values: ssq['安徽']['合肥']
             }
         ]
