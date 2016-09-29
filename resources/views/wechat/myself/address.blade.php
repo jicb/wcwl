@@ -7,15 +7,52 @@
 
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
 
+    <style>
+        .button-success {
+            border-color: #4cd964;
+            color: #4cd964;
+        }
+        .button-success:active {
+            border-color: #2ac845;
+            color: #2ac845;
+        }
+        .button-success.button-fill {
+            color: white;
+            background-color: #4cd964;
+        }
+        .button-success.button-fill:active {
+            background-color: #2ac845;
+        }
+        .button-danger {
+            border-color: #f6383a;
+            color: #f6383a;
+        }
+        .button-danger:active {
+            border-color: #f00b0d;
+            color: #f00b0d;
+        }
+        .button-danger.button-fill {
+            color: white;
+            background-color: #f6383a;
+        }
+        .button-danger.button-fill:active {
+            background-color: #f00b0d;
+        }
+        .button-warning {
+            border-color: #f60;
+            color: #f60;
+        }
+        .button-warning:active {
+            border-color: #cc5200;
+            color: #cc5200;
+        }
+    </style>
 </head>
 <body style="display:none;">
 <div class="views">
     <div class="view view-main"  id="sendreceive">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
                 <!-- Sub navbar -->
                 <div class="subnavbar">
                     <div class="buttons-row">
@@ -28,11 +65,12 @@
         <div class="pages navbar-through">
             <!-- Pag has additional "with-subnavbar" class -->
             <div data-page="home" class="page with-subnavbar">
-                <div class="page-content hide-bars-on-scroll">
+                <div class="page-content">
                     <div class="tabs">
                         <div id="tab-send" class="tab active">
-                            <div class="content-block">
+                            <div class="content">
                                 <div class="list-block media-list">
+                                    <a href="#" class="button button-big button-fill open-popup">添加</a>
                                     <ul>
                                         <li class="swipeout" v-for="item in send">
                                             <div class="item-content swipeout-content">
@@ -62,15 +100,16 @@
                             </div>
                         </div>
                         <div id="tab-receive" class="tab">
-                            <div class="content-block">
+                            <div class="content">
                                 <div class="list-block media-list">
+                                    <a href="#" class="button button-big button-fill open-popup">添加</a>
                                     <ul>
                                         <li class="swipeout" v-for="item in receive">
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
                                                         <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
-                                                        <div class="item-after">发货方</div>
+                                                        <div class="item-after">收货方</div>
                                                     </div>
                                                     <div class="item-subtitle">@{{ item.pca }}</div>
                                                     <div class="item-text">@{{ item.street }}</div>
@@ -87,7 +126,6 @@
                                                 <span style="display: none;">@{{ item.addr_id }}</span>
                                             </div>
                                         </li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -96,11 +134,11 @@
                 </div>
             </div>
         </div>
-        <div class="toolbar">
+        {{--<div class="toolbar">
             <div class="toolbar-inner open-popup" style="justify-content: center;background-color: green;">
                 添加
             </div>
-        </div>
+        </div>--}}
     </div>
 </div>
 
