@@ -98,6 +98,7 @@
             <div class="pages navbar-through">
                 <div class="page">
                     <div class="page-content">
+                        <p>hello</p>
                         <div class="list-block media-list" id="lists">
                             <ul>
                                 <li v-for="item in data">
