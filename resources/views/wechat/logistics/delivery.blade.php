@@ -44,7 +44,7 @@
                                             <div class="item-title" id="receive-users"><span
                                                         id="receive-user">@{{ receive.name }}</span> <span
                                                         id="receive-phone">@{{ receive.phone }}</span></div>
-                                            <div class="item-after">发货方</div>
+                                            <div class="item-after">收货方</div>
                                         </div>
                                         <div class="item-subtitle" id="receive-pca">@{{ receive.pca }}</div>
                                         <div class="item-text" id="receive-street">@{{ receive.street }}</div>
