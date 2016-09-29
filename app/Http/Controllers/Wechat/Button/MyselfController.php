@@ -35,4 +35,20 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->addressTotop($request);
     }
+    
+    public function balance(Request $request){
+        return view('wechat.expect');
+    }
+
+    public function order(Request $request){
+        return view('wechat.expect');
+    }
+
+    public function numerical(Request $request){
+        return view('wechat.expect');
+    }
+
+    public function coupon(Request $request){
+        return view('wechat.expect');
+    }
 }

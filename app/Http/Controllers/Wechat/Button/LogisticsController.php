@@ -30,4 +30,16 @@ class LogisticsController extends Controller
     public function useraddressselect(Request $request){
         return view('wechat.logistics.useraddressselect');
     }
+
+    public function freightaging(Request $request){
+        return view('wechat.expect');
+    }
+
+    public function netquery(Request $request){
+        return view('wechat.expect');
+    }
+
+    public function takerange(Request $request){
+        return view('wechat.expect');
+    }
 }

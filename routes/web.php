@@ -39,11 +39,21 @@ Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],
     Route::any('logistics/delivery',['as'=>'delivery','uses'=>'LogisticsController@delivery']);
     Route::any('logistics/useraddress',['as'=>'useraddress','uses'=>'LogisticsController@useraddress']);
     Route::any('logistics/useraddressselect',['as'=>'useraddressselect','uses'=>'LogisticsController@useraddressselect']);
+    Route::any('logistics/freightaging',['as'=>'freightaging','uses'=>'LogisticsController@freightaging']);
+    Route::any('logistics/netquery',['as'=>'netquery','uses'=>'LogisticsController@netquery']);
+    Route::any('logistics/takerange',['as'=>'takerange','uses'=>'LogisticsController@takerange']);
 
     Route::any('myself/address',['as'=>'address','uses'=>'MyselfController@address']);
     Route::any('myself/address/create',['as'=>'address::create','uses'=>'MyselfController@addressCreate']);
     Route::any('myself/address/delete',['as'=>'address::delete','uses'=>'MyselfController@addressDelete']);
     Route::any('myself/address/totop',['as'=>'address::totop','uses'=>'MyselfController@addresstotop']);
+    Route::any('myself/balance',['as'=>'balance','uses'=>'MyselfController@balance']);
+    Route::any('myself/order',['as'=>'order','uses'=>'MyselfController@order']);
+    Route::any('myself/numerical',['as'=>'numerical','uses'=>'MyselfController@numerical']);
+    Route::any('myself/coupon',['as'=>'coupon','uses'=>'MyselfController@coupon']);
+
+    Route::any('benefit/numericalmall',['as'=>'numericalmall','uses'=>'BenefitController@numericalmall']);
+    Route::any('benefit/dolehall',['as'=>'dolehall','uses'=>'BenefitController@dolehall']);
 });
 
 Route::any('/testmysql','Wechat\H5\Auth\RegisterController@testmysql');
