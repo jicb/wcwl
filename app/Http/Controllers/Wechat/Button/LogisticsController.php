@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Wechat\Button;
 
+use App\Services\Wechat\LogisticsService;
+use EasyWeChat\Support\Log;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,18 +15,16 @@ class LogisticsController extends Controller
 {
     //
     public function delivery(Request $request){
-        $code = $request->input('code');        
-        $openid = self::getOpenidFromCode($code);
-        if($openid){
-            return view('wechat.logistics.delivery')->with('openid',$openid);
-        }       
-        
+        //$code = $request->input('code');
+        //$openid = self::getOpenidFromCode($code);
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $service = new LogisticsService();
+        return $service->delivery($openid);   
     }
     
     public function useraddress(Request $request){
-        return view('wechat.logistics.useraddress')
-            ->with('openid',$request->input('openid'))
-            ->with('method',$request->input('method'));
+        $service = new LogisticsService();
+        return $service->userAddress($request);        
     }
 
     public function useraddressselect(Request $request){

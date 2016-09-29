@@ -218,7 +218,7 @@
 
                     this.name = "";
                     this.phone = "";
-                    this.pca = "湖北 武汉 武昌区";
+                    this.pca = "安徽 合肥 蜀山";
                     this.street = "";
                 });
             }
