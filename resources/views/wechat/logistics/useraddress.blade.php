@@ -135,7 +135,7 @@
         el: '#popup',
         data: {
             items: mydata,
-            type: ""
+            type: type
         },
         methods:{
             insertData:function(){
@@ -151,9 +151,7 @@
         }
     });
 
-    //items.type = type == 1 ? '发货方' : '收货方';
 
-    popupVue.type = (type == 1 ? '发货方' : '收货方');
 
     var insertVue = new Vue({
         el: "#insertData",
@@ -169,14 +167,9 @@
     var typeVue = new Vue({
         el: "#typevue",
         data: {
-            type: "常用发货方信息"
+            type: type == 1 ? "常用发货方信息":"常用收货方信息"
         }
     });
-    if (type == "2") {
-        typeVue.type = "常用收货方信息";
-    }
-
-
 </script>
 <script>
     var myApp = new Framework7();
