@@ -79,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-block media-list" id="popus">
+                    <div class="list-block media-list" id="popup">
                         <ul>
                             <li v-for='it in items'>
                                 <label class="label-radio item-content">
