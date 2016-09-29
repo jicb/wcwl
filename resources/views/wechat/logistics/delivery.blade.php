@@ -145,8 +145,8 @@
         },
         methods: {
             getSendInfo: function () {
-                window.localStorage.setItem('send',JSON.stringify(this.data.send));
-                window.localStorage.setItem('receive',JSON.stringify(this.data.receive));
+                //window.localStorage.setItem('send',JSON.stringify(this.data.send));
+                //window.localStorage.setItem('receive',JSON.stringify(this.data.receive));
             }
         }
     });
