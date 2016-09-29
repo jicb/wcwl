@@ -22,7 +22,7 @@
     <div class="list-block media-list">
         <ul>
             <li>
-                <a class="item-link item-content" style="height:110px;" v-on:click="getSendInfo" href="useraddress?member_id={!! $member_id !!}&type=1">
+                <a class="item-link item-content" style="height:110px;" href="useraddress?member_id={!! $member_id !!}&type=1">
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">@{{ data.send.name }} @{{ data.send.phone }}</div>
@@ -144,10 +144,7 @@
             }
         },
         methods: {
-            getSendInfo: function () {
-                //window.localStorage.setItem('send',JSON.stringify(this.data.send));
-                //window.localStorage.setItem('receive',JSON.stringify(this.data.receive));
-            }
+
         }
     });
 

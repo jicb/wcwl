@@ -179,11 +179,10 @@
         typeVue.type = "常用收货方信息";
     }
     itemsVue.data = items;
+
     items.type = type == 1 ? '发货方' : '收货方';
 
     titleVue.type = type == 1 ? '发货方' : '收货方';
-
-
 
 </script>
 <script>
