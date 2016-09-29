@@ -15,9 +15,9 @@ class LogisticsController extends Controller
 {
     //
     public function delivery(Request $request){
-        //$code = $request->input('code');
-        //$openid = self::getOpenidFromCode($code);
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $code = $request->input('code');
+        $openid = self::getOpenidFromCode($code);
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $service = new LogisticsService();
         return $service->delivery($openid);   
     }

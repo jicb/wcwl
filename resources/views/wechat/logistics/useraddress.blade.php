@@ -151,11 +151,6 @@
                     $('#insert-phone').val(items[index].phone);
                     $('#insert-pca').val(items[index].pca);
                     $('#insert-street').val(items[index].street);
-
-                    /*insertVue.name = items[index].name;
-                    insertVue.phone = items[index].phone;
-                    insertVue.pca = items[index].pca;
-                    insertVue.street = items[index].street;*/
                 }
             }
         }
@@ -182,20 +177,6 @@
 
     if (type == "2") {
         typeVue.type = "常用收货方信息";
-        var receive = window.localStorage.getItem('receive');
-        receive = eval('('+receive+')');
-        insertVue.name = receive.name;
-        insertVue.phone = receive.phone;
-        insertVue.pca = receive.pca;
-        insertVue.street = receive.street;
-
-    }else{
-        var send = window.localStorage.getItem('send');
-        send = eval('('+send+')');
-        insertVue.name = send.name;
-        insertVue.phone = send.phone;
-        insertVue.pca = send.pca;
-        insertVue.street = send.street;
     }
     itemsVue.data = items;
     items.type = type == 1 ? '发货方' : '收货方';
