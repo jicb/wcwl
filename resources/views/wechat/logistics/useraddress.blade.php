@@ -19,7 +19,7 @@
                             <!-- Text inputs -->
                             <li>
                                 <a class="item-link item-content open-popup" href="#">
-                                    <div class="item-inner" id="type">
+                                    <div class="item-inner" id="typevue">
                                         <div class="item-title">@{{ type }}</div>
                                     </div>
                                 </a>
@@ -98,7 +98,6 @@
             <div class="pages navbar-through">
                 <div class="page">
                     <div class="page-content">
-                        <p>hello</p>
                         <div class="list-block media-list" id="lists">
                             <ul>
                                 <li v-for="item in data">
@@ -157,7 +156,7 @@
         }
     });
     var typeVue = new Vue({
-        el: "#type",
+        el: "#typevue",
         data: {
             type: "常用发货方信息"
         }
@@ -173,7 +172,7 @@
 
     var data = eval('(' + '{!! $data !!}' + ')');
     var items = data.data;
-    var type = data.type;
+    var type = '{!! $type !!}';
 
 
     if (type == "2") {

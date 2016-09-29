@@ -24,6 +24,7 @@ class LogisticsService{
         $info = $type == 1 ? "发货方信息":"收货方信息";
         return view('wechat.logistics.useraddress')
             ->with('data',$data)
-            ->with('title',$info);
+            ->with('title',$info)
+            ->with('type',$type);
     }
 }
