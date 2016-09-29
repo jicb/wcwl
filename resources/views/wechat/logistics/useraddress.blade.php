@@ -85,24 +85,24 @@
     </div>
 </div>
 
-<div class="popup">
+<div class="popup" id="popup">
     <div class="views">
         <div class="view">
             <div class="navbar">
-                <div class="navbar-inner" id="title">
+                <div class="navbar-inner">
                     <div class="left"><a href="#" class="close-popup">取消</a></div>
                     <div class="center">@{{ type }}</div>
-                    <div class="right"><a href="#" class="close-popup" v-on:click="insert">确定</a></div>
+                    <div class="right"><a href="#" class="close-popup" v-on:click="insertData">确定</a></div>
                 </div>
             </div>
             <div class="pages navbar-through">
                 <div class="page">
                     <div class="page-content">
-                        <div class="list-block media-list" id="lists">
+                        <div class="list-block media-list">
                             <ul>
                                 <li v-for="item in items">
                                     <label class="label-radio item-content">
-                                        <input type="radio" name="my-radio" />
+                                        <input type="radio" name="my-radio" value="@{{ $index  }}" />
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
@@ -137,13 +137,21 @@
         }
     });
 
-    var titleVue = new Vue({
-        el: "#title",
+
+    var typeVue = new Vue({
+        el: "#typevue",
         data: {
+            type: "常用发货方信息"
+        }
+    });
+    var popupVue = new Vue({
+        el: '#popup',
+        data: {
+            items: "",
             type: ""
         },
         methods:{
-            insert:function(){
+            insertData:function(){
                 var selected = $("input[type='radio']:checked");
                 if (selected && selected.length) {
                     var index = selected.val();
@@ -153,19 +161,6 @@
                     $('#insert-street').val(items[index].street);
                 }
             }
-        }
-    });
-    var typeVue = new Vue({
-        el: "#typevue",
-        data: {
-            type: "常用发货方信息"
-        }
-    });
-    var itemsVue = new Vue({
-        el: '#lists',
-        data: {
-            items: "",
-            type: ""
         }
     });
 
@@ -178,11 +173,11 @@
     if (type == "2") {
         typeVue.type = "常用收货方信息";
     }
-    itemsVue.items = items;
+    popupVue.items = items;
 
     //items.type = type == 1 ? '发货方' : '收货方';
 
-    titleVue.type = type == 1 ? '发货方' : '收货方';
+    popupVue.type = type == 1 ? '发货方' : '收货方';
 
 </script>
 <script>
