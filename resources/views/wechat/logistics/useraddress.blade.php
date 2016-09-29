@@ -100,17 +100,17 @@
                     <div class="page-content">
                         <div class="list-block media-list">
                             <ul>
-                                <li>
+                                <li v-for="item in items">
                                 <label class="label-radio item-content">
                                     <input type="radio" name="my-radio" checked>
                                     <div class="item-media"></div>
                                     <div class="item-inner">
                                         <div class="item-title-row">
-                                            <div class="item-title">Yellow Submarine</div>
-                                            <div class="item-after">$15</div>
+                                            <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
+                                            <div class="item-after">@{{ type }}</div>
                                         </div>
-                                        <div class="item-subtitle">Beatles</div>
-                                        <div class="item-text">Lorem ipsum dolor ...</div>
+                                        <div class="item-subtitle">@{{ item.pca }}</div>
+                                        <div class="item-text">@{{ item.street }}</div>
                                     </div>
                                 </label>
                                 </li>
