@@ -81,7 +81,8 @@
                     </div>
                     <div class="list-block media-list" id="popup">
                         <ul>
-                            <li v-for='it in items'>
+                            <template v-for='it in items'>
+                            <li>
                                 <label class="label-radio item-content">
                                     <input type="radio"   v-model="@{{ $index }}"/>
                                     <div class="item-inner">
@@ -94,7 +95,7 @@
                                     </div>
                                 </label>
                             </li>
-
+                            </template>
                         </ul>
                     </div>
                 </div>
