@@ -8,6 +8,55 @@
     <link rel="stylesheet" href="{!! URL::asset('css/wechat/common.css') !!}"/>
 </head>
 <body style="display:none;">
+<div class="popup" id="popup">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="close-popup">取消</a></div>
+                    <div class="center">@{{ type }}</div>
+                    <div class="right"><a href="#" class="close-popup" v-on:click="insertData">确定</a></div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div class="page">
+                    <div class="page-content">
+                        <div class="list-block media-list">
+                            <ul>
+                                <li v-for='it in items'>
+                                    <label class="label-radio item-content">
+                                        <input type="radio"   v-model="@{{ $index }}"/>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">@{{ it.name }} @{{ it.phone }}</div>
+                                                <div class="item-after">@{{ type }}</div>
+                                            </div>
+                                            <div class="item-subtitle">@{{ it.pca }}</div>
+                                            <div class="item-text">@{{ it.street }}</div>
+                                        </div>
+                                    </label>
+                                </li>
+                                {{--<li v-for="item in items">
+                                    <label class="label-radio item-content">
+                                        <input type="radio"   v-model="@{{ $index }}"/>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
+                                                <div class="item-after">@{{ type }}</div>
+                                            </div>
+                                            <div class="item-subtitle">@{{ item.pca }}</div>
+                                            <div class="item-text">@{{ item.street }}</div>
+                                        </div>
+                                    </label>
+                                </li>--}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="views">
     <div class="view view-main">
         <div class="pages">
@@ -85,56 +134,7 @@
     </div>
 </div>
 
-<div class="popup" id="popup">
-    <div class="views">
-        <div class="view">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <div class="left"><a href="#" class="close-popup">取消</a></div>
-                    <div class="center">@{{ type }}</div>
-                    <div class="right"><a href="#" class="close-popup" v-on:click="insertData">确定</a></div>
-                </div>
-            </div>
-            <div class="pages navbar-through">
-                <div class="page">
-                    <div class="page-content">
-                        <div class="list-block media-list">
-                            <ul>
-                                <li>
-                                <label class="label-radio item-content">
-                                    <input type="radio" name="my-radio" checked>
-                                    <div class="item-media"></div>
-                                    <div class="item-inner">
-                                        <div class="item-title-row">
-                                            <div class="item-title">nihao</div>
-                                            <div class="item-after">wohao</div>
-                                        </div>
-                                        <div class="item-subtitle">dajiahao</div>
-                                        <div class="item-text">douhao</div>
-                                    </div>
-                                </label>
-                                </li>
-                                {{--<li v-for="item in items">
-                                    <label class="label-radio item-content">
-                                        <input type="radio"   v-model="@{{ $index }}"/>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
-                                                <div class="item-after">@{{ type }}</div>
-                                            </div>
-                                            <div class="item-subtitle">@{{ item.pca }}</div>
-                                            <div class="item-text">@{{ item.street }}</div>
-                                        </div>
-                                    </label>
-                                </li>--}}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <script src="{!! URL::asset('js/vue.min.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
