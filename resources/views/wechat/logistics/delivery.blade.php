@@ -180,7 +180,7 @@
                                             <div class="item-title label">地址</div>
                                             <div class="item-input">
                                                 <input type="text" class='city-picker' value="@{{ pca }}"
-                                                       id="send-insert-pca" readonly/>
+                                                       id="send-insert-pca" />
                                             </div>
                                         </div>
                                     </div>

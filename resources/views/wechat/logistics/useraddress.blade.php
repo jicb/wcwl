@@ -125,6 +125,7 @@
 
 <script src="{!! URL::asset('js/vue.min.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
+<script src="{!! URL::asset('js/kitchen-sink.js') !!}"></script>
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 <script>
     var data = eval('(' + '<?php echo $data; ?>' + ')');
