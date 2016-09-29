@@ -167,7 +167,7 @@
             data: "",
             type: ""
         }
-    })
+    });
 
 
     var data = eval('(' + '{!! $data !!}' + ')');
