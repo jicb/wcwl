@@ -165,7 +165,7 @@
     });
 
 
-    var data = eval('(' + '{!! $data !!}' + ')');
+    var data = eval('(' + '<?php echo $data;?>' + ')');
     var items = data.data;
     var type = '{!! $type !!}';
 
