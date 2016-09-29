@@ -18,7 +18,7 @@
                         <ul>
                             <!-- Text inputs -->
                             <li>
-                                <a class="item-link item-content open-popup" href="#">
+                                <a class="item-content open-popup" href="#">
                                     <div class="item-inner" id="typevue">
                                         <div class="item-title">@{{ type }}</div>
                                     </div>
@@ -100,9 +100,23 @@
                     <div class="page-content">
                         <div class="list-block media-list">
                             <ul>
-                                <li v-for="item in items">
+                                <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="my-radio" checked>
+                                    <div class="item-media"></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Yellow Submarine</div>
+                                            <div class="item-after">$15</div>
+                                        </div>
+                                        <div class="item-subtitle">Beatles</div>
+                                        <div class="item-text">Lorem ipsum dolor ...</div>
+                                    </div>
+                                </label>
+                                </li>
+                                {{--<li v-for="item in items">
                                     <label class="label-radio item-content">
-                                        <input type="radio" name="my-radio" value="@{{ $index  }}" />
+                                        <input type="radio"   v-model="@{{ $index }}"/>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">@{{ item.name }} @{{ item.phone }}</div>
@@ -112,7 +126,7 @@
                                             <div class="item-text">@{{ item.street }}</div>
                                         </div>
                                     </label>
-                                </li>
+                                </li>--}}
                             </ul>
                         </div>
                     </div>
@@ -122,7 +136,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="{!! URL::asset('js/vue.min.js') !!}"></script>
+<script src="{!! URL::asset('js/vue.min.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 <script>
