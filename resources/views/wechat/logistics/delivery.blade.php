@@ -34,8 +34,7 @@
                 </a>
             </li>
             <li>
-                <a class="item-link item-content" style="height:110px;"
-                   href="useraddress?member_id={!! $member_id !!}&type=2">
+                <a class="item-link item-content" style="height:110px;" href="useraddress?member_id={!! $member_id !!}&type=2">
                     <div class="item-inner">
                         <div class="item-title-row">
                             <div class="item-title">@{{ data.receive.name }} @{{ data.receive.phone }}</div>
@@ -142,9 +141,6 @@
                     street: "详细地址"
                 }
             }
-        },
-        methods: {
-
         }
     });
 
