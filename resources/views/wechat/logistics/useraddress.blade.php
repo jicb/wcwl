@@ -79,32 +79,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-block media-list" id="popup">
-                        <ul>
-                            <template v-for='it in items'>
-                            <li>
-                                <label class="label-radio item-content">
-                                    <input type="radio"   v-model="@{{ $index }}"/>
-                                    <div class="item-inner">
-                                        <div class="item-title-row">
-                                            <div class="item-title">@{{ it.name }} @{{ it.phone }}</div>
-                                            <div class="item-after">@{{ type }}</div>
-                                        </div>
-                                        <div class="item-subtitle">@{{ it.pca }}</div>
-                                        <div class="item-text">@{{ it.street }}</div>
-                                    </div>
-                                </label>
-                            </li>
-                            </template>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="popup" id="popups">
+<div class="popup" id="popup">
     <div class="views">
         <div class="view">
             <div class="navbar">
