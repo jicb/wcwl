@@ -100,7 +100,7 @@
                     <div class="page-content">
                         <div class="list-block media-list">
                             <ul>
-                                <li v-for="item in items">
+                                <li>
                                 <label class="label-radio item-content">
                                     <input type="radio" name="my-radio" checked>
                                     <div class="item-media"></div>
