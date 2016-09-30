@@ -19,7 +19,7 @@ class MyselfService{
         $config = config('wechat');
 
         $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=".$currentUrl."&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
-        dd($url);
+
         $body = $client
             ->get($url)
             ->getBody();
