@@ -21,9 +21,10 @@ class LogisticsService{
         $bill = Waybill::where('order_id',$order_id)->first();
         $app = app('wechat');
         $broadcast = $app->broadcast;
-        $text = "您好，您已生成订单<br />单号：".$order->order_code.
-                "<br />运单号：".$bill->waybill_code;
+        $text = "您好，您已生成订单\n单号：".$order->order_code.
+                "\n运单号：".$bill->waybill_code;
         $broadcast->previewText($text, $request->input('openid'));
+        return "";
     }
 
     public function createOrder($request){
@@ -43,7 +44,7 @@ class LogisticsService{
 
         //生成运单
         Waybill::firstOrCreate([
-            'waybill_code'=>$request->input('waybill_code'),
+            'waybill_code'=>date('Hms'),
             'order_id'=>$order_id,
             'from_name'=>$request->input('from_name'),
             'from_phone'=>$request->input('from_phone'),
