@@ -161,6 +161,64 @@
     </div>
 </div>
 
+<div class="popup">
+    <div class="content" id="createAddress">
+        <div class="list-block">
+            <ul>
+                <!-- Text inputs -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">姓名</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="请输入名称" v-model="name">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">手机号</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="请输入手机号" v-model="phone">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">地址</div>
+                            <div class="item-input">
+                                <input type="text" class='city-picker' v-model="pca" id="pca" readonly/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">详细地址</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="详细到门牌号" v-model="street" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <div class="row">
+                <div class="col-50"><a href="#" class="button button-big button-fill button-danger close-popup">取消</a>
+                </div>
+                <div class="col-50"><a href="#" class="button button-big button-fill button-success close-popup"
+                                       v-on:click="create">提交</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 {{--<script src="{!! URL::asset('sui/dist/js/zepto.js) !!}"></script>--}}

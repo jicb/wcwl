@@ -23,7 +23,7 @@
                         <ul>
                             <li>
                                 <a class="item-link item-content open-popup" data-popup="#popup-send"
-                                   style="height:110px;" href="#">
+                                    href="#">
                                     <div class="item-inner">
                                         <div class="item-title-row">
                                             <div class="item-title" id="send-users"><span
@@ -37,7 +37,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="item-link item-content open-popup" style="height:110px;"
+                                <a class="item-link item-content open-popup"
                                    href="#" data-popup="#popup-receive">
                                     <div class="item-inner">
                                         <div class="item-title-row">
@@ -55,14 +55,18 @@
                     </div>
                     <div class="list-block media-list" style="margin-top: -1em">
                         <ul>
-                            <li class="item-link item-content huowuxinxi">
-                                <div class="item-media">
-                                    <i class="icon"
-                                       style="width:1.45em;height:1.45em;background-image:url({!! URL::asset('sui/img/logistics/supermarket7.png') !!})"></i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">@{{ huowu }}</div>
-                                </div>
+                            <li>
+                                <a class="item-link item-content open-popup" style="height:110px;"
+                                   href="#" data-popup="#popup-cargo">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">名称：<span id="cargo-name"></span></div>
+                                            <div class="item-after">货物</div>
+                                        </div>
+                                        <div class="item-subtitle" >件数：<span id="cargo-count"></span></div>
+                                        <div class="item-text">重量：<span id="cargo-weight"></span><br/>体积：<span id="cargo-volume"></span></div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -70,9 +74,9 @@
                     <div class="list-block" style="margin-top:-1em">
                         <ul>
                             <li>
-                                <a href="#" class="item-link item-content fukuanfangshi">
+                                <a href="#" class="item-link item-content" id="pay-method">
                                     <div class="item-inner">
-                                        <div class="item-title">付款方式<span style="padding-left:2em;">付款方式</span></div>
+                                        <div class="item-title">付款方式<span style="padding-left:2em;" id="pay">@{{paymethod}}</span></div>
                                     </div>
                                 </a>
                             </li>
@@ -85,17 +89,17 @@
                             </li>
 
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="#" class="item-link item-content" id="take-way">
                                     <div class="item-inner">
-                                        <div class="item-title">提货方式<span style="padding-left:2em;">自提</span></div>
+                                        <div class="item-title">提货方式<span style="padding-left:2em;" id="take">@{{ takeway }}</span></div>
                                     </div>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="#" class="item-link item-content" id="receipt-style">
                                     <div class="item-inner">
-                                        <div class="item-title">回单要求<span style="padding-left:2em;">1份</span></div>
+                                        <div class="item-title">回单要求<span style="padding-left:2em;" id="receipt">@{{ receiptstyle }}</span></div>
                                     </div>
                                 </a>
                             </li>
@@ -106,7 +110,6 @@
                         <ul>
                             <li class="align-top">
                                 <div class="item-content">
-                                    <div class="item-media"><i class="icon icon-form-comment"></i></div>
                                     <div class="item-inner">
                                         <div class="item-input">
                                             <textarea placeholder="备注"></textarea>
@@ -115,6 +118,18 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-50"><a href="#"
+                                                   class="button button-big button-fill button-danger close-popup"
+                                                   data-popup="#popup-send">取消</a>
+                            </div>
+                            <div class="col-50"><a href="#"
+                                                   class="button button-big button-fill button-success close-popup"
+                                                   data-popup="#popup-send" onclick="insertSend()">提交</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,6 +399,85 @@
     </div>
 </div>
 
+<div class="popup" id="popup-cargo">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">货物信息</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div class="page">
+                    <div class="page-content">
+                        <div class="list-block">
+                            <ul>
+                                <!-- Text inputs -->
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">名称</div>
+                                            <div class="item-input">
+                                                <input type="text" placeholder="请输入货物名称" value="@{{ name }}"
+                                                       id="cargo-insert-name"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">件数</div>
+                                            <div class="item-input">
+                                                <input type="text" placeholder="请输入件数" value="@{{ count }}"
+                                                       id="cargo-insert-count"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">重量</div>
+                                            <div class="item-input">
+                                                <input type="text" placeholder="请输入重量" value="@{{ weight }}"
+                                                       id="cargo-insert-weight"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">体积</div>
+                                            <div class="item-input">
+                                                <input type="text" placeholder="请输入体积" value="@{{ volume }}"
+                                                       id="cargo-insert-volume"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <div class="row">
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-danger close-popup"
+                                                       data-popup="#popup-cargo">取消</a>
+                                </div>
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-success close-popup"
+                                                       data-popup="#popup-cargo" onclick="insertCargo()">提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="{!! URL::asset('js/vue.min.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
@@ -407,7 +501,10 @@
                 phone: "",
                 pca: "",
                 street: "详细地址"
-            }
+            },
+            paymethod:"发货方付款",
+            takeway:"网点自提",
+            receiptstyle:"1 份"
         }
     });
 
@@ -445,6 +542,16 @@
         data: {
             items: data.receive,
             type: "收货方"
+        }
+    });
+
+    var cargoVue = new Vue({
+        el:"#popup-cargo",
+        data:{
+            name:$('#cargo-name').text(),
+            count:$('#cargo-count').text(),
+            weight:$('#cargo-weight').text(),
+            volume:$('#cargo-volume').text()
         }
     });
 
@@ -510,6 +617,107 @@
             }
         ]
     });
+
+    $('#pay-method').on('click', function () {
+        var buttons1 = [
+            {
+                text: '选择付款方式',
+                label: true
+            },
+            {
+                text: '发货方付款',
+                onClick: function () {
+                    $('#pay').text('发货方付款');
+                }
+            },
+            {
+                text: '收货方付款',
+                onClick: function () {
+                    $('#pay').text('收货方付款');
+                }
+            },
+            {
+                text: '发货方月结',
+                onClick: function () {
+                    $('#pay').text('发货方月结');
+                }
+            }
+        ];
+        var buttons2 = [
+            {
+                text: '取消',
+                color: 'red'
+            }
+        ];
+        var groups = [buttons1, buttons2];
+        myApp.actions(groups);
+    });
+
+    $('#take-way').on('click', function () {
+        var buttons1 = [
+            {
+                text: '选择提货方式',
+                label: true
+            },
+            {
+                text: '网点自提',
+                onClick: function () {
+                    $('#take').text('网点自提');
+                }
+            },
+            {
+                text: '送货上门',
+                onClick: function () {
+                    $('#take').text('送货上门');
+                }
+            }
+        ];
+        var buttons2 = [
+            {
+                text: '取消',
+                color: 'red'
+            }
+        ];
+        var groups = [buttons1, buttons2];
+        myApp.actions(groups);
+    });
+
+
+    $('#receipt-style').on('click', function () {
+        var buttons1 = [
+            {
+                text: '选择回单数量',
+                label: true
+            },
+            {
+                text: '3 份',
+                onClick: function () {
+                    $('#receipt').text('3 份');
+                }
+            },
+            {
+                text: '2 份',
+                onClick: function () {
+                    $('#receipt').text('2 份');
+                }
+            },
+            {
+                text: '1 份',
+                onClick: function () {
+                    $('#receipt').text('1 份');
+                }
+            }
+        ];
+        var buttons2 = [
+            {
+                text: '取消',
+                color: 'red'
+            }
+        ];
+        var groups = [buttons1, buttons2];
+        myApp.actions(groups);
+    });
+
 </script>
 <script>
 
@@ -525,6 +733,13 @@
         $('#receive-phone').text($('#receive-insert-phone').val());
         $('#receive-pca').text($('#receive-insert-pca').val());
         $('#receive-street').text($('#receive-insert-street').val());
+    }
+
+    function insertCargo(){
+        $('#cargo-name').text($("#cargo-insert-name").val());
+        $('#cargo-count').text($("#cargo-insert-count").val());
+        $('#cargo-weight').text($("#cargo-insert-weight").val());
+        $('#cargo-volume').text($("#cargo-insert-volume").val());
     }
 
 
