@@ -21,15 +21,20 @@ class LogisticsController extends Controller
         $service = new LogisticsService();
         return $service->delivery($openid);   
     }
+
+    public function createOrder(Request $request){
+        $service = new LogisticsService();
+        return $service->createOrder($request);
+    }
     
-    public function useraddress(Request $request){        
+    /*public function useraddress(Request $request){        
         $service = new LogisticsService();
         return $service->userAddress($request);        
-    }
+    }*/
 
-    public function useraddressselect(Request $request){
+    /*public function useraddressselect(Request $request){
         return view('wechat.logistics.useraddressselect');
-    }
+    }*/
 
     public function freightaging(Request $request){
         return view('wechat.expect');
@@ -42,4 +47,6 @@ class LogisticsController extends Controller
     public function takerange(Request $request){
         return view('wechat.expect');
     }
+    
+    
 }

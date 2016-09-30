@@ -11,6 +11,51 @@ use App\Wechat\Member;
 use App\Wechat\Address;
 
 class CommonService{
+    
+    public static function switchReceipt($receipt_type){
+        $type = 0;
+        switch($receipt_type){
+            case '签回单':
+                $type=1;
+                break;
+            case '签托运单':
+                $type=2;
+                break;
+            case '签信封':
+                $type=3;
+                break;
+            case '签回单盖章':
+                $type=4;
+                break;
+            case '1份回单':
+                $type=5;
+                break;
+            case '2份回单':
+                $type=6;
+                break;
+            case '3份回单':
+                $type=7;
+                break;      
+            default:
+                break;
+        }
+        return $type;
+    }
+    
+    public static function switchExchange($exchange_type){
+        switch($exchange_type){
+            case '网点自提': return 1;
+            case '送货上门':return 1;
+            default:return 1;
+        }
+    }
+    
+    public static function createOrderCode($member_id){
+        $date = date('YmdHms');
+        
+        return $date;
+    }
+    
     public static function getMemberid($openid){
         $member = Member::where('openid',$openid)->first();
         if(!$member){

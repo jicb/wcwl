@@ -37,6 +37,7 @@ Route::group(['as'=>'h5::','prefix'=>'h5/auth','namespace'=>'Wechat\H5\Auth'],fu
 
 Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],function(){
     Route::any('logistics/delivery',['as'=>'delivery','uses'=>'LogisticsController@delivery']);
+    Route::any('logistics/createorder',['as'=>'createorder','uses'=>'LogisticsController@createOrder']);
     //Route::any('logistics/useraddress',['as'=>'useraddress','uses'=>'LogisticsController@useraddress']);
     //Route::any('logistics/useraddressselect',['as'=>'useraddressselect','uses'=>'LogisticsController@useraddressselect']);
     Route::any('logistics/freightaging',['as'=>'freightaging','uses'=>'LogisticsController@freightaging']);

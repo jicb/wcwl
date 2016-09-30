@@ -23,7 +23,7 @@
                         <ul>
                             <li>
                                 <a class="item-link item-content open-popup" data-popup="#popup-send"
-                                    href="#">
+                                   href="#">
                                     <div class="item-inner">
                                         <div class="item-title-row">
                                             <div class="item-title" id="send-users"><span
@@ -63,8 +63,9 @@
                                             <div class="item-title">名称：<span id="cargo-name"></span></div>
                                             <div class="item-after">货物</div>
                                         </div>
-                                        <div class="item-subtitle" >件数：<span id="cargo-count"></span></div>
-                                        <div class="item-text">重量：<span id="cargo-weight"></span><br/>体积：<span id="cargo-volume"></span></div>
+                                        <div class="item-subtitle">件数：<span id="cargo-count"></span></div>
+                                        <div class="item-text">重量：<span id="cargo-weight"></span><br/>体积：<span
+                                                    id="cargo-volume"></span></div>
                                     </div>
                                 </a>
                             </li>
@@ -76,14 +77,17 @@
                             <li>
                                 <a href="#" class="item-link item-content" id="pay-method">
                                     <div class="item-inner">
-                                        <div class="item-title">付款方式<span style="padding-left:2em;" id="pay">@{{paymethod}}</span></div>
+                                        <div class="item-title">付款方式<span style="padding-left:2em;"
+                                                                          id="pay">@{{paymethod}}</span></div>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="item-link item-content">
                                     <div class="item-inner">
-                                        <div class="item-title">报价费用<span style="padding-left:2em;">10元</span></div>
+                                        <div class="item-title">保价费用<span style="padding-left:2em;"
+                                                                        id="cargo-insure">10</span>元
+                                        </div>
                                     </div>
                                 </a>
                             </li>
@@ -91,7 +95,8 @@
                             <li>
                                 <a href="#" class="item-link item-content" id="take-way">
                                     <div class="item-inner">
-                                        <div class="item-title">提货方式<span style="padding-left:2em;" id="take">@{{ takeway }}</span></div>
+                                        <div class="item-title">提货方式<span style="padding-left:2em;"
+                                                                          id="take">@{{ takeway }}</span></div>
                                     </div>
                                 </a>
                             </li>
@@ -99,7 +104,8 @@
                             <li>
                                 <a href="#" class="item-link item-content" id="receipt-style">
                                     <div class="item-inner">
-                                        <div class="item-title">回单要求<span style="padding-left:2em;" id="receipt">@{{ receiptstyle }}</span></div>
+                                        <div class="item-title">回单要求<span style="padding-left:2em;"
+                                                                          id="receipt">@{{ receiptstyle }}</span></div>
                                     </div>
                                 </a>
                             </li>
@@ -112,7 +118,7 @@
                                 <div class="item-content">
                                     <div class="item-inner">
                                         <div class="item-input">
-                                            <textarea placeholder="备注"></textarea>
+                                            <textarea placeholder="备注" id="comment"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +133,7 @@
                             </div>
                             <div class="col-50"><a href="#"
                                                    class="button button-big button-fill button-success close-popup"
-                                                   data-popup="#popup-send" onclick="insertSend()">提交</a>
+                                                   data-popup="#popup-send" onclick="insertOrderWaybill()">提交</a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +201,7 @@
                                             <div class="item-title label">地址</div>
                                             <div class="item-input">
                                                 <input type="text" class='city-picker-send' value="@{{ pca }}"
-                                                       id="send-insert-pca" />
+                                                       id="send-insert-pca"/>
                                             </div>
                                         </div>
                                     </div>
@@ -251,7 +257,7 @@
                             <ul>
                                 <li v-for='it in items'>
                                     <label class="label-radio item-content">
-                                        <input type="radio" name="send" value="@{{ $index }}"/>
+                                        <input type="radio" name="popup-send-index" value="@{{ $index }}"/>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">@{{ it.name }} @{{ it.phone }}</div>
@@ -379,7 +385,7 @@
                             <ul>
                                 <li v-for='it in items'>
                                     <label class="label-radio item-content">
-                                        <input type="radio" name="receive" value="@{{ $index }}"/>
+                                        <input type="radio" name="popup-receive-index" value="@{{ $index }}"/>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">@{{ it.name }} @{{ it.phone }}</div>
@@ -502,9 +508,9 @@
                 pca: "",
                 street: "详细地址"
             },
-            paymethod:"发货方付款",
-            takeway:"网点自提",
-            receiptstyle:"1 份"
+            paymethod: "发货方付款",
+            takeway: "网点自提",
+            receiptstyle: "1 份"
         }
     });
 
@@ -546,12 +552,12 @@
     });
 
     var cargoVue = new Vue({
-        el:"#popup-cargo",
-        data:{
-            name:$('#cargo-name').text(),
-            count:$('#cargo-count').text(),
-            weight:$('#cargo-weight').text(),
-            volume:$('#cargo-volume').text()
+        el: "#popup-cargo",
+        data: {
+            name: $('#cargo-name').text(),
+            count: $('#cargo-count').text(),
+            weight: $('#cargo-weight').text(),
+            volume: $('#cargo-volume').text()
         }
     });
 
@@ -751,7 +757,7 @@
                 onClick: function () {
                     $('#receipt').text('1份回单');
                 }
-            },{
+            }, {
                 text: '2份回单',
                 onClick: function () {
                     $('#receipt').text('2份回单');
@@ -778,6 +784,75 @@
 </script>
 <script>
 
+    function getQuery() {
+        var member_id = data.member_id;
+
+        var from_name = $('#send-user').text();
+        var from_phone = $('#send-phone').text();
+        var from_pca = $('#send-pca').text();
+        var from_street = $('#from-street').text();
+        var to_name = $('#receive-user').text();
+        var to_phone = $('#receive-phone').text();
+        var to_pca = $('#receive-pca').text();
+        var to_street = $('#receive-street').text();
+        var cargo_name = $('#cargo-name').text();
+        var cargo_count = $('#cargo-count').text();
+        var cargo_weight = $('#cargo-weight').text();
+        var cargo_volume = $('#cargo-volume').text();
+        var cargo_insure = $('#cargo-insure').text();
+        var exchange_type = $('#take').text();
+        var receipt_type = $("#receipt").text();
+
+        var price = cargo_insure;
+
+        var comment = $('#comment').val();
+
+        return {
+            member_id: member_id,
+            from_name: from_name,
+            from_phone: from_phone,
+            from_pca: from_pca,
+            from_street: from_street,
+            to_name: to_name,
+            to_phone: to_phone,
+            to_pca: to_pca,
+            to_street: to_street,
+            cargo_name: cargo_name,
+            cargo_count: cargo_count,
+            cargo_weight: cargo_weight,
+            cargo_volume: cargo_volume,
+            cargo_insure: cargo_insure,
+            exchange_type: exchange_type,
+            receipt_type:receipt_type,
+            price: price,
+            comment: comment
+        };
+
+    }
+
+    function insertOrderWaybill() {
+        myApp.confirm('您确定要提交订单吗？', '提交订单', function () {
+            var query = getQuery();
+            $.post('createorder',query,function(res){
+                $.alert('订单已成功完成','订单提交',function(){
+                    var readyFunc = function onBridgeReady() {
+                        WeixinJSBridge.invoke('closeWindow',{
+                        },function(res){
+                        });
+                    }
+
+                    if (typeof WeixinJSBridge === "undefined") {
+                        document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
+                    } else {
+                        readyFunc();
+                    }
+                })
+            });
+        });
+
+
+    }
+
     function insertSend() {
         $('#send-user').text($('#send-insert-name').val());
         $('#send-phone').text($('#send-insert-phone').val());
@@ -792,7 +867,7 @@
         $('#receive-street').text($('#receive-insert-street').val());
     }
 
-    function insertCargo(){
+    function insertCargo() {
         $('#cargo-name').text($("#cargo-insert-name").val());
         $('#cargo-count').text($("#cargo-insert-count").val());
         $('#cargo-weight').text($("#cargo-insert-weight").val());
@@ -801,7 +876,7 @@
 
 
     function insertSendData() {
-        var selected = $("input[type='radio']:checked");
+        var selected = $("input[name='popup-send-index']:checked");
         if (selected && selected.length) {
             var index = selected.val();
             $('#send-insert-name').val(sendSelectVue.items[index].name);
@@ -812,7 +887,7 @@
     }
 
     function insertReceiveData() {
-        var selected = $("input[type='radio']:checked");
+        var selected = $("input[name='popup-receive-index']:checked");
         if (selected && selected.length) {
             var index = selected.val();
             $('#receive-insert-name').val(receiveSelectVue.items[index].name);
