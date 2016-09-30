@@ -499,13 +499,13 @@
             send: {
                 name: "发货人信息",
                 phone: "",
-                pca: "",
+                pca: "地址",
                 street: "详细地址"
             },
             receive: {
                 name: "收货人信息",
                 phone: "",
-                pca: "",
+                pca: "地址",
                 street: "详细地址"
             },
             paymethod: "发货方付款",
