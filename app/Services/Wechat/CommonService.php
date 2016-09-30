@@ -7,6 +7,7 @@
  */
 namespace App\Services\Wechat;
 
+use App\Services\ToPinyin;
 use App\Wechat\Area;
 use App\Wechat\Member;
 use App\Wechat\Address;
@@ -60,9 +61,15 @@ class CommonService{
     }
     
     public static function createOrderCode($member_id){
+        $member = Member::find($member_id);
+        $name = $member->name;
+
+        $toPinyin = new ToPinyin();
+        $name = $toPinyin->get_pinyin($name);
+        $name = strtoupper($name);
         $date = date('YmdHms');
-        
-        return $date;
+
+        return $name.$date;
     }
     
     public static function getMemberid($openid){
