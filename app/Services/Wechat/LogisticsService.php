@@ -15,6 +15,17 @@ use Illuminate\Http\Request;
 
 class LogisticsService{
 
+    public function orderToUser($request){
+        $order_id = $request->input('order_id');
+        $order_code = Order::find($order_id);
+        $bill = Waybill::where('order_id',$order_id)->first();
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $text = '您好，您已生成订单<br />单号：'.$order_code.
+                '<br />运单号：'.$bill->waybill_code;
+        $broadcast->previewText($text, $request->input('openid'));
+    }
+
     public function createOrder($request){
         //生成运单号
         $orderCode = CommonService::createOrderCode($request->input('member_id'));
