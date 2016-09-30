@@ -7,6 +7,7 @@
  */
 namespace App\Services\Wechat;
 
+use App\Wechat\Area;
 use App\Wechat\Member;
 use App\Wechat\Address;
 
@@ -80,10 +81,35 @@ class CommonService{
         $dataSend = self::getData($send);
         $dataReceive = self::getData($receive);
 
-        $data = json_encode(array('send'=>$dataSend,'receive'=>$dataReceive,'member_id'=>$member_id));
+
+        $dataSSQ = [];
+        $dataSS = [];
+        $dataSheng = [];
+        $dataShi = [];
+        self::getSSQ($dataSS,$dataSSQ,$dataSheng,$dataShi);
+
+        $data = json_encode(array('send'=>$dataSend,'receive'=>$dataReceive,'member_id'=>$member_id,'SSQ'=>$dataSSQ,'SS'=>$dataSS,'Sheng'=>$dataSheng,'Shi'=>$dataShi));
 
 
         return $data;
+    }
+
+    public static function getSSQ(&$SS,&$SSQ,&$Sheng,&$Shi){
+        $source = Area::orderBy('priority','desc')->get();
+        $source = $source->groupBy('province');
+
+        $source->each(function ($item1,$key1) use(&$SS,&$SSQ,&$Sheng,&$Shi){
+           $item2 = $item1->groupBy('city');
+            $Sheng[] = $key1;
+            foreach($item2 as $key2 => $value){
+                $SS[$key1][] = $key2;
+                $SSQ[$key1][$key2] = [];
+                foreach ($value as $value2){
+                    $SSQ[$key1][$key2][] = $value2->area;
+                }
+            }
+        });
+
     }
 
     public static function getSendOrReceiveData($member_id,$type){

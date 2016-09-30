@@ -86,7 +86,7 @@
                                 <a href="#" class="item-link item-content">
                                     <div class="item-inner">
                                         <div class="item-title">保价费用<span style="padding-left:2em;"
-                                                                        id="cargo-insure">10</span>元
+                                                                          id="cargo-insure">10</span>元
                                         </div>
                                     </div>
                                 </a>
@@ -491,6 +491,10 @@
 {{--<script src="{!! URL::asset('js/mydelivery.js') !!}"></script>--}}
 <script>
     var data = eval('(' + '<?php echo $data; ?>' + ')');
+    var SSQ = data.SSQ;
+    var SS = data.SS;
+    var Sheng = data.Sheng;
+
     var openid = '{!! $openid !!}';
 
     var contentVue = new Vue({
@@ -574,15 +578,50 @@
         dynamicNavbar: true
     });
 
-    var ssq = {
+    /*var testaments = {OT: ['Genesis', 'Exodus', 'Leviticus'], NT: ['Matthew', 'Mark']};
+     var books = {
+     Genesis: ['Genesis 1', 'Genesis 2', 'Genesis 3'],
+     Exodus: ['Exodus 1', 'Exodus 2', 'Exodus 3'],
+     Leviticus: ['Leviticus 1', 'Leviticus 2', 'Leviticus 3'],
+     Matthew: ['Mathew 1', 'Matthew 2', 'Matthew 3'],
+     Mark: ['Mark 1', 'Mark 2', 'Mark 3']
+     };
+     var pickerDependent = myApp.picker({
+     input: '.city-picker-send',
+     rotateEffect: true,
+     formatValue: function (picker, values) {
+     return values[1];
+     },
+     cols: [{
+     textAlign: 'left', values: ['OT', 'NT'], onChange: function (picker, section) {
+     if (picker.cols[1].replaceValues) {
+     picker.cols[1].replaceValues(testaments[section]);
+     picker.cols[2].replaceValues(testaments[section]);
+     }
+     }
+     }, {
+     textAlign: 'left', values: testaments.OT, onChange: function (picker, section) {
+     if (picker.cols[2].replaceValues) {
+     picker.cols[2].replaceValues(books[section]);
+     }
+     }
+     }, {values: books.Genesis, width: 160,},]
+     });*/
+
+    /*var ssq = {
         '湖北': {
             '武汉': ['江岸区', '江汉区', '硚口区', '汉阳区', '武昌区', '青山区', '洪山区', '东西湖区', '汉南区', '蔡甸区', '江夏区', '黄陂区', '新洲区']
+        },
+        '安徽': {
+            '合肥': ['蜀山'],
+            'chuizi': ['gaga']
         }
     };
 
     var ss = {
         '湖北': ['武汉'],
-    };
+        '安徽': ['合肥', 'chuizi']
+    };*/
 
     var pickerSend = myApp.picker({
         input: '.city-picker-send',
@@ -590,13 +629,14 @@
         formatValue: function (picker, values) {
             return values[0] + " " + values[1] + " " + values[2];
         },
-        cols: [
+        /*cols: [
             {
                 textAlign: 'left',
-                values: ['湖北'],
+                values: ['湖北', '安徽'],
                 onChange: function (picker, sheng) {
                     if (picker.cols[1].replaceValues) {
                         picker.cols[1].replaceValues(ss[sheng]);
+                        picker.cols[2].replaceValues(ssq[sheng][picker.cols[1].value]);
                     }
                 }
             },
@@ -612,35 +652,61 @@
             {
                 values: ssq['湖北']['武汉']
             }
+        ]*/
+        cols: [
+            {
+                textAlign: 'left',
+                values: Sheng,
+                onChange: function (picker, sheng) {
+                    if (picker.cols[1].replaceValues) {
+                        picker.cols[1].replaceValues(SS[sheng]);
+                        picker.cols[2].replaceValues(SSQ[sheng][picker.cols[1].value]);
+                    }
+                }
+            },
+            {
+                textAlign: 'left',
+                values: SS[Sheng[0]],
+                onChange: function (picker, shi) {
+                    if (picker.cols[2].replaceValues) {
+                        picker.cols[2].replaceValues(SSQ[picker.cols[0].value][shi]);
+                    }
+                }
+            },
+            {
+                values: SSQ[Sheng[0]]['武汉']
+            }
         ]
     });
-    var pickerReceive= myApp.picker({
+    var pickerReceive = myApp.picker({
         input: '.city-picker-receive',
         rotateEffect: true,
         formatValue: function (picker, values) {
             return values[0] + " " + values[1] + " " + values[2];
         },
+
         cols: [
             {
                 textAlign: 'left',
-                values: ['湖北'],
+                values: Sheng,
                 onChange: function (picker, sheng) {
                     if (picker.cols[1].replaceValues) {
-                        picker.cols[1].replaceValues(ss[sheng]);
+                        picker.cols[1].replaceValues(SS[sheng]);
+                        picker.cols[2].replaceValues(SSQ[sheng][picker.cols[1].value]);
                     }
                 }
             },
             {
                 textAlign: 'left',
-                values: ss['湖北'],
+                values: SS[Sheng[0]],
                 onChange: function (picker, shi) {
                     if (picker.cols[2].replaceValues) {
-                        picker.cols[2].replaceValues(ssq[picker.cols[0].value][shi]);
+                        picker.cols[2].replaceValues(SSQ[picker.cols[0].value][shi]);
                     }
                 }
             },
             {
-                values: ssq['湖北']['武汉']
+                values: SSQ[Sheng[0]]['武汉']
             }
         ]
     });
@@ -813,7 +879,7 @@
             cargo_volume: cargo_volume,
             cargo_insure: cargo_insure,
             exchange_type: exchange_type,
-            receipt_type:receipt_type,
+            receipt_type: receipt_type,
             price: price,
             comment: comment
         };
@@ -824,15 +890,14 @@
         var order = null;
         myApp.confirm('您确定要提交订单吗？', '提交订单', function () {
             var query = getQuery();
-            $.post('createorder',query,function(res){
-                order=res.order_id;
-                myApp.alert('订单已成功完成','订单提交',function(){
+            $.post('createorder', query, function (res) {
+                order = res.order_id;
+                myApp.alert('订单已成功完成', '订单提交', function () {
 
-                    window.location.href='ordertouser?openid='+openid+"&order_id="+order;
+                    window.location.href = 'ordertouser?openid=' + openid + "&order_id=" + order;
 
                     var readyFunc = function onBridgeReady() {
-                        WeixinJSBridge.invoke('closeWindow',{
-                        },function(res){
+                        WeixinJSBridge.invoke('closeWindow', {}, function (res) {
                         });
                     }
 
