@@ -23,7 +23,7 @@ class LogisticsController extends Controller
         $code = $request->input('code');
         $openid = self::getOpenidFromCode($code);
         $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
-        $service = new LogisticsService();
+      //  $service = new LogisticsService();
         return $service->delivery($openid);   
     }
 
