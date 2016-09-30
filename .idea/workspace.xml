@@ -6876,7 +6876,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
               <folding>
                 <element signature="e#54#95#0#PHP" expanded="true" />
               </folding>
@@ -6887,11 +6887,9 @@
       <file leaf-file-name="LogisticsService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="e#118#141#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="189">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -6970,8 +6968,8 @@
       <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="38" column="52" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="52" />
+            <state relative-caret-position="351">
+              <caret line="37" column="37" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -7052,8 +7050,8 @@
         <option value="$PROJECT_DIR$/app/Wechat/Waybill.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php" />
       </list>
     </option>
@@ -7642,12 +7640,12 @@
       <workItem from="1475031164469" duration="7500000" />
       <workItem from="1475045533300" duration="3691000" />
       <workItem from="1475050262224" duration="75430000" />
-      <workItem from="1475203035638" duration="18881000" />
+      <workItem from="1475203035638" duration="19352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269775000" />
+    <option name="totallyTimeSpent" value="270246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -8035,24 +8033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="38" column="52" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#54#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -8072,13 +8052,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/H5/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="37" column="37" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#54#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#118#141#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -16,15 +16,9 @@ use Illuminate\Http\Request;
 class LogisticsService{
 
     public function orderToUser($request){
-        /*$order_id = $request->input('order_id');
-        $order = Order::find($order_id);
-        $bill = Waybill::where('order_id',$order_id)->first();*/
-
         $app = app('wechat');
         $broadcast = $app->broadcast;
-        /*$text = "您好，您已生成订单,单号：".$order->order_code.
-                ",运单号：".$bill->waybill_code;*/
-        $broadcast->previewText("您好，订单已生成，请妥善保管。单号：".$request->input('order_id'), $request->input('openid'));
+        $broadcast->previewText("你好，下单成功", $request->input('openid'));
     }
 
     public function createOrder($request){
