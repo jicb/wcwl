@@ -576,55 +576,16 @@
     });
 
     var ssq = {
-        '安徽': {
-            '合肥': ['蜀山', '包河', '庐阳'],
-            '芜湖': ['无为', '怀远'],
-            '马鞍山': ['5'],
-            '铜陵': [],
-            '池州': []
-        },
-        German: {'Audi': [], 'BMW': [], 'Mercedes': [], 'Volkswagen': [], 'Volvo': []},
-        American: {'Cadillac': [], 'Chrysler': [], 'Dodge': [], 'Ford': []}
+        '湖北': {
+            '武汉': ['江岸区', '江汉区', '硚口区', '汉阳区', '武昌区', '青山区', '洪山区', '东西湖区', '汉南区', '蔡甸区', '江夏区', '黄陂区', '新洲区']
+        }
     };
 
     var ss = {
-        '安徽': ['合肥', '芜湖', '马鞍山', '铜陵', '池州'],
-        German: ['Audi', 'BMW', 'Mercedes', 'Volkswagen', 'Volvo'],
-        American: ['Cadillac', 'Chrysler', 'Dodge', 'Ford']
+        '湖北': ['武汉'],
     };
 
-    var pickeReceive = myApp.picker({
-        input: '.city-picker-receive',
-        rotateEffect: true,
-        formatValue: function (picker, values) {
-            return values[0] + " " + values[1] + " " + values[2];
-        },
-        cols: [
-            {
-                textAlign: 'left',
-                values: ['安徽', 'German', 'American'],
-                onChange: function (picker, sheng) {
-                    if (picker.cols[1].replaceValues) {
-                        picker.cols[1].replaceValues(ss[sheng]);
-                    }
-                }
-            },
-            {
-                textAlign: 'left',
-                values: ss['安徽'],
-                onChange: function (picker, shi) {
-                    if (picker.cols[2].replaceValues) {
-                        picker.cols[2].replaceValues(ssq[picker.cols[0].value][shi]);
-                    }
-                }
-            },
-            {
-                textAlign: 'left',
-                values: ssq['安徽']['合肥']
-            }
-        ]
-    });
-    var pickeSend = myApp.picker({
+    var pickerSend = myApp.picker({
         input: '.city-picker-send',
         rotateEffect: true,
         formatValue: function (picker, values) {
@@ -633,7 +594,7 @@
         cols: [
             {
                 textAlign: 'left',
-                values: ['安徽', 'German', 'American'],
+                values: ['湖北'],
                 onChange: function (picker, sheng) {
                     if (picker.cols[1].replaceValues) {
                         picker.cols[1].replaceValues(ss[sheng]);
@@ -642,7 +603,7 @@
             },
             {
                 textAlign: 'left',
-                values: ss['安徽'],
+                values: ss['湖北'],
                 onChange: function (picker, shi) {
                     if (picker.cols[2].replaceValues) {
                         picker.cols[2].replaceValues(ssq[picker.cols[0].value][shi]);
@@ -650,8 +611,37 @@
                 }
             },
             {
+                values: ssq['湖北']['武汉']
+            }
+        ]
+    });
+    var pickerReceive= myApp.picker({
+        input: '.city-picker-receive',
+        rotateEffect: true,
+        formatValue: function (picker, values) {
+            return values[0] + " " + values[1] + " " + values[2];
+        },
+        cols: [
+            {
                 textAlign: 'left',
-                values: ssq['安徽']['合肥']
+                values: ['湖北'],
+                onChange: function (picker, sheng) {
+                    if (picker.cols[1].replaceValues) {
+                        picker.cols[1].replaceValues(ss[sheng]);
+                    }
+                }
+            },
+            {
+                textAlign: 'left',
+                values: ss['湖北'],
+                onChange: function (picker, shi) {
+                    if (picker.cols[2].replaceValues) {
+                        picker.cols[2].replaceValues(ssq[picker.cols[0].value][shi]);
+                    }
+                }
+            },
+            {
+                values: ssq['湖北']['武汉']
             }
         ]
     });

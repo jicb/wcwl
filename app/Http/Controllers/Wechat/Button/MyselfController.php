@@ -15,7 +15,7 @@ class MyselfController extends Controller
     public function address(Request $request){
         $code = $request->input('code');
         $openid = self::getOpenidFromCode($code);
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $service = new MyselfService();
         return $service->viewAddress($openid);
         
