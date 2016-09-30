@@ -834,7 +834,7 @@
         myApp.confirm('您确定要提交订单吗？', '提交订单', function () {
             var query = getQuery();
             $.post('createorder',query,function(res){
-                $.alert('订单已成功完成','订单提交',function(){
+                myApp.alert('订单已成功完成','订单提交',function(){
                     var readyFunc = function onBridgeReady() {
                         WeixinJSBridge.invoke('closeWindow',{
                         },function(res){
