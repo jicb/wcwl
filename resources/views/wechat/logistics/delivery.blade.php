@@ -83,10 +83,20 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="#" class="item-link item-content" id="insure">
                                     <div class="item-inner">
-                                        <div class="item-title">保价费用<span style="padding-left:2em;"
+                                        <div class="item-title">保价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="padding-left:2em;"
                                                                           id="cargo-insure">10</span>元
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="item-link item-content" id="fare">
+                                    <div class="item-inner">
+                                        <div class="item-title">运费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="padding-left:2em;"
+                                                                                                                  id="cargo-fare">10</span>元
                                         </div>
                                     </div>
                                 </a>
@@ -127,13 +137,13 @@
                     </div>
                     <div class="content-block">
                         <div class="row">
-                            <div class="col-50"><a href="#"
+                            {{--<div class="col-50"><a href="#"
                                                    class="button button-big button-fill button-danger close-popup"
                                                    data-popup="#popup-send">取消</a>
-                            </div>
-                            <div class="col-50"><a href="#"
-                                                   class="button button-big button-fill button-success close-popup"
-                                                   data-popup="#popup-send" onclick="insertOrderWaybill()">提交</a>
+                            </div>--}}
+                            <div class="col-100"><a href="#"
+                                                   class="button button-big button-fill button-success "
+                                                    onclick="insertOrderWaybill()">提交</a>
                             </div>
                         </div>
                     </div>
@@ -226,7 +236,7 @@
                                                        data-popup="#popup-send">取消</a>
                                 </div>
                                 <div class="col-50"><a href="#"
-                                                       class="button button-big button-fill button-success close-popup"
+                                                       class="button button-big button-fill button-success"
                                                        data-popup="#popup-send" onclick="insertSend()">提交</a>
                                 </div>
                             </div>
@@ -354,7 +364,7 @@
                                                        data-popup="#popup-receive">取消</a>
                                 </div>
                                 <div class="col-50"><a href="#"
-                                                       class="button button-big button-fill button-success close-popup"
+                                                       class="button button-big button-fill button-success"
                                                        data-popup="#popup-receive" onclick="insertReceive()">提交</a>
                                 </div>
                             </div>
@@ -435,7 +445,7 @@
                                         <div class="item-inner">
                                             <div class="item-title label">件数</div>
                                             <div class="item-input">
-                                                <input type="text" placeholder="请输入件数" value="@{{ count }}"
+                                                <input type="number" placeholder="请输入件数" value="@{{ count }}"
                                                        id="cargo-insert-count"/>
                                             </div>
                                         </div>
@@ -444,9 +454,9 @@
                                 <li>
                                     <div class="item-content">
                                         <div class="item-inner">
-                                            <div class="item-title label">重量</div>
+                                            <div class="item-title label">重量(Kg)</div>
                                             <div class="item-input">
-                                                <input type="text" placeholder="请输入重量" value="@{{ weight }}"
+                                                <input type="number" placeholder="请输入重量" value="@{{ weight }}"
                                                        id="cargo-insert-weight"/>
                                             </div>
                                         </div>
@@ -455,9 +465,9 @@
                                 <li>
                                     <div class="item-content">
                                         <div class="item-inner">
-                                            <div class="item-title label">体积</div>
+                                            <div class="item-title label">体积(m&sup2;)</div>
                                             <div class="item-input">
-                                                <input type="text" placeholder="请输入体积" value="@{{ volume }}"
+                                                <input type="number" placeholder="请输入体积" value="@{{ volume }}"
                                                        id="cargo-insert-volume"/>
                                             </div>
                                         </div>
@@ -472,7 +482,7 @@
                                                        data-popup="#popup-cargo">取消</a>
                                 </div>
                                 <div class="col-50"><a href="#"
-                                                       class="button button-big button-fill button-success close-popup"
+                                                       class="button button-big button-fill button-success"
                                                        data-popup="#popup-cargo" onclick="insertCargo()">提交</a>
                                 </div>
                             </div>
@@ -837,8 +847,105 @@
         myApp.actions(groups);
     });
 
+    $('#insure').on('click', function () {
+        myApp.prompt('请输入保价金额','保价',function(value){
+           var flag = /^-?\d+[\.\d]?\d{0,2}$/.test(value);
+           if(flag){
+               $('#cargo-insure').text(value);
+           }else{
+               myApp.alert('请输入数字！！','保价')
+           }
+        });
+    });
+
+    $('#fare').on('click', function () {
+        myApp.prompt('请输入运费金额','运费',function(value){
+            var flag = /^-?\d+[\.\d]?\d{0,2}$/.test(value);
+            if(flag){
+                $('#cargo-fare').text(value);
+            }else{
+                myApp.alert('请输入数字！！','运费')
+            }
+        });
+    });
+
 </script>
 <script>
+
+    function sendAddrValidate(){
+        if(!$('#send-insert-name').val()){
+            myApp.alert('姓名不能为空！！！');
+            return false;
+        }
+
+        var phone = $('#send-insert-phone').val();
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            myApp.alert('请填写正确的手机号码！！！');
+            return false;
+        }
+
+        if(!$("#send-insert-pca").val()){
+            myApp.alert('地址不能为空！！！');
+            return false;
+        }
+
+
+        if(!$("#send-insert-street").val()){
+            myApp.alert('详细地址不能为空！！！');
+            return false;
+        }
+
+        return true;
+    }
+    function receiveAddrValidate(){
+        if(!$('#receive-insert-name').val()){
+            myApp.alert('姓名不能为空！！！');
+            return false;
+        }
+
+        var phone = $('#receive-insert-phone').val();
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            myApp.alert('请填写正确的手机号码！！！');
+            return false;
+        }
+
+        if(!$("#receive-insert-pca").val()){
+            myApp.alert('地址不能为空！！！');
+            return false;
+        }
+
+
+        if(!$("#receive-insert-street").val()){
+            myApp.alert('详细地址不能为空！！！');
+            return false;
+        }
+
+        return true;
+    }
+
+    function cargoValidate(){
+        if(!$('#cargo-insert-name').val()){
+            myApp.alert('名称不能为空！！！');
+            return false;
+        }
+
+        if(!$('#cargo-insert-count').val()){
+            myApp.alert('件数不能为空！！！');
+            return false;
+        }
+
+        if(!$('#cargo-insert-weight').val()){
+            myApp.alert('重量不能为空！！！');
+            return false;
+        }
+
+        if(!$('#cargo-insert-volume').val()){
+            myApp.alert('体积不能为空！！！');
+            return false;
+        }
+
+        return true;
+    }
 
     function getQuery() {
         var member_id = data.member_id;
@@ -894,18 +1001,26 @@
                 order = res.order_id;
                 myApp.alert('订单已成功完成', '订单提交', function () {
 
-                    window.location.href = 'ordertouser?openid=' + openid + "&order_id=" + order;
+                    var query = {
+                        openid:openid,
+                        order_id:order
+                    };
+                    $.get('ordertouser',query,function(res){
+                        var readyFunc = function onBridgeReady() {
+                            WeixinJSBridge.invoke('closeWindow', {}, function (res) {
+                            });
+                        }
 
-                    var readyFunc = function onBridgeReady() {
-                        WeixinJSBridge.invoke('closeWindow', {}, function (res) {
-                        });
-                    }
+                        if (typeof WeixinJSBridge === "undefined") {
+                            document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
+                        } else {
+                            readyFunc();
+                        }
+                    });
 
-                    if (typeof WeixinJSBridge === "undefined") {
-                        document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
-                    } else {
-                        readyFunc();
-                    }
+                    //window.location.href = 'ordertouser?openid=' + openid + "&order_id=" + order;
+
+
                 })
 
             });
@@ -915,24 +1030,37 @@
     }
 
     function insertSend() {
+        if(!sendAddrValidate()){
+            return false;
+        }
         $('#send-user').text($('#send-insert-name').val());
         $('#send-phone').text($('#send-insert-phone').val());
         $('#send-pca').text($('#send-insert-pca').val());
         $('#send-street').text($('#send-insert-street').val());
+
+        myApp.closeModal('#popup-send');
     }
 
     function insertReceive() {
+        if(!receiveAddrValidate()){
+            return false;
+        }
         $('#receive-user').text($('#receive-insert-name').val());
         $('#receive-phone').text($('#receive-insert-phone').val());
         $('#receive-pca').text($('#receive-insert-pca').val());
         $('#receive-street').text($('#receive-insert-street').val());
+        myApp.closeModal('#popup-receive');
     }
 
     function insertCargo() {
+        if(!cargoValidate()){
+            return false;
+        }
         $('#cargo-name').text($("#cargo-insert-name").val());
         $('#cargo-count').text($("#cargo-insert-count").val());
         $('#cargo-weight').text($("#cargo-insert-weight").val());
         $('#cargo-volume').text($("#cargo-insert-volume").val());
+        myApp.closeModal('#popup-cargo');
     }
 
 
