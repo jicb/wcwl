@@ -3,25 +3,20 @@
 namespace App\Http\Controllers\Wechat\Button;
 
 use App\Services\Wechat\LogisticsService;
-use EasyWeChat\Support\Log;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-
-
 class LogisticsController extends Controller
 {
     //
     public function orderToUser(Request $request){
-
-        $app = app('wechat');
-        $broadcast = $app->broadcast;
-        $broadcast->previewText("你好，注册成功", $request->input('openid'));
         
-        /*$service = new LogisticsService();
-        return $service->orderToUser($request);*/
+
+        $service = new LogisticsService();
+        $service->orderToUser($request);
     }
 
     public function delivery(Request $request){

@@ -12,15 +12,22 @@ use App\Wechat\Member;
 use App\Wechat\Order;
 use App\Wechat\Waybill;
 use Illuminate\Http\Request;
+use Log;
 
 class LogisticsService{
 
     public function orderToUser($request){
+
+        $order_id = $request->input('order_id');
+        $order = Order::find($order_id);
+        $bill = Waybill::where('order_id',$order_id)->first();
+
+        Log::info('hello '.$order->order_code." ".$bill->waybill_code);
         $app = app('wechat');
         $broadcast = $app->broadcast;
-        $broadcast->previewText("你好，下单成功", $request->input('openid'));
-        
-        return "";
+        $text = "您好，您已生成订单,单号：".$order->order_code.
+                ",运单号：".$bill->waybill_code;
+        $broadcast->previewText($text, $request->input('openid'));
     }
 
     public function createOrder($request){

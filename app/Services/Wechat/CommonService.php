@@ -43,11 +43,19 @@ class CommonService{
     }
     
     public static function switchExchange($exchange_type){
+        $data = 2;
         switch($exchange_type){
-            case '网点自提': return 1;
-            case '送货上门':return 1;
-            default:return 1;
+            case '网点自提':
+                $data = 2;
+                break;                
+            case '送货上门':
+                $data = 1;
+                break;
+            default:
+                break;
         }
+        
+        return $data;
     }
     
     public static function createOrderCode($member_id){
