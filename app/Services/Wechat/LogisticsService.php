@@ -53,7 +53,7 @@ class LogisticsService{
             'comment'=>$request->input('comment'),
         ]);
 
-        return "true";
+        return array('order_id'=>$order_id);
     }
 
     public function delivery($openid){

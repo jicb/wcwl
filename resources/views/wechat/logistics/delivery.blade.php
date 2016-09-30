@@ -492,6 +492,7 @@
 
 <script>
     var data = eval('(' + '<?php echo $data; ?>' + ')');
+    var openid = '{!! $openid !!}';
 
     var contentVue = new Vue({
         el: "#content",
@@ -831,9 +832,11 @@
     }
 
     function insertOrderWaybill() {
+        var order = null;
         myApp.confirm('您确定要提交订单吗？', '提交订单', function () {
             var query = getQuery();
             $.post('createorder',query,function(res){
+                order=res.order_id;
                 myApp.alert('订单已成功完成','订单提交',function(){
                     var readyFunc = function onBridgeReady() {
                         WeixinJSBridge.invoke('closeWindow',{
@@ -847,6 +850,7 @@
                         readyFunc();
                     }
                 })
+                window.location.href='ordertouser?openid='+openid+"&order_id="+order;
             });
         });
 

@@ -14,10 +14,16 @@ use App\Http\Controllers\Controller;
 class LogisticsController extends Controller
 {
     //
+    public function orderToUser(Request $request){
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $broadcast->previewText("你好，注册成功,订单好：".$request->input('order_id'), $request->input('openid'));
+    }
+
     public function delivery(Request $request){
         $code = $request->input('code');
         $openid = self::getOpenidFromCode($code);
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $service = new LogisticsService();
         return $service->delivery($openid);   
     }
