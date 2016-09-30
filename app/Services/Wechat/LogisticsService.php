@@ -38,7 +38,7 @@ class LogisticsService{
         Order::firstOrCreate([
             'order_code'=>$orderCode,
             'member_id' =>$request->input('member_id'),
-            'price'=>$request->input('price'),            
+            'price'=>$request->input('cargo_fare'),
         ]);
 
         //查找刚才生成的订单id
@@ -62,6 +62,7 @@ class LogisticsService{
             'cargo_weight'=>$request->input('cargo_weight'),
             'cargo_volume'=>$request->input('cargo_volume'),
             'cargo_insure'=>$request->input('cargo_insure'),
+            'price'=>$request->input('cargo_fare'),
             'exchange_type'=>CommonService::switchExchange($request->input('exchange_type')),
             'receipt_type'=>CommonService::switchReceipt($request->input('receipt_type')),
             'price'=>$request->input('price'),

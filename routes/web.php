@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::get('/hello','HelloController@hello');
 
+Route::any('/test','PaytestController@test');
+Route::any('/notify','PaytestController@notify');
+
 Route::group(['as'=>'wechat::','prefix'=>'wechat','namespace'=>'Wechat'],function(){
     Route::any('/',['as'=>'serve','uses'=>'WechatController@serve']);
     Route::any('/register/{openid}',['as'=>'register','uses'=>'WechatController@registeruser']);

@@ -963,6 +963,7 @@
         var cargo_weight = $('#cargo-weight').text();
         var cargo_volume = $('#cargo-volume').text();
         var cargo_insure = $('#cargo-insure').text();
+        var cargo_fare = $('#cargo-fare').text();
         var exchange_type = $('#take').text();
         var receipt_type = $("#receipt").text();
 
@@ -985,6 +986,7 @@
             cargo_weight: cargo_weight,
             cargo_volume: cargo_volume,
             cargo_insure: cargo_insure,
+            cargo_fare:cargo_fare,
             exchange_type: exchange_type,
             receipt_type: receipt_type,
             price: price,
