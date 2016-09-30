@@ -14,7 +14,7 @@ use GuzzleHttp\Client;
 class MyselfService{
 
     public function myOrder($request){
-        $currentUrl = $request->url;
+        $currentUrl = $request->url();
         $client = new Client();
         $config = config('wechat');
 
