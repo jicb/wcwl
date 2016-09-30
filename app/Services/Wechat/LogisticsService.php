@@ -19,6 +19,8 @@ class LogisticsService{
         $app = app('wechat');
         $broadcast = $app->broadcast;
         $broadcast->previewText("你好，下单成功", $request->input('openid'));
+        
+        return "";
     }
 
     public function createOrder($request){

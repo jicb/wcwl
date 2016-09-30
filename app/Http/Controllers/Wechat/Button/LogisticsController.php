@@ -15,8 +15,13 @@ class LogisticsController extends Controller
 {
     //
     public function orderToUser(Request $request){
-        $service = new LogisticsService();
-        return $service->orderToUser($request);
+
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $broadcast->previewText("你好，注册成功", $request->input('openid'));
+        
+        /*$service = new LogisticsService();
+        return $service->orderToUser($request);*/
     }
 
     public function delivery(Request $request){
