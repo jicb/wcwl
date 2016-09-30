@@ -194,7 +194,7 @@
                                         <div class="item-inner">
                                             <div class="item-title label">地址</div>
                                             <div class="item-input">
-                                                <input type="text" class='city-picker' value="@{{ pca }}"
+                                                <input type="text" class='city-picker-send' value="@{{ pca }}"
                                                        id="send-insert-pca" />
                                             </div>
                                         </div>
@@ -322,7 +322,7 @@
                                         <div class="item-inner">
                                             <div class="item-title label">地址</div>
                                             <div class="item-input">
-                                                <input type="text" class='city-picker' value="@{{ pca }}"
+                                                <input type="text" class='city-picker-receive' value="@{{ pca }}"
                                                        id="receive-insert-pca"/>
                                             </div>
                                         </div>
@@ -586,8 +586,39 @@
         American: ['Cadillac', 'Chrysler', 'Dodge', 'Ford']
     };
 
-    var pickerDependent = myApp.picker({
-        input: '.city-picker',
+    var pickeReceive = myApp.picker({
+        input: '.city-picker-receive',
+        rotateEffect: true,
+        formatValue: function (picker, values) {
+            return values[0] + " " + values[1] + " " + values[2];
+        },
+        cols: [
+            {
+                textAlign: 'left',
+                values: ['安徽', 'German', 'American'],
+                onChange: function (picker, sheng) {
+                    if (picker.cols[1].replaceValues) {
+                        picker.cols[1].replaceValues(ss[sheng]);
+                    }
+                }
+            },
+            {
+                textAlign: 'left',
+                values: ss['安徽'],
+                onChange: function (picker, shi) {
+                    if (picker.cols[2].replaceValues) {
+                        picker.cols[2].replaceValues(ssq[picker.cols[0].value][shi]);
+                    }
+                }
+            },
+            {
+                textAlign: 'left',
+                values: ssq['安徽']['合肥']
+            }
+        ]
+    });
+    var pickeSend = myApp.picker({
+        input: '.city-picker-send',
         rotateEffect: true,
         formatValue: function (picker, values) {
             return values[0] + " " + values[1] + " " + values[2];
@@ -686,27 +717,53 @@
     $('#receipt-style').on('click', function () {
         var buttons1 = [
             {
-                text: '选择回单数量',
+                text: '选择回单要求',
                 label: true
             },
             {
-                text: '3 份',
+                text: '签回单',
                 onClick: function () {
-                    $('#receipt').text('3 份');
+                    $('#receipt').text('签回单');
                 }
             },
             {
-                text: '2 份',
+                text: '签托运单',
                 onClick: function () {
-                    $('#receipt').text('2 份');
+                    $('#receipt').text('签托运单');
                 }
             },
             {
-                text: '1 份',
+                text: '签信封',
                 onClick: function () {
-                    $('#receipt').text('1 份');
+                    $('#receipt').text('签信封');
                 }
             }
+            ,
+            {
+                text: '签回单盖章',
+                onClick: function () {
+                    $('#receipt').text('签回单盖章');
+                }
+            }
+            ,
+            {
+                text: '1份回单',
+                onClick: function () {
+                    $('#receipt').text('1份回单');
+                }
+            },{
+                text: '2份回单',
+                onClick: function () {
+                    $('#receipt').text('2份回单');
+                }
+            },
+            {
+                text: '3份回单',
+                onClick: function () {
+                    $('#receipt').text('3份回单');
+                }
+            }
+
         ];
         var buttons2 = [
             {
