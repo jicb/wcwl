@@ -482,7 +482,6 @@
     var pickerDependent = myApp.picker({
         input: '.city-picker',
         rotateEffect: true,
-        onlyOnPopover:true,
         formatValue: function (picker, values) {
             return values[0] + " " + values[1] + " " + values[2];
         },
