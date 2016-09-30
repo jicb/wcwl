@@ -16,7 +16,7 @@ class LogisticsController extends Controller
     //
     public function orderToUser(Request $request){
         $service = new LogisticsService();
-        $service->orderToUser($request);        
+        return $service->orderToUser($request);
     }
 
     public function delivery(Request $request){
