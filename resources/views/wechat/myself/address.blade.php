@@ -161,7 +161,7 @@
     </div>
 </div>
 
-<div class="popup">
+{{--<div class="popup">
     <div class="content" id="createAddress">
         <div class="list-block">
             <ul>
@@ -191,7 +191,7 @@
                         <div class="item-inner">
                             <div class="item-title label">地址</div>
                             <div class="item-input">
-                                <input type="text" class='city-picker' v-model="pca" id="pca" readonly/>
+                                <input type="text" class='city-picker' value="@{{ pca }}" id="pca"/>
                             </div>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--}}
 
 
 
