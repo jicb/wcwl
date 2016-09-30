@@ -39,6 +39,7 @@ class LogisticsService{
             'order_code'=>$orderCode,
             'member_id' =>$request->input('member_id'),
             'price'=>$request->input('cargo_fare'),
+            'order_status'=>1,
         ]);
 
         //查找刚才生成的订单id

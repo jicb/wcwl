@@ -11,6 +11,11 @@ use App\Wechat\Address;
 use App\Wechat\Member;
 
 class MyselfService{
+
+    public function myOrder($request){
+        dd($request->url);
+    }
+
     public function addressTotop($request){
         $type = $request->input('type');
         $addr_id = $request->input('addr_id');

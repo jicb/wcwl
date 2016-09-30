@@ -41,7 +41,9 @@ class MyselfController extends Controller
     }
 
     public function order(Request $request){
-        return view('wechat.expect');
+        //return view('wechat.expect');
+        $service = new MyselfService();
+        return $service->myOrder($request);
     }
 
     public function numerical(Request $request){
