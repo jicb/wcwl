@@ -511,7 +511,7 @@
             },
             paymethod: "发货方付款",
             takeway: "网点自提",
-            receiptstyle: "1 份"
+            receiptstyle: "1份回单"
         }
     });
 
