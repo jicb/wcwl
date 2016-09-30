@@ -838,6 +838,7 @@
             $.post('createorder',query,function(res){
                 order=res.order_id;
                 myApp.alert('订单已成功完成','订单提交',function(){
+
                     window.location.href='ordertouser?openid='+openid+"&order_id="+order;
 
                     var readyFunc = function onBridgeReady() {
