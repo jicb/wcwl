@@ -17,12 +17,12 @@ class LogisticsService{
 
     public function orderToUser($request){
         $order_id = $request->input('order_id');
-        $order_code = Order::find($order_id);
+        $order = Order::find($order_id);
         $bill = Waybill::where('order_id',$order_id)->first();
         $app = app('wechat');
         $broadcast = $app->broadcast;
-        $text = '您好，您已生成订单<br />单号：'.$order_code.
-                '<br />运单号：'.$bill->waybill_code;
+        $text = "您好，您已生成订单<br />单号：".$order->order_code.
+                "<br />运单号：".$bill->waybill_code;
         $broadcast->previewText($text, $request->input('openid'));
     }
 
