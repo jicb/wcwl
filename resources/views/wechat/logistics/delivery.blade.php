@@ -399,13 +399,13 @@
             send: {
                 name: "发货人信息",
                 phone: "",
-                pca: "发货地址",
+                pca: "",
                 street: "详细地址"
             },
             receive: {
                 name: "收货人信息",
                 phone: "",
-                pca: "收货地址",
+                pca: "",
                 street: "详细地址"
             }
         }
