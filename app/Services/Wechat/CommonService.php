@@ -13,6 +13,39 @@ use App\Wechat\Member;
 use App\Wechat\Address;
 
 class CommonService{
+
+    public static function getOpenidFromCode($code){
+        try {
+            $config = config('wechat');
+
+            $url = "https://api.weixin.qq.com/sns/oauth2/access_token";
+
+            $data = array(
+                'appid' => $config['app_id'],
+                'secret' => $config['secret'],
+                'code' => $code,
+                'grant_type' => 'authorization_code',
+            );
+            $client = new Client();
+
+            $response = $client->request('GET',$url , ['query' => $data]);
+            $content = $response->getBody()->getContents();
+            $content = \GuzzleHttp\json_decode($content);
+            if(isset($content->openid,$content)){
+                return $content->openid;
+
+            }
+            Log::error("拉取用户信息错误");
+            return "";
+
+        } catch (ClientException $ce) {
+            Log::error($ce);
+            return "";
+        } catch (ConnectException $ce) {
+            Log::error($ce);
+            return "";
+        }
+    }
     
     public static function switchReceipt($receipt_type){
         $type = 0;

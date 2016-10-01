@@ -9,21 +9,15 @@ namespace App\Services\Wechat;
 
 use App\Wechat\Address;
 use App\Wechat\Member;
-use GuzzleHttp\Client;
+
 
 class MyselfService{
 
     public function myOrder($request){
-        $currentUrl = $request->url();
-        $client = new Client();
-        $config = config('wechat');
-
-        $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=".$currentUrl."&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
-
-        $body = $client
-            ->get($url)
-            ->getBody();
-        dd($body);
+        $code = $request->input('code');
+        $openid = CommonService::getOpenidFromCode($code);
+        dd($openid);
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
     }
 
     public function addressTotop($request){
