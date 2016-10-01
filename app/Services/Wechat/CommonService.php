@@ -11,7 +11,10 @@ use App\Services\ToPinyin;
 use App\Wechat\Area;
 use App\Wechat\Member;
 use App\Wechat\Address;
-
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ConnectException;
+use Log;
 class CommonService{
 
     public static function getOpenidFromCode($code){
