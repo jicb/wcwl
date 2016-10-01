@@ -70,6 +70,17 @@ class WechatController extends Controller
                 "sub_button" => [
                     [
                         "type" => "view",
+                        "name" => "个人首页",
+                        "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/myself/myself&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect",
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "员工入口",
+                        "url" => "http://wx.wancheng.org/button/myself/balance",
+                    ],
+                    
+                    /*[
+                        "type" => "view",
                         "name" => "我的余额",
                         "url" => "http://wx.wancheng.org/button/myself/balance",
                     ],
@@ -93,7 +104,7 @@ class WechatController extends Controller
                         "type" => "view",
                         "name" => "常用地址",
                         "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/myself/address&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect",
-                    ],
+                    ],*/
                 ],
             ],
 

@@ -15,9 +15,22 @@ class MyselfService{
 
     public function myOrder($request){
         $code = $request->input('code');
+        //$openid = CommonService::getOpenidFromCode($code);
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $member_id = CommonService::getMemberid($openid);
+        $orders = Member::find($member_id)->Order;
+        dd($orders);
+        return view('wechat.myself.myorder');
+    }
+
+    public function myself($request){
+        $code = $request->input('code');
         $openid = CommonService::getOpenidFromCode($code);
-        dd($openid);
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$member_id = CommonService::getMemberid($openid);
+        //$orders = Member::find($member_id)->Order;
+        dd($openid);
+        return view('wechat.myself.myorder');
     }
 
     public function addressTotop($request){

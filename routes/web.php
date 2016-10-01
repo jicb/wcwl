@@ -48,6 +48,7 @@ Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],
     Route::any('logistics/netquery',['as'=>'netquery','uses'=>'LogisticsController@netquery']);
     Route::any('logistics/takerange',['as'=>'takerange','uses'=>'LogisticsController@takerange']);
 
+    Route::any('myself/myself',['as'=>'myself','uses'=>'MyselfController@myself']);
     Route::any('myself/address',['as'=>'address','uses'=>'MyselfController@address']);
     Route::any('myself/address/create',['as'=>'address::create','uses'=>'MyselfController@addressCreate']);
     Route::any('myself/address/delete',['as'=>'address::delete','uses'=>'MyselfController@addressDelete']);

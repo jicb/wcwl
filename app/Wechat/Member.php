@@ -11,4 +11,9 @@ class Member extends Model
     protected $table = "wc_member";
     protected $primaryKey = "member_id";    
     protected $fillable = ['name','role','mobile','openid'];
+
+    public function Order()
+    {
+        return $this->hasMany('App\Wechat\Order','member_id');
+    }
 }

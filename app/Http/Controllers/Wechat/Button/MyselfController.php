@@ -40,8 +40,12 @@ class MyselfController extends Controller
         return view('wechat.expect');
     }
 
-    public function order(Request $request){
-        //return view('wechat.expect');
+    public function myself(Request $request){
+        $service = new MyselfService();
+        return $service->myself($request);
+    }
+
+    public function order(Request $request){        
         $service = new MyselfService();
         return $service->myOrder($request);
     }

@@ -13,4 +13,9 @@ class Waybill extends Model
     protected $fillable = ['waybill_code','order_id','from_name','from_phone','from_pca','from_street','to_name',
                             'to_phone','to_pca','to_street','cargo_name','cargo_count','cargo_weight','cargo_volume',
                             'cargo_insure','exchange_type','receipt_type','price','comment'];
+
+    public function Order()
+    {
+        return $this->belongsTo('App\Wechat\Order','order_id');
+    }
 }
