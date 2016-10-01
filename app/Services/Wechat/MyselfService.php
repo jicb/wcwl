@@ -24,8 +24,14 @@ class MyselfService{
     }
 
     public function myself($request){
-        $code = $request->input('code');
-        $openid = CommonService::getOpenidFromCode($code);
+        //$openid = "";
+        if(!$request->input('openid')){
+            $code = $request->input('code');
+            $openid = CommonService::getOpenidFromCode($code);
+        }else{
+            $openid = $request->input('openid');
+        }
+        
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
@@ -93,7 +99,7 @@ class MyselfService{
 
     public function viewCommonAddress($request){
         $data = CommonService::getAllAddress($request->input('openid'));
-        return view('wechat.myself.address')->with('data',$data);
+        return view('wechat.myself.commonaddress')->with('data',$data)->with('openid',$request->input('openid'));
     }
 
     private function getMaxPriotity($member_id,$type){
