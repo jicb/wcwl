@@ -23,7 +23,7 @@
 
                 <div class="subnavbar">
                     <div class="buttons-row">
-                        <a href="#tab-send" class="button tab-link active" v-on:click="issend">发货方dd</a>
+                        <a href="#tab-send" class="button tab-link active" v-on:click="issend">发货方</a>
                         <a href="#tab-receive" class="button tab-link" v-on:click="isreceive">收货方</a>
                     </div>
                 </div>
