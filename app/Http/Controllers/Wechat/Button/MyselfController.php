@@ -21,6 +21,12 @@ class MyselfController extends Controller
         
     }
 
+    public function commonaddress(Request $request){        
+        $service = new MyselfService();
+        return $service->viewCommonAddress($request);
+
+    }
+
     public function addressCreate(Request $request){
         $service = new MyselfService();
         return $service->addressCreate($request);

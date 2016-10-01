@@ -26,10 +26,12 @@ class MyselfService{
     public function myself($request){
         $code = $request->input('code');
         $openid = CommonService::getOpenidFromCode($code);
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
-        //$member_id = CommonService::getMemberid($openid);
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
-        return view('wechat.myself.myself');
+        return view('wechat.myself.myself')
+                ->with('member_id',$member_id)
+                ->with('openid',$openid);
     }
 
     public function addressTotop($request){
@@ -85,12 +87,14 @@ class MyselfService{
     }
 
     public function viewAddress($openid){
-        $data = CommonService::getAllAddress($openid);     
+        $data = CommonService::getAllAddress($openid);
         return view('wechat.myself.address')->with('data',$data);
     }
-    
 
-    
+    public function viewCommonAddress($request){
+        $data = CommonService::getAllAddress($request->input('openid'));
+        return view('wechat.myself.address')->with('data',$data);
+    }
 
     private function getMaxPriotity($member_id,$type){
         $priority = 1;

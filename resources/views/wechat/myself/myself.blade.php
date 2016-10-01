@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>个人中心</title>
-    <link rel="stylesheet" href="{!! URL::asset('framework7plus/dist/css/framework7.ios.min.css') !!}">
-    <link rel="stylesheet" href="{!! URL::asset('framework7plus/dist/css/framework7.ios.colors.min.css') !!}">
+    <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
 </head>
 <body>
 <!-- Status bar overlay for full screen mode (PhoneGap) -->
@@ -60,7 +57,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="http;" class="item-link item-content" class="external">
                                     <div class="item-inner">
                                         我的优惠券
                                     </div>
@@ -72,7 +69,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="commonaddress?openid={!! $openid !!}" target="_blank" class="item-link item-content external">
                                     <div class="item-inner">
                                         常用地址簿
                                     </div>
@@ -84,13 +81,15 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-<script src="{!! URL::asset('framework7plus/dist/js/framework7.min.js') !!}"></script>
-<script src="{!! URL::asset('framework7plus/dist/js/kitchen-sink.js') !!}"></script>
-<script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
+
 <script src="{!! URL::asset('js/vue.js') !!}"></script>
+<script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
+<script src="{!! URL::asset('js/kitchen-sink.js') !!}"></script>
+<script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
+
+
 <script>
     // Initialize your app
     var myApp = new Framework7();
@@ -98,9 +97,10 @@
     // Export selectors engine
     var $$ = Dom7;
 
-    // Add views
-    var view1 = myApp.addView('.view-main');
-
+    var mainView = myApp.addView('.view-main', {
+        // Because we use fixed-through navbar we can enable dynamic navbar
+        //dynamicNavbar: true
+    });
 </script>
 </body>
 </html>

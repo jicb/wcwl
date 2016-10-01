@@ -6,10 +6,6 @@
     <title>我要发货</title>
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
     <link rel="stylesheet" href="{!! URL::asset('css/wechat/common.css') !!}"/>
-    <style>
-
-    </style>
-
 </head>
 <body style="display:none;">
 
@@ -152,13 +148,6 @@
         </div>
     </div>
 </div>
-
-{{--<div class="row no-gutter" style="position: fixed;left:0;bottom:0;z-index: 100;width:100%;">
-    <div class="col-75" style="height:4em;background-color: darkseagreen;text-align: center;padding-top:0.5em;">
-        订单总额：￥100元 仅供参考<br/>我同意万程运单条款
-    </div>
-    <div class="col-25" style="height:4em;background-color: yellow;line-height: 4em;text-align: center">提交订单</div>
-</div>--}}
 
 <div class="popup" id="popup-send">
     <div class="views">
@@ -498,7 +487,6 @@
 <script src="{!! URL::asset('js/vue.min.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
-{{--<script src="{!! URL::asset('js/mydelivery.js') !!}"></script>--}}
 <script>
     var data = eval('(' + '<?php echo $data; ?>' + ')');
     var SSQ = data.SSQ;
