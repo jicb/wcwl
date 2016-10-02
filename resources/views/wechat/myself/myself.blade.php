@@ -45,7 +45,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="order?member_id={!! $member_id !!}" class="item-link item-content external">
                                     <div class="item-inner">
                                         我的订单
                                     </div>
