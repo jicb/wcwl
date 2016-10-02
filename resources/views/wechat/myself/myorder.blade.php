@@ -23,9 +23,9 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through" style="margin-top: -50px;">
+        <div class="pages navbar-through" >
             <!-- Pag has additional "with-subnavbar" class -->
-            <div data-page="home" class="page with-subnavbar">
+            <div  class="page">
                 <div class="page-content">
                     <div class="tabs">
                         <div id="tab-notend" class="tab active">
