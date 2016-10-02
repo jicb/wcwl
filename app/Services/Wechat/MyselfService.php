@@ -24,7 +24,7 @@ class MyselfService
         }*/
         $openid = CommonService::getOpenidFromCode($request->input('code'));
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
-        $member_id = $request->input('member_id');
+        $member_id = CommonService::getMemberid($openid);
         $orders = Member::find($member_id)->Order()->orderBy('created_at', 'desc')->get();
         $data = $this->getOrderData($orders);
         return view('wechat.myself.employee')->with('data',$data)
