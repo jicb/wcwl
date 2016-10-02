@@ -51,10 +51,24 @@
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="http;" class="item-link item-content" class="external">
+                                    <div class="item-inner">
+                                        我的优惠券
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="commonaddress?openid={!! $openid !!}" target="_blank" class="item-link item-content external">
+                                    <div class="item-inner">
+                                        常用地址簿
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
-                    <div class="list-block">
+                    {{--<div class="list-block">
                         <ul>
                             <li>
                                 <a href="http;" class="item-link item-content" class="external">
@@ -76,7 +90,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div>--}}
 
                 </div>
             </div>

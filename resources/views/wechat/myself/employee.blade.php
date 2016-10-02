@@ -13,7 +13,8 @@
             height:80px;
             border-radius: 15px;
             line-height:80px;
-            text-align: center
+            text-align: center;
+            font-size: 1.5em;
         }
 
         .row-my{
