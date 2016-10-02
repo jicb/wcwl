@@ -63,4 +63,9 @@ class MyselfController extends Controller
     public function coupon(Request $request){
         return view('wechat.expect');
     }
+    
+    public function employee(Request $request){
+        $service = new MyselfService();
+        return $service->employee($request);
+    }
 }
