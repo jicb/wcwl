@@ -9,6 +9,7 @@ namespace App\Services\Wechat;
 
 use App\Wechat\Address;
 use App\Wechat\Member;
+use App\Wechat\Order;
 
 
 class MyselfService
@@ -58,13 +59,14 @@ class MyselfService
         $notend = [];
         $ended = [];
         foreach ($orders as $order) {
+            $wayBill = Order::find($order->order_id)->Waybill;
             $temp = [];
             $temp['order_code'] = $order->order_code;
             $temp['price'] = $order->price;
             $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
-            $temp['employee_get'] = "zhangsan";
-            $temp['employee_send'] = "lisi";
+            $temp['employee_get'] = $wayBill->from_name;
+            $temp['employee_send'] = $wayBill->to_name;
             $temp['created_at'] = $order->created_at;
             $temp['end_at'] = $order->end_at;
             if($order->order_status == 6){
