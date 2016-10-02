@@ -34,7 +34,7 @@
                             <div class="col-50 col-card" style="background-color: yellowgreen;">订单收现</div>
                         </div>
                         <div class="row row-my">
-                            <div class="col-50 col-card" style="background-color: rebeccapurple;">网点添加</div>
+                            <div class="col-50 col-card" style="background-color: purple;">网点添加</div>
                             <div class="col-50 col-card" style="background-color: darkred;">收送范围</div>
                         </div>
                     </div>
