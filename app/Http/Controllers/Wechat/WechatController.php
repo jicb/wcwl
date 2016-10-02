@@ -19,6 +19,8 @@ class WechatController extends Controller
         $wechat = app('wechat');
         $menu = $wechat->menu;
         $menu->destroy();
+        $urlPre = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=";
+        $urlEnd = "&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
         $button = [
             [
                 "name" => "物流服务",
@@ -76,7 +78,7 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "员工入口",
-                        "url" => "http://wx.wancheng.org/button/myself/balance",
+                        "url" => $urlPre."http://wx.wancheng.org/button/myself/employee".$urlEnd,
                     ],
                     
                     /*[
