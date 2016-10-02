@@ -65,6 +65,7 @@ class MyselfController extends Controller
     }
     
     public function employee(Request $request){
+        dd($request);
         $service = new MyselfService();
         return $service->employee($request);
     }

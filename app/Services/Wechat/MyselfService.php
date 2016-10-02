@@ -17,20 +17,20 @@ class MyselfService
     public function employee($request)
     {
         dd($request->input('openid'));
-        //$openid = "";
+        /*//$openid = "";
         if (!$request->input('openid')) {
             $code = $request->input('code');
             $openid = CommonService::getOpenidFromCode($code);
         } else {
             $openid = $request->input('openid');
-        }
+        }*/
 
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
-        $member_id = CommonService::getMemberid($openid);
+        //$member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
-        return view('wechat.myself.employee')
+        /*return view('wechat.myself.employee')
             ->with('member_id', $member_id)
-            ->with('openid', $openid);
+            ->with('openid', $openid);*/
     }
 
     public function myOrder($request)
