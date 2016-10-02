@@ -16,21 +16,19 @@ class MyselfService
 {
     public function employee($request)
     {
-        dd($request->input('openid'));
-        /*//$openid = "";
-        if (!$request->input('openid')) {
+        /*if (!$request->input('openid')) {
             $code = $request->input('code');
             $openid = CommonService::getOpenidFromCode($code);
         } else {
             $openid = $request->input('openid');
         }*/
-
+        $openid = CommonService::getOpenidFromCode($request->input('code'));
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
-        //$member_id = CommonService::getMemberid($openid);
-        //$orders = Member::find($member_id)->Order;        
-        /*return view('wechat.myself.employee')
-            ->with('member_id', $member_id)
-            ->with('openid', $openid);*/
+        $member_id = $request->input('member_id');
+        $orders = Member::find($member_id)->Order()->orderBy('created_at', 'desc')->get();
+        $data = $this->getOrderData($orders);
+        return view('wechat.myself.employee')->with('data',$data)
+            ->with('member_id',$member_id);
     }
 
     public function myOrder($request)
