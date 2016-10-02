@@ -15,6 +15,8 @@
             line-height:80px;
             text-align: center;
             font-size: 1.5em;
+            background-color: #007aff;
+            color:white;
         }
 
         .row-my{
@@ -31,12 +33,12 @@
                 <div class="page-content">
                     <div class="content-block">
                         <div class="row row-my">
-                            <div class="col-50 col-card" style="background-color: #00d449;">新单核价</div>
-                            <div class="col-50 col-card" style="background-color: yellowgreen;">订单收现</div>
+                            <div class="col-50 col-card" >新单核价</div>
+                            <div class="col-50 col-card" >订单收现</div>
                         </div>
                         <div class="row row-my">
-                            <div class="col-50 col-card" style="background-color: purple;">网点添加</div>
-                            <div class="col-50 col-card" style="background-color: darkred;">收送范围</div>
+                            <div class="col-50 col-card" >网点添加</div>
+                            <div class="col-50 col-card" >收送范围</div>
                         </div>
                     </div>
                 </div>
