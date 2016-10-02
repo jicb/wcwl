@@ -16,6 +16,7 @@ class MyselfService
 {
     public function employee($request)
     {
+        dd($request->input('openid'));
         //$openid = "";
         if (!$request->input('openid')) {
             $code = $request->input('code');
