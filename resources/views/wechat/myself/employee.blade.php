@@ -5,7 +5,6 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>员工通道</title>
 
-    <link rel="stylesheet" href="{!! URL::asset('css/framework7.material.css') !!}"/>
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
     <link rel="stylesheet" href="{!! URL::asset('css/wechat/common.css') !!}"/>
 
@@ -29,6 +28,11 @@
             text-decoration: none;
             display:block;
         }
+
+        .card  p{
+            margin:0.1em 0;
+            font-size: 0.8em;
+        }
     </style>
 </head>
 <body style="display:none;">
@@ -40,7 +44,7 @@
                 <div class="page-content">
                     <div class="content-block">
                         <div class="row row-my">
-                            <div class="col-50 col-card" ><a href="#pricing" class="a-my">新单核价</a></div>
+                            <div class="col-50 col-card" ><a href="#pricing" class="a-my">我要揽件</a></div>
                             <div class="col-50 col-card" >订单收现</div>
                         </div>
                         <div class="row row-my">
@@ -70,7 +74,7 @@
                                     </div>
                                     <div class="swipeout-actions-right">
                                         <a href="#" class="item-success"
-                                           style="background-color: #00c795" onclick="itemPricing(@{{ $index }})">核价</a>
+                                           style="background-color: #00c795" onclick="itemPricing(@{{ $index }})">揽件</a>
                                     </div>
                                 </li>
                             </ul>
@@ -87,7 +91,7 @@
         <div class="view">
             <div class="navbar">
                 <div class="navbar-inner">
-                    <div class="center">待核价订单</div>
+                    <div class="center">待揽件订单</div>
                 </div>
             </div>
             <div class="pages navbar-through">
@@ -119,19 +123,22 @@
                             </div>
                             <div class="card-footer">
                                 <p>
-                                    运费：<input type="number" value="@{{ item.price }}" class="input-price"/>
+                                    备注：@{{ item.comment }}
                                 </p>
                             </div>
                         </div>
-                        <div class="content-block">
-                            <div class="row">
-                                <div class="col-100"><a href="#"
-                                                        class="button button-big button-fill button-success "
-                                                        onclick="goingPricing()">核价</a>
+                        <div class="content-block" >
+                            <div class="row" style="margin-bottom: 100px;">
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-danger  close-popup"
+                                                       data-popup="#popup-pricing">取消</a>
+                                </div>
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-success close-popup"
+                                                       data-popup="#popup-pricing" onclick="goingPricing(@{{ item.order_code }})">揽件</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -220,6 +227,10 @@
             }
         };
     }*/
+    function goingPricing(order_sttaus){
+
+    }
+
     function itemPricing(index){
         popupPricing.item = pricing[index];
         myApp.popup('#popup-pricing');

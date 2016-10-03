@@ -23,7 +23,7 @@ class MyselfService
             $openid = $request->input('openid');
         }*/
         $openid = CommonService::getOpenidFromCode($request->input('code'));
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Member::find($member_id)->Order()->where('order_status','1')->orderBy('created_at', 'desc')->get();
         if(!empty($pricingData)){
@@ -54,13 +54,13 @@ class MyselfService
         $data = "待核价";
         switch ($status) {
             case 1:
-                $data = "待核价";
+                $data = "待揽件";
                 break;
             case 2:
-                $data = "待确定";
+                $data = "待报价";
                 break;
             case 3:
-                $data = "已确认";
+                $data = "待确定";
                 break;
             case 4:
                 $data = "运输中";
@@ -164,7 +164,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
         return view('wechat.myself.myself')
