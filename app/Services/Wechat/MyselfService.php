@@ -14,6 +14,26 @@ use App\Wechat\Order;
 
 class MyselfService
 {
+    public function getOrder($request){
+        $order = Order::find($request->input('order_id'));
+        $order->order_status = 2;
+        $order->employee_get = $request->input('member_id');
+        $order->save();
+
+        $order_id = $order->order_id;
+        $employee_get = Order::find($request->input('order_id'));
+
+        $member  = $order->Member;
+        $employee = $employee_get->Member;
+
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $text = "您好，您的订单已被".$employee->name."收揽,单号：".$order->order_code;
+        $broadcast->previewText($text, $member->openid);
+
+        return "";
+    }
+
     public function employee($request)
     {
         /*if (!$request->input('openid')) {
@@ -23,7 +43,7 @@ class MyselfService
             $openid = $request->input('openid');
         }*/
         $openid = CommonService::getOpenidFromCode($request->input('code'));
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Member::find($member_id)->Order()->where('order_status','1')->orderBy('created_at', 'desc')->get();
         if(!empty($pricingData)){
@@ -84,6 +104,7 @@ class MyselfService
             $wayBill = Order::find($order->order_id)->Waybill;
             $temp = [];
             $temp['order_code'] = $order->order_code;
+            $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
             $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
@@ -121,6 +142,7 @@ class MyselfService
             $wayBill = Order::find($order->order_id)->Waybill;
             $temp = [];
             $temp['order_code'] = $order->order_code;
+            $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
             $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
@@ -164,7 +186,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
         return view('wechat.myself.myself')

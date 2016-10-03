@@ -68,4 +68,9 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->employee($request);
     }
+
+    public function getOrder(Request $request){
+        $service = new MyselfService();
+        return $service->getOrder($request);
+    }
 }
