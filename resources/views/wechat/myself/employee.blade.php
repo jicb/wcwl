@@ -118,9 +118,12 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <p>
+                                <div class="item-input">
+                                    <input type="text" placeholder="Your name" value="@{{ item.price }}">
+                                </div>
+                                {{--<p>
                                     运费：<input type="number" value="@{{ item.price }}" class="input-f"/>
-                                </p>
+                                </p>--}}
                             </div>
                         </div>
                         <div class="content-block">
