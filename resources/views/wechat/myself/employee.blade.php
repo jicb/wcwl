@@ -118,12 +118,12 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <div class="item-input">
+                                {{--<div class="item-input">
                                     <input type="text" placeholder="Your name" value="@{{ item.price }}">
-                                </div>
-                                {{--<p>
-                                    运费：<input type="number" value="@{{ item.price }}" class="input-f"/>
-                                </p>--}}
+                                </div>--}}
+                                <p>
+                                    运费：<input type="number" value="@{{ item.price }}" class="input-price"/>
+                                </p>
                             </div>
                         </div>
                         <div class="content-block">
@@ -181,6 +181,48 @@
 
 
 <script>
+    //处理input输入框被输入法遮住
+
+        var inputF = $("p").find('input');//找到对应的input
+        if(inputF == document.activeElement){
+            //获取焦点时用喔
+            setTimeout(function(){
+                var inputIsNotInView = notInView(),
+                        Width = window.innerWidth,
+                        Height = window.innerHeight;
+                if(inputIsNotInView){
+                    if(Width != 750){
+                        var bottomAdjust = (Height - window.innerHeight - 88) + 'px';
+                        $(inputBox).css('bottom',bottomAdjust);
+                    }else {
+                        var bottomAdjust = (Height - window.innerHeight - 88 - 432) + 'px';
+                        $(inputBox).css('bottom',bottomAdjust);
+                    }
+                }
+            },600);
+
+        }else {
+            //失去焦点时用喔
+            var inputIsNotInView=notInView();
+            if(inputIsNotInView){
+                $(inputBox).css({'opacity':0,bottom:0});
+                setTimeout(function(){
+                    $(inputBox).css('opacity',1);
+                },600)
+            }
+        }
+
+
+        //------------------------------
+        function notInView(){
+            var bottom = inputBox.getBoundingClientRect().bottom;
+            if (window.innerHeight - bottom < 0){
+                return true;
+            }else {
+                return false;
+            }
+        };
+
     function itemPricing(index){
         popupPricing.item = pricing[index];
         myApp.popup('#popup-pricing');
