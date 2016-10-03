@@ -148,7 +148,9 @@
 <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 
 <script>
-    var myApp = new Framework7();
+    var myApp = new Framework7({
+        hideNavbarOnPageScroll:true,
+    });
 
     // Export selectors engine
     var $$ = Dom7;
@@ -181,9 +183,9 @@
 
 
 <script>
-    //处理input输入框被输入法遮住
-
-        var inputF = $("p").find('input');//找到对应的input
+    /*//处理input输入框被输入法遮住
+    function inputIos(inputBox){
+        var inputF = $(inputBox).find('input');//找到对应的input
         if(inputF == document.activeElement){
             //获取焦点时用喔
             setTimeout(function(){
@@ -222,7 +224,7 @@
                 return false;
             }
         };
-
+    }*/
     function itemPricing(index){
         popupPricing.item = pricing[index];
         myApp.popup('#popup-pricing');
