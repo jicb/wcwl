@@ -17,7 +17,7 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left">
-                    <a href="myself?openid={!! $openid !!}" class="link external">返回</a>
+                    <a href="myself?openid={!! $openid !!}" class="link external" style="font-size: 1.2em;"><i class="icon icon-back @{{iconsColorClass}}"></i>&nbsp;返回</a>
                 </div>
 
 

@@ -23,11 +23,16 @@ class MyselfService
             $openid = $request->input('openid');
         }*/
         $openid = CommonService::getOpenidFromCode($request->input('code'));
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
-        $orders = Member::find($member_id)->Order()->orderBy('created_at', 'desc')->get();
-        $data = $this->getOrderData($orders);
-        return view('wechat.myself.employee')->with('data',$data)
+        $pricingData = Member::find($member_id)->Order()->where('order_status','1')->orderBy('created_at', 'desc')->get();
+        if(!empty($pricingData)){
+            $pricingData = $this->getPricingData($pricingData);
+        }else{
+            $pricingData = "";
+        }
+
+        return view('wechat.myself.employee')->with('pricing',$pricingData)
             ->with('member_id',$member_id);
     }
 
@@ -70,6 +75,24 @@ class MyselfService
         return $data;
     }
 
+    private function getPricingData($orders){
+        $data = [];
+        foreach ($orders as $order) {
+            $wayBill = Order::find($order->order_id)->Waybill;
+            $temp = [];
+            $temp['order_code'] = $order->order_code;
+            $temp['price'] = $order->price;
+            $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
+            $temp['order_status'] = $this->switchOrderStatus($order->order_status);
+            $temp['employee_get'] = $wayBill->from_name;
+            $temp['employee_send'] = $wayBill->to_name;
+            $temp['created_at'] = $order->created_at;
+            $temp['end_at'] = $order->end_at;
+            $data[] = $temp;
+        }
+        return json_encode($data);
+    }
+
     private function getOrderData($orders)
     {
         $notend = [];
@@ -104,7 +127,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
         return view('wechat.myself.myself')
