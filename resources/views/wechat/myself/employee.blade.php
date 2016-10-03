@@ -60,7 +60,7 @@
                                     <div class="item-content swipeout-content">
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">@{{ item.employee_get }} ===> @{{ item.employee_send }}</div>
+                                                <div class="item-title">@{{ item.from_name }} ===> @{{ item.to_name }}</div>
                                                 <div class="item-after">@{{item.order_status}}/@{{item.pay_status}}</div>
                                             </div>
                                             <div class="item-subtitle">单号：@{{item.order_code}}</div>
@@ -96,9 +96,31 @@
                         <div class="card">
                             <div class="card-header">订单号:@{{ item.order_code }}</div>
                             <div class="card-content">
-                                <div class="card-content-inner">Card with header and footer. Card header is used to displayCard with header and footer. Card header is used to displayCard with header and footer. Card header is used to displayCard with header and footer. Card header is used to displayCard with header and footer. Card header is used to displayCard with header and footer. Card header is used to display card title and footer for some additional information or for custom actions.</div>
+                                <div class="card-content-inner">
+                                    <p>发货人：@{{ item.from_name }} @{{ item.from_phone }}</p>
+                                    <p>地址：@{{ item.from_pca }}</p>
+                                    <p>详细地址：@{{ item.from_street }}</p>
+                                    <hr />
+                                    <p>收货人：@{{ item.to_name }} @{{ item.to_phone }}</p>
+                                    <p>地址：@{{ item.to_pca }}</p>
+                                    <p>详细地址：@{{ item.to_street }}</p>
+                                    <hr />
+                                    <p>货物名称：@{{ item.cargo_name }}</p>
+                                    <p>件数：@{{ item.cargo_count }}</p>
+                                    <p>重量(Kg)：@{{ item.cargo_weight }}</p>
+                                    <p>体积(m&sup2;)：@{{ item.cargo_volume }}</p>
+                                    <hr />
+                                    <p>付款方式：@{{ item.pay_method }}</p>
+                                    <p>保价：@{{ item.cargo_insure }}</p>
+                                    <p>提货方式：@{{ item.exchange_type }}</p>
+                                    <p>回单要求：@{{ item.receipt_type }}</p>
+                                </div>
                             </div>
-                            <div class="card-footer">Card Footer</div>
+                            <div class="card-footer">
+                                <p>
+                                    运费：<input type="number" value="@{{ item.price }}" />
+                                </p>
+                            </div>
                         </div>
                         <div class="content-block">
                             <div class="row">

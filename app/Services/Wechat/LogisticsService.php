@@ -40,6 +40,7 @@ class LogisticsService{
             'member_id' =>$request->input('member_id'),
             'price'=>$request->input('cargo_fare'),
             'order_status'=>1,
+            'pay_method'=>CommonService::switchPayMethod($request->input('pay_method')),
         ]);
 
         //查找刚才生成的订单id
@@ -63,7 +64,6 @@ class LogisticsService{
             'cargo_weight'=>$request->input('cargo_weight'),
             'cargo_volume'=>$request->input('cargo_volume'),
             'cargo_insure'=>$request->input('cargo_insure'),
-            'price'=>$request->input('cargo_fare'),
             'exchange_type'=>CommonService::switchExchange($request->input('exchange_type')),
             'receipt_type'=>CommonService::switchReceipt($request->input('receipt_type')),
             'price'=>$request->input('price'),

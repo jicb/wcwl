@@ -63,7 +63,7 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">@{{ item.employee_get }} ===> @{{ item.employee_send }}</div>
+                                                        <div class="item-title">@{{ item.from_name }} ===> @{{ item.to_name }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>

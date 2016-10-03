@@ -946,6 +946,7 @@
         var to_phone = $('#receive-phone').text();
         var to_pca = $('#receive-pca').text();
         var to_street = $('#receive-street').text();
+        var pay_method = $('#pay').text();
         var cargo_name = $('#cargo-name').text();
         var cargo_count = $('#cargo-count').text();
         var cargo_weight = $('#cargo-weight').text();
@@ -969,6 +970,7 @@
             to_phone: to_phone,
             to_pca: to_pca,
             to_street: to_street,
+            pay_method:pay_method,
             cargo_name: cargo_name,
             cargo_count: cargo_count,
             cargo_weight: cargo_weight,

@@ -75,6 +75,9 @@ class MyselfService
         return $data;
     }
 
+    
+
+
     private function getPricingData($orders){
         $data = [];
         foreach ($orders as $order) {
@@ -85,9 +88,26 @@ class MyselfService
             $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
             $temp['employee_get'] = $wayBill->from_name;
+            $temp['from_name'] = $wayBill->from_name;
+            $temp['from_phone'] = $wayBill->from_phone;
+            $temp['from_pca'] = $wayBill->from_pca;
+            $temp['from_street'] = $wayBill->from_street;
+            $temp['to_name'] = $wayBill->to_name;
+            $temp['to_phone'] = $wayBill->to_phone;
+            $temp['to_pca'] = $wayBill->to_pca;
+            $temp['to_street'] = $wayBill->to_street;
+            $temp['cargo_name'] = $wayBill->cargo_name;
+            $temp['cargo_weight'] = $wayBill->cargo_weight;
+            $temp['cargo_count'] = $wayBill->cargo_count;
+            $temp['cargo_volume'] = $wayBill->cargo_volume;
+            $temp['cargo_insure'] = $wayBill->cargo_insure;
+            $temp['exchange_type'] = CommonService::reSwitchExchange($wayBill->exchange_type);
+            $temp['receipt_type'] = CommonService::reSwitchReceipt($wayBill->receipt_type);
+            $temp['comment'] = $wayBill->comment;
             $temp['employee_send'] = $wayBill->to_name;
-            $temp['created_at'] = $order->created_at;
-            $temp['end_at'] = $order->end_at;
+            $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
+            $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
+            $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
             $data[] = $temp;
         }
         return json_encode($data);
@@ -105,9 +125,26 @@ class MyselfService
             $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
             $temp['employee_get'] = $wayBill->from_name;
+            $temp['from_name'] = $wayBill->from_name;
+            $temp['from_phone'] = $wayBill->from_phone;
+            $temp['from_pca'] = $wayBill->from_pca;
+            $temp['from_street'] = $wayBill->from_street;
+            $temp['to_name'] = $wayBill->to_name;
+            $temp['to_phone'] = $wayBill->to_phone;
+            $temp['to_pca'] = $wayBill->to_pca;
+            $temp['to_street'] = $wayBill->to_street;
+            $temp['cargo_name'] = $wayBill->cargo_name;
+            $temp['cargo_weight'] = $wayBill->cargo_weight;
+            $temp['cargo_count'] = $wayBill->cargo_count;
+            $temp['cargo_volume'] = $wayBill->cargo_volume;
+            $temp['cargo_insure'] = $wayBill->cargo_insure;
+            $temp['exchange_type'] = CommonService::reSwitchExchange($wayBill->exchange_type);            
+            $temp['receipt_type'] = CommonService::reSwitchReceipt($wayBill->receipt_type);
+            $temp['comment'] = $wayBill->comment;
             $temp['employee_send'] = $wayBill->to_name;
-            $temp['created_at'] = $order->created_at;
-            $temp['end_at'] = $order->end_at;
+            $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
+            $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
+            $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
             if($order->order_status == 6){
                 $ended[] = $temp;
             }else{
@@ -127,7 +164,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
         return view('wechat.myself.myself')
