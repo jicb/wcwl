@@ -5,7 +5,8 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>员工通道</title>
 
-    <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
+    <link rel="stylesheet" href="{!! URL::asset('css/framework7.material.css') !!}"/>
+    {{--<link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>--}}
     <link rel="stylesheet" href="{!! URL::asset('css/wechat/common.css') !!}"/>
 
     <style>
@@ -118,7 +119,7 @@
                             </div>
                             <div class="card-footer">
                                 <p>
-                                    运费：<input type="number" value="@{{ item.price }}" />
+                                    运费：<input type="number" value="@{{ item.price }}" class="input-f"/>
                                 </p>
                             </div>
                         </div>
