@@ -23,7 +23,7 @@ class MyselfService
             $openid = $request->input('openid');
         }*/
         $openid = CommonService::getOpenidFromCode($request->input('code'));
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Member::find($member_id)->Order()->where('order_status','1')->orderBy('created_at', 'desc')->get();
         if(!empty($pricingData)){
