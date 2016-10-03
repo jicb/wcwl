@@ -242,7 +242,7 @@
                     myApp.alert('揽件成功！');
 
                     myApp.closeModal('#popup-pricing');
-                })
+                });
             });
         }
 
