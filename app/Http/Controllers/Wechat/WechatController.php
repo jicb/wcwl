@@ -17,8 +17,8 @@ class WechatController extends Controller
     public function template(Request $request){
         $wechat = app('wechat');
         $notice = $wechat->notice;
-        dd($notice->setIndustry(14,15));
-        dd($notice->getPrivateTemplates());
+        //$notice->setIndustry(14,15);
+        dd($notice->getIndustry());
     }
 
     public function menuadd(Request $request)
