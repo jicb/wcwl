@@ -14,11 +14,25 @@ class WechatController extends Controller
     //
 
 
-    public function template(Request $request){
+    public function template(Request $request)
+    {
         $wechat = app('wechat');
         $notice = $wechat->notice;
         //$notice->setIndustry(14,15);
-        dd($notice->getIndustry());
+
+
+        $userId = 'oLsBZxNMEZQEL8STHlrEaSu5mwD8';
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $url = 'http://overtrue.me';
+        $color = '#FF0000';
+        $data = array(
+            "first" => "恭喜你购买成功！",
+            "name" => "巧克力",
+            "price" => "39.8元",
+            "remark" => "欢迎再次购买！",
+        );
+        $result = $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+        dd($result);
     }
 
     public function menuadd(Request $request)
@@ -26,9 +40,9 @@ class WechatController extends Controller
 
         $config = config('wechat');
         $wechat = app('wechat');
-        $menu = $wechat->menu;        
+        $menu = $wechat->menu;
         $menu->destroy();
-        $urlPre = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=";
+        $urlPre = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" . $config['app_id'] . "&redirect_uri=";
         $urlEnd = "&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
         $button = [
             [
@@ -37,7 +51,7 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "我要发货",
-                        "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
+                        "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" . $config['app_id'] . "&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
                     ],
                     [
                         "type" => "view",
@@ -82,14 +96,14 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "个人首页",
-                        "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/myself/myself&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect",
+                        "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" . $config['app_id'] . "&redirect_uri=http://wx.wancheng.org/button/myself/myself&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect",
                     ],
                     [
                         "type" => "view",
                         "name" => "员工入口",
-                        "url" => $urlPre."http://wx.wancheng.org/button/myself/employee".$urlEnd,
+                        "url" => $urlPre . "http://wx.wancheng.org/button/myself/employee" . $urlEnd,
                     ],
-                    
+
                     /*[
                         "type" => "view",
                         "name" => "我的余额",
@@ -122,99 +136,99 @@ class WechatController extends Controller
         ];
         $menu->add($button);
 
-       /* $button = [
-            [
-                "name" => "物流服务",
-                "sub_button" => [
-                    [
-                        "type" => "view",
-                        "name" => "我要发货",
-                        "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "运单查询",
-                        "url" => "http://wx.wancheng.org/button/logistics/trackingquery",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "运费计算",
-                        "url" => "http://wx.wancheng.org/button/logistics/freightaging",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "网点查询",
-                        "url" => "http://wx.wancheng.org/button/logistics/netquery",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "收货范围",
-                        "url" => "http://wx.wancheng.org/button/logistics/takerange",
-                    ],
-                ],
-            ],
-            [
-                "name" => "优惠活动",
-                "sub_button" => [
-                    [
-                        "type" => "view",
-                        "name" => "积分商城",
-                        "url" => "http://wx.wancheng.org/button/benefit/numericalmall",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "领取大厅",
-                        "url" => "http://wx.wancheng.org/button/benefit/dolehall",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "收货范围",
-                        "url" => "http://wx.wancheng.org/button/logistics/takerange",
-                    ],
-                ],
-            ],
-            [
-                "name" => "个人中心",
-                "sub_button" => [
-                    [
-                        "type" => "view",
-                        "name" => "我的余额",
-                        "url" => "http://wx.wancheng.org/button/myself/balance",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "我的订单",
-                        "url" => "http://wx.wancheng.org/button/myself/order",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "我的积分",
-                        "url" => "http://wx.wancheng.org/button/myself/numerical",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "我的优惠券",
-                        "url" => "http://wx.wancheng.org/button/myself/coupon",
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "常用地址",
-                        "url" => "http://wx.wancheng.org/button/myself/address",
-                    ],
-                ],
-            ],
+        /* $button = [
+             [
+                 "name" => "物流服务",
+                 "sub_button" => [
+                     [
+                         "type" => "view",
+                         "name" => "我要发货",
+                         "url"=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$config['app_id']."&redirect_uri=http://wx.wancheng.org/button/logistics/delivery&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "运单查询",
+                         "url" => "http://wx.wancheng.org/button/logistics/trackingquery",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "运费计算",
+                         "url" => "http://wx.wancheng.org/button/logistics/freightaging",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "网点查询",
+                         "url" => "http://wx.wancheng.org/button/logistics/netquery",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "收货范围",
+                         "url" => "http://wx.wancheng.org/button/logistics/takerange",
+                     ],
+                 ],
+             ],
+             [
+                 "name" => "优惠活动",
+                 "sub_button" => [
+                     [
+                         "type" => "view",
+                         "name" => "积分商城",
+                         "url" => "http://wx.wancheng.org/button/benefit/numericalmall",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "领取大厅",
+                         "url" => "http://wx.wancheng.org/button/benefit/dolehall",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "收货范围",
+                         "url" => "http://wx.wancheng.org/button/logistics/takerange",
+                     ],
+                 ],
+             ],
+             [
+                 "name" => "个人中心",
+                 "sub_button" => [
+                     [
+                         "type" => "view",
+                         "name" => "我的余额",
+                         "url" => "http://wx.wancheng.org/button/myself/balance",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "我的订单",
+                         "url" => "http://wx.wancheng.org/button/myself/order",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "我的积分",
+                         "url" => "http://wx.wancheng.org/button/myself/numerical",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "我的优惠券",
+                         "url" => "http://wx.wancheng.org/button/myself/coupon",
+                     ],
+                     [
+                         "type" => "view",
+                         "name" => "常用地址",
+                         "url" => "http://wx.wancheng.org/button/myself/address",
+                     ],
+                 ],
+             ],
 
-        ];
+         ];
 
-        $matchRule = [
-            "group_id"             => "101",
-            "sex"                  => "",
-            "country"              => "",
-            "province"             => "",
-            "city"                 => "",
-            "client_platform_type" => ""
-        ];
-        $menu->add($button,$matchRule);        */
+         $matchRule = [
+             "group_id"             => "101",
+             "sex"                  => "",
+             "country"              => "",
+             "province"             => "",
+             "city"                 => "",
+             "client_platform_type" => ""
+         ];
+         $menu->add($button,$matchRule);        */
 
     }
 
@@ -232,11 +246,11 @@ class WechatController extends Controller
     {
         $openid = $message->FromUserName;
         $text = new Text();
-        if(!$this->existUser($openid)){
+        if (!$this->existUser($openid)) {
             $content = "欢迎您的关注，请尽快完成\n";
             $content .= "<a href='http://wx.wancheng.org/h5/auth/register/" . $openid . "'>用户注册</a>";
             $content .= "，以免影响使用";
-        }else{
+        } else {
             $content = "欢迎回来";
         }
 
@@ -244,16 +258,18 @@ class WechatController extends Controller
         return $text;
     }
 
-    private function existUser($openid){
-        $member = Member::where('openid',$openid)->take(1)->get();
-        if(count($member) && $member[0]->exists && $member[0]->mobile){
+    private function existUser($openid)
+    {
+        $member = Member::where('openid', $openid)->take(1)->get();
+        if (count($member) && $member[0]->exists && $member[0]->mobile) {
             return true;
         }
         return false;
     }
 
-    private function clickButtonEvent($message){
-        switch($message->EventKey){
+    private function clickButtonEvent($message)
+    {
+        switch ($message->EventKey) {
             case 'CLICK_BUTTON_DELIVERY':
                 //return view('welcome');
                 return "gaga";
@@ -263,8 +279,8 @@ class WechatController extends Controller
     private function response($message)
     {
         switch ($message->MsgType) {
-            case 'event':{
-                switch($message->Event){
+            case 'event': {
+                switch ($message->Event) {
                     case 'subscribe':
                         return $this->register($message);
                     /*case "VIEW":
@@ -299,7 +315,8 @@ class WechatController extends Controller
         }
     }
 
-    private function replyText($message){
+    private function replyText($message)
+    {
         return $this->register($message);
     }
 }
