@@ -125,7 +125,7 @@
 <script>
 
     function sure(order_id){
-        $.get('ordersure?order_id'+order_id,function(res){
+        $.get('ordersure?order_id='+order_id,function(res){
            myApp.alert("订单已确认完成");
         });
     }
