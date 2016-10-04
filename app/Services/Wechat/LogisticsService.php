@@ -11,6 +11,7 @@ use App\Wechat\Address;
 use App\Wechat\Member;
 use App\Wechat\Order;
 use App\Wechat\Waybill;
+use EasyWeChat\Foundation\Application;
 use Illuminate\Http\Request;
 use Log;
 
@@ -23,11 +24,26 @@ class LogisticsService{
         $bill = Waybill::where('order_id',$order_id)->first();
 
         Log::info('hello '.$order->order_code." ".$bill->waybill_code);
-        $app = app('wechat');
+        /*$app = app('wechat');
         $broadcast = $app->broadcast;
         $text = "您好，您已生成订单,单号：".$order->order_code.
                 ",运单号：".$bill->waybill_code;
-        $broadcast->previewText($text, $request->input('openid'));
+        $broadcast->previewText($text, $request->input('openid'));*/
+
+        $app = new app('wechat');
+
+        $notice = $app->notice;
+        $userId = 'oLsBZxNMEZQEL8STHlrEaSu5mwD8';
+        $templateId = 'ngqIpbwh8bUfcSsECmogfXcV14J0tQlEpBO27izEYtY';
+        $url = 'http://www.baidu.com';
+        $color = '#FF0000';
+        $data = array(
+            "first"  => "恭喜你购买成功！",
+            "name"   => "巧克力",
+            "price"  => "39.8元",
+            "remark" => "欢迎再次购买！",
+        );
+        $result = $notice->uses($templateId)->withUrl($url)->andData($data)->andReceiver($userId)->send();
     }
 
     public function createOrder($request){
