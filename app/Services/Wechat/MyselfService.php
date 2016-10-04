@@ -49,23 +49,16 @@ class MyselfService
         $order->employee_get = $request->input('member_id');
         $order->save();
 
-        $order_id = $order->order_id;
-        $employee_get = Order::find($request->input('order_id'));
+
+        /*$employee_get = Order::find($request->input('order_id'));
         $member  = $order->Member;
         $employee = $employee_get->Member;
         $app = app('wechat');
         $broadcast = $app->broadcast;
         $text = "您好，您的订单已被".$employee->name."收揽,单号：".$order->order_code;
-        $broadcast->previewText($text, $member->openid);
+        $broadcast->previewText($text, $member->openid);*/
 
-        $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
-        if(!empty($pricingData)){
-            $pricingData = $this->getPricingData($pricingData);
-        }else{
-            $pricingData = "";
-        }
-
-        return $pricingData;
+        return "";
 
     }
 
