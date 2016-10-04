@@ -49,7 +49,7 @@
                                                         <a href="#" class="to-top"
                                                        style="background-color: #00c795" onclick="pay()" v-if="(item.pay_status == '未支付')">支付</a>
                                                 <a href="#" style="background-color: red;" class="item-delete"
-                                                   onclick="delete_item()">删除</a>
+                                                   onclick="sure(@{{ item.order_id }})">订单确认</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -123,6 +123,13 @@
 
 
 <script>
+
+    function sure(order_id){
+        $.get('ordersure?order_id'+order_id,function(res){
+           myApp.alert("订单已确认完成");
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         document.body.style.display = 'block';
     });
