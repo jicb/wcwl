@@ -62,7 +62,7 @@
                     <div class="content" id="content-pricing">
                         <div class="list-block media-list">
                             <ul>
-                                <li class="swipeout" v-for="item in pricing">
+                                <li class="swipeout @{{ item.order_code }}" v-for="item in items">
                                     <div class="item-content swipeout-content">
                                         <div class="item-inner">
                                             <div class="item-title-row">
@@ -147,6 +147,7 @@
             </div>
         </div>
     </div>
+</div>
 
 
     <script src="{!! URL::asset('js/vue.js') !!}"></script>
@@ -155,6 +156,7 @@
     <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 
     <script>
+        Vue.config.async = false
         var myApp = new Framework7();
 
         // Export selectors engine
@@ -173,7 +175,7 @@
         var contentPricing = new Vue({
             el: "#content-pricing",
             data: {
-                pricing: pricing,
+                items: pricing,
             }
         });
 
@@ -182,69 +184,34 @@
             data: {
                 item: '',
             }
-        })
+        });
 
     </script>
 
 
     <script>
-        /*//处理input输入框被输入法遮住
-         function inputIos(inputBox){
-         var inputF = $(inputBox).find('input');//找到对应的input
-         if(inputF == document.activeElement){
-         //获取焦点时用喔
-         setTimeout(function(){
-         var inputIsNotInView = notInView(),
-         Width = window.innerWidth,
-         Height = window.innerHeight;
-         if(inputIsNotInView){
-         if(Width != 750){
-         var bottomAdjust = (Height - window.innerHeight - 88) + 'px';
-         $(inputBox).css('bottom',bottomAdjust);
-         }else {
-         var bottomAdjust = (Height - window.innerHeight - 88 - 432) + 'px';
-         $(inputBox).css('bottom',bottomAdjust);
-         }
-         }
-         },600);
-
-         }else {
-         //失去焦点时用喔
-         var inputIsNotInView=notInView();
-         if(inputIsNotInView){
-         $(inputBox).css({'opacity':0,bottom:0});
-         setTimeout(function(){
-         $(inputBox).css('opacity',1);
-         },600)
-         }
-         }
-
-
-         //------------------------------
-         function notInView(){
-         var bottom = inputBox.getBoundingClientRect().bottom;
-         if (window.innerHeight - bottom < 0){
-         return true;
-         }else {
-         return false;
-         }
-         };
-         }*/
         function goingPricing() {
             var order_code = popupPricing.item.order_code;
             var order_id = popupPricing.item.order_id;
+
             myApp.confirm('订单号：' + order_code, '我要揽件', function () {
                 var query = {
                     member_id: member_id,
                     order_id: order_id
                 };
                 $.get('getorder', query, function (res) {
+                    var res = eval('('+res+')');
                     myApp.alert('揽件成功！');
-
                     myApp.closeModal('#popup-pricing');
+
+                    var item = '.'+order_code;
+                    $(item).remove();
                 });
             });
+
         }
+
+
 
         function itemPricing(index) {
             popupPricing.item = pricing[index];
