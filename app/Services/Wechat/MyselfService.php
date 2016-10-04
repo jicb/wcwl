@@ -14,20 +14,49 @@ use App\Wechat\Order;
 
 class MyselfService
 {
+
+    public function quote($request){
+        $order = Order::find($request->input('order_id'));
+        $order->order_status = 3;
+        $order->price = $request->input('price');
+        $order->save();
+
+
+        $member  = $order->Member;
+
+        $employee_get = Order::find($request->input('order_id'));
+        $employee = $employee_get->Member;
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $text = "您好，您的订单已被".$employee->name."报价,单号：".$order->order_code."报价：".$order->price;
+        $broadcast->previewText($text, $member->openid);
+
+        return "";
+
+        /*$pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
+        if(!empty($pricingData)){
+            $pricingData = $this->getPricingData($pricingData);
+        }else{
+            $pricingData = "";
+        }
+
+        return $pricingData;*/
+    }
+
     public function getOrder($request){
         $order = Order::find($request->input('order_id'));
         $order->order_status = 2;
         $order->employee_get = $request->input('member_id');
         $order->save();
 
-        /*$order_id = $order->order_id;
+        $order_id = $order->order_id;
         $employee_get = Order::find($request->input('order_id'));
         $member  = $order->Member;
         $employee = $employee_get->Member;
         $app = app('wechat');
         $broadcast = $app->broadcast;
         $text = "您好，您的订单已被".$employee->name."收揽,单号：".$order->order_code;
-        $broadcast->previewText($text, $member->openid);*/
+        $broadcast->previewText($text, $member->openid);
 
         $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
         if(!empty($pricingData)){
@@ -37,7 +66,6 @@ class MyselfService
         }
 
         return $pricingData;
-
 
     }
 
@@ -53,14 +81,22 @@ class MyselfService
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
+        $moneyData = Member::find($member_id)->Order()->where('order_status','2')->orderBy('created_at', 'desc')->get();
+        if(!empty($moneyData)){
+            $moneyData = $this->getPricingData($moneyData);
+        }else{
+            $moneyData = "";
+        }
         if(!empty($pricingData)){
             $pricingData = $this->getPricingData($pricingData);
         }else{
             $pricingData = "";
         }
 
-        return view('wechat.myself.employee')->with('pricing',$pricingData)
-            ->with('member_id',$member_id);
+        return view('wechat.myself.employee')
+            ->with('pricing',$pricingData)
+            ->with('member_id',$member_id)
+            ->with('money',$moneyData);
     }
 
     public function myOrder($request)
@@ -139,7 +175,7 @@ class MyselfService
             $data[] = $temp;
         }
         return json_encode($data);
-    }
+    }    
 
     private function getOrderData($orders)
     {
@@ -193,7 +229,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
         return view('wechat.myself.myself')

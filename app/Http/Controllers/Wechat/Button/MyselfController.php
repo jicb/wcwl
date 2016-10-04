@@ -73,4 +73,9 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->getOrder($request);
     }
+    
+    public function quote(Request $request){
+        $service = new MyselfService();
+        return $service->quote($request);
+    }
 }

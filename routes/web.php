@@ -59,6 +59,7 @@ Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],
     Route::any('myself/balance',['as'=>'balance','uses'=>'MyselfController@balance']);
     Route::any('myself/order',['as'=>'order','uses'=>'MyselfController@order']);
     Route::any('myself/getorder',['as'=>'getorder','uses'=>'MyselfController@getOrder']);
+    Route::any('myself/quote',['as'=>'quote','uses'=>'MyselfController@quote']);
     Route::any('myself/numerical',['as'=>'numerical','uses'=>'MyselfController@numerical']);
     Route::any('myself/coupon',['as'=>'coupon','uses'=>'MyselfController@coupon']);
 

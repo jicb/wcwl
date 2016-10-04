@@ -23,9 +23,9 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through" >
+        <div class="pages navbar-through">
             <!-- Pag has additional "with-subnavbar" class -->
-            <div  class="page">
+            <div class="page">
                 <div class="page-content">
                     <div class="tabs">
                         <div id="tab-notend" class="tab active">
@@ -36,7 +36,8 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">@{{ item.employee_get }} ===> @{{ item.employee_send }}</div>
+                                                        <div class="item-title">@{{ item.employee_get }}
+                                                            ===> @{{ item.employee_send }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>
@@ -45,8 +46,8 @@
                                                 </div>
                                             </div>
                                             <div class="swipeout-actions-right">
-                                                <a href="#" class="to-top"
-                                                   style="background-color: #00c795" onclick="totop_item()">置顶</a>
+                                                        <a href="#" class="to-top"
+                                                       style="background-color: #00c795" onclick="pay()" v-if="(item.pay_status == '未支付')">支付</a>
                                                 <a href="#" style="background-color: red;" class="item-delete"
                                                    onclick="delete_item()">删除</a>
                                             </div>
@@ -63,7 +64,8 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">@{{ item.from_name }} ===> @{{ item.to_name }}</div>
+                                                        <div class="item-title">@{{ item.from_name }}
+                                                            ===> @{{ item.to_name }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>
