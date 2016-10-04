@@ -14,6 +14,9 @@ class WechatController extends Controller
     //
 
 
+    public function expect(){
+        return view('wechat.expect');
+    }
     public function template(Request $request)
     {
         $wechat = app('wechat');
@@ -23,13 +26,13 @@ class WechatController extends Controller
 
         $userId = 'oLsBZxNMEZQEL8STHlrEaSu5mwD8';
         $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
-        $url = 'http://overtrue.me';
+        $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
-            "first" => "恭喜你购买成功！",
-            "name" => "巧克力",
-            "price" => "39.8元",
-            "remark" => "欢迎再次购买！",
+            "first" => "订单已生成",
+            "keyword1" => "1234567890",
+            "keyword2" => "待揽件",
+            "remark" => "您已生成订单，请耐心等待揽件！",
         );
         $result = $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
         dd($result);

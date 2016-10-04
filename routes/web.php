@@ -25,6 +25,7 @@ Route::group(['as'=>'wechat::','prefix'=>'wechat','namespace'=>'Wechat'],functio
     Route::any('/register/{openid}',['as'=>'register','uses'=>'WechatController@registeruser']);
     Route::any('/menuadd',['as'=>'menuadd','uses'=>'WechatController@menuadd']);
     Route::any('/template',['as'=>'template','uses'=>'WechatController@template']);
+    Route::any('/expect',['as'=>'expect','uses'=>'WechatController@expect']);
 });
 
 Route::group(['as'=>'user::','prefix'=>'wechat/user','namespace'=>'Wechat\User'],function(){
