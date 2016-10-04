@@ -23,7 +23,6 @@ class MyselfService
 
 
         $member  = $order->Member;
-
         $employee_get = Order::find($request->input('order_id'));
         $employee = $employee_get->Member;
         $app = app('wechat');
@@ -33,14 +32,6 @@ class MyselfService
 
         return "";
 
-        /*$pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
-        if(!empty($pricingData)){
-            $pricingData = $this->getPricingData($pricingData);
-        }else{
-            $pricingData = "";
-        }
-
-        return $pricingData;*/
     }
 
     public function getOrder($request){
@@ -50,13 +41,13 @@ class MyselfService
         $order->save();
 
 
-        /*$employee_get = Order::find($request->input('order_id'));
+        $employee_get = Order::find($request->input('order_id'));
         $member  = $order->Member;
         $employee = $employee_get->Member;
         $app = app('wechat');
         $broadcast = $app->broadcast;
         $text = "您好，您的订单已被".$employee->name."收揽,单号：".$order->order_code;
-        $broadcast->previewText($text, $member->openid);*/
+        $broadcast->previewText($text, $member->openid);
 
         return "";
 
@@ -64,12 +55,7 @@ class MyselfService
 
     public function employee($request)
     {
-        /*if (!$request->input('openid')) {
-            $code = $request->input('code');
-            $openid = CommonService::getOpenidFromCode($code);
-        } else {
-            $openid = $request->input('openid');
-        }*/
+
         $openid = CommonService::getOpenidFromCode($request->input('code'));
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
@@ -94,10 +80,6 @@ class MyselfService
 
     public function myOrder($request)
     {
-        //$code = $request->input('code');
-        //$openid = CommonService::getOpenidFromCode($code);
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
-        //$member_id = CommonService::getMemberid($openid);
         $member_id = $request->input('member_id');
         $orders = Member::find($member_id)->Order()->orderBy('created_at', 'desc')->get();
         $data = $this->getOrderData($orders);

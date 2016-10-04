@@ -307,7 +307,6 @@
                     price:money,
                 };
                 $.get('quote', query, function (res) {
-                    var res = eval('('+res+')');
                     myApp.alert('报价成功！');
                     myApp.closeModal('#popup-money');
 
@@ -326,7 +325,6 @@
                     order_id: order_id
                 };
                 $.get('getorder', query, function (res) {
-                    var res = eval('('+res+')');
                     myApp.alert('揽件成功！');
                     myApp.closeModal('#popup-pricing');
 
