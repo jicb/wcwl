@@ -30,7 +30,7 @@ class LogisticsService{
                 ",运单号：".$bill->waybill_code;
         $broadcast->previewText($text, $request->input('openid'));*/
 
-        $app = new app('wechat');
+        $app = app('wechat');
 
         $notice = $app->notice;
         $userId = 'oLsBZxNMEZQEL8STHlrEaSu5mwD8';
