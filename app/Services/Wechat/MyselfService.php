@@ -20,6 +20,23 @@ class MyselfService
         $order->order_status = 4;
         $order->save();
 
+        $wechat = app('wechat');
+        $notice = $wechat->notice;
+
+        $member_id = $request->member_id;
+        $order_code = $request->order_code;
+        $userId = Member::find($member_id)->openid;
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $url = 'http://wx.wancheng.org/wechat/expect';
+        $color = '#FF0000';
+        $data = array(
+            "first" => "订单已确定成功",
+            "keyword1" => $order_code,
+            "keyword2" => "运输中",
+            "remark" => "您的订单已确定成功，正在运输中，请耐心等待！",
+        );
+        $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+
 
         /*$member  = $order->Member;
         $employee_get = Order::find($request->input('order_id'));
@@ -116,7 +133,7 @@ class MyselfService
                 $data = "待报价";
                 break;
             case 3:
-                $data = "待确定";
+                $data = "待确任";
                 break;
             case 4:
                 $data = "运输中";
@@ -180,7 +197,9 @@ class MyselfService
             $temp['order_code'] = $order->order_code;
             $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
+            $temp['pay_status_flag'] = $order->pay_status;
             $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
+            $temp['order_status_id'] = $order->order_status;
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
             $temp['employee_get'] = $wayBill->from_name;
             $temp['from_name'] = $wayBill->from_name;
@@ -203,7 +222,21 @@ class MyselfService
             $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
             $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
             $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
-            if($order->order_status == 6){
+            $temp['pay_flag'] = false;
+            $temp['sure_flag'] = false;
+            $temp['sended_flag'] = false;
+
+
+            if(!$temp['pay_status_flag'] &&($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)){
+                $temp['pay_flag'] = true;
+            }
+            if($temp['order_status_id'] == 3){
+                $temp['sure_flag'] = true;
+            }else if($temp['order_status_id'] == 4){
+                $temp['sended_flag'] = true;
+            }
+
+            if($temp['order_status_id'] == 6){
                 $ended[] = $temp;
             }else{
                 $notend[] = $temp;
@@ -222,7 +255,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         //$orders = Member::find($member_id)->Order;        
         return view('wechat.myself.myself')

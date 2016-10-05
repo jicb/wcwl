@@ -47,9 +47,11 @@
                                             </div>
                                             <div class="swipeout-actions-right">
                                                         <a href="#" class="to-top"
-                                                       style="background-color: #00c795" onclick="pay()" v-if="(item.pay_status == '未支付')">支付</a>
+                                                       style="background-color: #00c795" onclick="pay()" v-if="(item.pay_flag == true)">支付</a>
+                                                <a href="#" style="background-color: red;" class="item-delete open-popup"
+                                                    v-if="(item.sure_flag ==true)" onclick="itemSuring(@{{ $index }})">订单确认</a>
                                                 <a href="#" style="background-color: red;" class="item-delete"
-                                                   onclick="sure(@{{ item.order_id }})">订单确认</a>
+                                                   onclick="sure(@{{ item.order_id }})" v-if="(item.sended_flag ==true)">签收</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -85,6 +87,67 @@
     </div>
 </div>
 
+<div class="popup" id="popup-suring">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">待确认订单</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <!-- Pag has additional "with-subnavbar" class -->
+                <div class="page">
+                    <div class="page-content">
+                        <div class="card">
+                            <div class="card-header">订单号:@{{ item.order_code }}</div>
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <p>发货人：@{{ item.from_name }} @{{ item.from_phone }}</p>
+                                    <p>地址：@{{ item.from_pca }}</p>
+                                    <p>详细地址：@{{ item.from_street }}</p>
+                                    <hr/>
+                                    <p>收货人：@{{ item.to_name }} @{{ item.to_phone }}</p>
+                                    <p>地址：@{{ item.to_pca }}</p>
+                                    <p>详细地址：@{{ item.to_street }}</p>
+                                    <hr/>
+                                    <p>货物名称：@{{ item.cargo_name }}</p>
+                                    <p>件数：@{{ item.cargo_count }}</p>
+                                    <p>重量(Kg)：@{{ item.cargo_weight }}</p>
+                                    <p>体积(m&sup2;)：@{{ item.cargo_volume }}</p>
+                                    <hr/>
+                                    <p>付款方式：@{{ item.pay_method }}</p>
+                                    <p>保价：@{{ item.cargo_insure }}</p>
+                                    <p>提货方式：@{{ item.exchange_type }}</p>
+                                    <p>回单要求：@{{ item.receipt_type }}</p>
+                                    <p>
+                                        备注：@{{ item.comment }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <p>运费(元)：@{{ item.price }}</p>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <div class="row" style="margin-bottom: 100px;">
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-danger  close-popup"
+                                                       data-popup="#popup-suring">取消</a>
+                                </div>
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-success"
+                                                       onclick="goingSuring()">订单确认</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="{!! URL::asset('js/vue.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
 <script src="{!! URL::asset('js/kitchen-sink.js') !!}"></script>
@@ -99,7 +162,8 @@
     // Add view
     var mainView = myApp.addView('.view-main', {
         // Because we use fixed-through navbar we can enable dynamic navbar
-        dynamicNavbar: true
+        dynamicNavbar: true,
+        domCache: true //enable inline pages
     });
 </script>
 <script>
@@ -119,10 +183,58 @@
             ended: ended,
         },
     });
+
+    var popupSuring = new Vue({
+        el: "#popup-suring",
+        data: {
+            item: '',
+        }
+    });
 </script>
 
 
 <script>
+
+    function goingSuring() {
+        var order_code = popupPricing.item.order_code;
+        var order_id = popupPricing.item.order_id;
+
+        myApp.confirm('订单号：' + order_code, '确认订单', function () {
+            var query = {
+                order_id: order_id,
+                member_id:member_id,
+                order_code:order_code
+            };
+            $.get('ordersure', query, function (res) {
+                myApp.alert('订单确认成功！',function(){
+                    backToWechat();
+                });
+                /*myApp.closeModal('#popup-pricing');
+
+                var item = '.'+order_code;
+                $(item).remove();*/
+            });
+        });
+
+    }
+
+    function backToWechat(){
+        var readyFunc = function onBridgeReady() {
+            WeixinJSBridge.invoke('closeWindow', {}, function (res) {
+            });
+        }
+
+        if (typeof WeixinJSBridge === "undefined") {
+            document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
+        } else {
+            readyFunc();
+        }
+    }
+
+    function itemSuring(index) {
+        popupSuring.item = notend[index];
+        myApp.popup('#popup-suring');
+    }
 
     function sure(order_id){
         $.get('ordersure?order_id='+order_id,function(res){
