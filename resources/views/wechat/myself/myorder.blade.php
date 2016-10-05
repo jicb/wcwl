@@ -47,7 +47,7 @@
                                             </div>
                                             <div class="swipeout-actions-right">
                                                         <a href="#" class="to-top"
-                                                       style="background-color: #00c795" onclick="pay()" v-if="(item.pay_flag == true)">支付</a>
+                                                       style="background-color: #00c795" onclick="itemPay(@{{ $index }})" v-if="(item.pay_flag == true)">支付</a>
                                                 <a href="#" style="background-color: red;" class="item-delete"
                                                     v-if="(item.sure_flag ==true)" onclick="itemSuring(@{{ $index }})">订单确认</a>
                                                 <a href="#" style="background-color: red;" class="item-success"
@@ -209,6 +209,99 @@
     </div>
 </div>
 
+<div class="popup" id="popup-pay">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">待支付订单</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <!-- Pag has additional "with-subnavbar" class -->
+                <div class="page">
+                    <div class="page-content">
+                        <div class="card">
+                            <div class="card-header">订单号:@{{ item.order_code }}</div>
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <p>货物名称：@{{ item.cargo_name }}</p>
+                                    <p>收货人：@{{ item.to_name }} @{{ item.to_phone }}</p>
+                                    <p>地址：@{{ item.to_pca }}</p>
+                                    <p>详细地址：@{{ item.to_street }}</p>
+
+                                    <p>
+                                        备注：@{{ item.comment }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <p>订单总价(元)：@{{ item.price }}</p>
+                            </div>
+                        </div>
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <a href="#" class="item-link item-content" id="pay-method">
+                                        <div class="item-inner">
+                                            <div class="item-title">优惠券<span style="padding-left:2em;"
+                                                                              id="pay">40</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content" id="pay-method">
+                                        <div class="item-inner">
+                                            <div class="item-title">抵用金<span style="padding-left:2em;"
+                                                                              id="pay">500</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content" id="pay-method">
+                                        <div class="item-inner">
+                                            <div class="item-title">余额扣款<span style="padding-left:2em;"
+                                                                              id="pay">20</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content" id="pay-method">
+                                        <div class="item-inner">
+                                            <div class="item-title">付款方式<span style="padding-left:2em;"
+                                                                              id="pay">@{{paymethod}}</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content" id="pay-method">
+                                        <div class="item-inner">
+                                            <div class="item-title">还需支付<span style="padding-left:2em;"
+                                                                              id="pay">500</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <div class="row" style="margin-bottom: 100px;">
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-danger  close-popup"
+                                                       data-popup="#popup-pay">取消</a>
+                                </div>
+                                <div class="col-50"><a href="#"
+                                                       class="button button-big button-fill button-success"
+                                                       onclick="goingPay()">支付</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="{!! URL::asset('js/vue.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
 <script src="{!! URL::asset('js/kitchen-sink.js') !!}"></script>
@@ -223,8 +316,8 @@
     // Add view
     var mainView = myApp.addView('.view-main', {
         // Because we use fixed-through navbar we can enable dynamic navbar
-        dynamicNavbar: true,
-        domCache: true //enable inline pages
+        //dynamicNavbar: true,
+        //domCache: true //enable inline pages
     });
 </script>
 <script>
@@ -254,6 +347,13 @@
 
     var popupSended = new Vue({
         el: "#popup-sended",
+        data: {
+            item: '',
+        }
+    });
+
+    var popupPay = new Vue({
+        el: "#popup-pay",
         data: {
             item: '',
         }
@@ -320,6 +420,11 @@
         } else {
             readyFunc();
         }
+    }
+
+    function itemPay(index) {
+        popupPay.item = notend[index];
+        myApp.popup('#popup-pay');
     }
 
     function itemSuring(index) {
