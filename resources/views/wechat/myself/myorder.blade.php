@@ -196,8 +196,8 @@
 <script>
 
     function goingSuring() {
-        var order_code = popupPricing.item.order_code;
-        var order_id = popupPricing.item.order_id;
+        var order_code = popupSuring.item.order_code;
+        var order_id = popupSuring.item.order_id;
 
         myApp.confirm('订单号：' + order_code, '确认订单', function () {
             var query = {
