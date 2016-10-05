@@ -50,6 +50,55 @@ class MyselfService
 
     }
 
+    public function sendedsure($request){
+        $order = Order::find($request->input('order_id'));
+        $order->order_status = 5;
+        $order->save();
+
+        $wechat = app('wechat');
+        $notice = $wechat->notice;
+
+        $member_id = $request->member_id;
+        $order_code = $request->order_code;
+        $userId = Member::find($member_id)->openid;
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $url = 'http://wx.wancheng.org/wechat/expect';
+        $color = '#FF0000';
+        $data = array(
+            "first" => "订单已签收",
+            "keyword1" => $order_code,
+            "keyword2" => "已签收",
+            "remark" => "您的订单已签收，若未支付，请尽快完成支付！",
+        );
+        $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+
+        //通知揽件员
+
+        $userId = Member::find($order->employee_get)->openid;
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $url = 'http://wx.wancheng.org/wechat/expect';
+        $color = '#FF0000';
+        $data = array(
+            "first" => "订单已被用户签收",
+            "keyword1" => $order_code,
+            "keyword2" => "已签收",
+            "remark" => "您的揽件已签收，若对方未支付，请尽快通知对方支付！",
+        );
+        $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+
+
+        /*$member  = $order->Member;
+        $employee_get = Order::find($request->input('order_id'));
+        $employee = $employee_get->Member;
+        $app = app('wechat');
+        $broadcast = $app->broadcast;
+        $text = "您好，您的订单已被".$employee->name."报价,单号：".$order->order_code."报价：".$order->price;
+        $broadcast->previewText($text, $member->openid);*/
+
+        return "";
+
+    }
+
     public function quote($request){
         $order = Order::find($request->input('order_id'));
         $order->order_status = 3;

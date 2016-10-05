@@ -83,4 +83,9 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->ordersure($request);
     }
+
+    public function sendedsure(Request $request){
+        $service = new MyselfService();
+        return $service->sendedsure($request);
+    }
 }
