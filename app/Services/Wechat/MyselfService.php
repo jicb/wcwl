@@ -230,7 +230,6 @@ class MyselfService
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status_id'] = $order->order_status;
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
-            dd($temp);
             $temp['employee_get'] = $order->employee_get;
             $temp['from_name'] = $wayBill->from_name;
             $temp['from_phone'] = $wayBill->from_phone;
@@ -255,6 +254,15 @@ class MyselfService
             $temp['pay_flag'] = false;
             $temp['sure_flag'] = false;
             $temp['sended_flag'] = false;
+
+            if(!$temp['pay_status_flag'] &&($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)){
+                $temp['pay_flag'] = true;
+            }
+            if($temp['order_status_id'] == 3){
+                $temp['sure_flag'] = true;
+            }else if($temp['order_status_id'] == 4){
+                $temp['sended_flag'] = true;
+            }
 
             $data[] = $temp;
         }
