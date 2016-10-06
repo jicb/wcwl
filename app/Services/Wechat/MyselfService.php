@@ -264,6 +264,8 @@ class MyselfService
                 $temp['sended_flag'] = true;
             }
 
+            dd($temp);
+
             $data[] = $temp;
         }
         return json_encode($data);
