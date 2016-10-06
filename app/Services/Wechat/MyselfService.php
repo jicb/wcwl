@@ -154,7 +154,6 @@ class MyselfService
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
         $moneyData = Order::where('order_status','2')->where('employee_get',$member_id)->orderBy('created_at', 'desc')->get();
-        dd($pricingData);
         if(!empty($moneyData)){
             $moneyData = $this->getPricingData($moneyData);
         }else{
@@ -218,6 +217,7 @@ class MyselfService
             $temp['order_code'] = $order->order_code;
             $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
+            $temp['pay_status_flag'] = $order->pay_status;
             if($order->pay_status){
                 if($order->pay_method == 1){
                     $temp['pay_status'] = "已现金支付";
@@ -228,6 +228,7 @@ class MyselfService
                 $temp['pay_status'] = "未支付";
             }
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
+            $temp['order_status_id'] = $order->order_status;
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
             $temp['employee_get'] = $order->employee_get;
             $temp['from_name'] = $wayBill->from_name;
@@ -250,6 +251,10 @@ class MyselfService
             $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
             $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
             $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
+            $temp['pay_flag'] = false;
+            $temp['sure_flag'] = false;
+            $temp['sended_flag'] = false;
+            
             $data[] = $temp;
         }
         return json_encode($data);
