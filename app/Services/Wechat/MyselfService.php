@@ -150,6 +150,7 @@ class MyselfService
     {
 
         $openid = CommonService::getOpenidFromCode($request->input('code'));
+        dd($openid);
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
