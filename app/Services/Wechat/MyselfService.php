@@ -15,6 +15,15 @@ use App\Wechat\Order;
 class MyselfService
 {
 
+    public function orderCashPay($request){
+        $order = Order::find($request->input('order_id'));
+        $order->pay_status = 1;
+        $order->pay_method = 1;
+        $order->save();
+
+
+    }
+
     public function ordersure($request){
         $order = Order::find($request->input('order_id'));
         $order->order_status = 4;
@@ -140,6 +149,7 @@ class MyselfService
     public function employee($request)
     {
 
+        dd($request->input());
         $openid = CommonService::getOpenidFromCode($request->input('code'));
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
@@ -208,7 +218,16 @@ class MyselfService
             $temp['order_code'] = $order->order_code;
             $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
-            $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
+            if($order->pay_status){
+                if($order->pay_method == 1){
+                    $temp['pay_status'] = "已现金支付";
+                }else{
+                    $temp['pay_status'] = "已支付";
+                }
+            }else{
+                $temp['pay_status'] = "未支付";
+            }
+            //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
             $temp['employee_get'] = $wayBill->from_name;
             $temp['from_name'] = $wayBill->from_name;
@@ -247,7 +266,16 @@ class MyselfService
             $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
             $temp['pay_status_flag'] = $order->pay_status;
-            $temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
+            if($order->pay_status){
+                if($order->pay_method == 1){
+                    $temp['pay_status'] = "已现金支付";
+                }else{
+                    $temp['pay_status'] = "已支付";
+                }
+            }else{
+                $temp['pay_status'] = "未支付";
+            }
+            //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status_id'] = $order->order_status;
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
             $temp['employee_get'] = $wayBill->from_name;

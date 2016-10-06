@@ -104,7 +104,7 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "员工入口",
-                        "url" => $urlPre . "http://wx.wancheng.org/button/myself/employee" . $urlEnd,
+                        "url" => $urlPre . "http://wx.wancheng.org/button/myself/employee" . $urlEnd,                        
                     ],
 
                     /*[

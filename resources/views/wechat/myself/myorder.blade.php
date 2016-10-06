@@ -36,13 +36,12 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">@{{ item.employee_get }}
-                                                            ===> @{{ item.employee_send }}</div>
+                                                        <div class="item-title">收货人：@{{ item.employee_send }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>
                                                     <div class="item-subtitle">单号：@{{item.order_code}}</div>
-                                                    <div class="item-text" style="color:red;">价格：@{{item.price}}</div>
+                                                    <div class="item-text" style="color:red;">名称：@{{ item.cargo_name }}<br />价格：@{{item.price}}</div>
                                                 </div>
                                             </div>
                                             <div class="swipeout-actions-right">
@@ -66,13 +65,12 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">@{{ item.from_name }}
-                                                            ===> @{{ item.to_name }}</div>
+                                                        <div class="item-title">收货人：@{{ item.employee_send }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>
                                                     <div class="item-subtitle">单号：@{{item.order_code}}</div>
-                                                    <div class="item-text" style="color:red;">价格：@{{item.price}}</div>
+                                                    <div class="item-text" style="color:red;">名称：@{{ item.cargo_name }}<br />价格：@{{item.price}}</div>
                                                 </div>
                                             </div>
                                         </li>
@@ -239,6 +237,16 @@
                                 <p>订单总价(元)：@{{ item.price }}</p>
                             </div>
                         </div>
+
+                        <div class="content-block">
+                            <div class="row">
+                                <div class="col-100"><a href="#"
+                                                       class="button button-big button-fill button-success"
+                                                       onclick="goingCashPay()">我已现金支付</a>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="list-block">
                             <ul>
                                 <li>
@@ -249,13 +257,11 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="item-link item-content" id="pay-method">
-                                        <div class="item-inner">
-                                            <div class="item-title">抵用金<span style="padding-left:2em;"
-                                                                              id="pay">500</span></div>
-                                        </div>
-                                    </a>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">抵用金<span style="padding-left:2em;"
+                                                                         id="pay">40</span></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="#" class="item-link item-content" id="pay-method">
@@ -362,6 +368,21 @@
 
 
 <script>
+
+    function goingCashPay(){
+        var order_code = popupPay.item.order_code;
+        var order_id = popupPay.item.order_id;
+        var price = popupPay.item.price;
+
+        myApp.confirm('订单号：'+order_code+'<br />金额：'+price,'现金支付确认',function(){
+            var query = {
+                order_id:order_id,
+            }
+            $.get('ordercashpay',query,function(res){
+                backToWechat();
+            });
+        })
+    }
 
     function goingSuring() {
         var order_code = popupSuring.item.order_code;
