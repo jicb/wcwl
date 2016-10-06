@@ -238,15 +238,6 @@
                             </div>
                         </div>
 
-                        <div class="content-block">
-                            <div class="row">
-                                <div class="col-100"><a href="#"
-                                                       class="button button-big button-fill button-success"
-                                                       onclick="goingCashPay()">我已现金支付</a>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="list-block">
                             <ul>
                                 <li>

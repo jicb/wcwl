@@ -16,26 +16,26 @@
         <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages">
             <!-- Page, "data-page" contains page name -->
-            <div  class="page">
+            <div class="page">
                 <!-- Scrollable page content -->
-                <div class="page-content">
+                <div class="page-content" id="member">
                     <div class="content-block" style="height:150px;background-color: silver;margin-top: 0;">
                         <div class="row" style="padding-top: 25px;padding-bottom: 10px;margin-left: 0;">
-                            <div class="col-100" style="text-align: center;margin-left: 0;">*长兵</div>
+                            <div class="col-100" style="text-align: center;margin-left: 0;">@{{ member_name }}</div>
                         </div>
                         <div class="row" style="margin-left: 0;">
-                            <div class="col-100" style="text-align: center;margin-left: 0;">155****9896</div>
+                            <div class="col-100" style="text-align: center;margin-left: 0;">@{{ member_phone }}</div>
                         </div>
                         <div class="row" style="margin-top:35px;">
-                            <div class="col-33" style="text-align: center;">余额(元)<br/>1000.00</div>
-                            <div class="col-33" style="text-align: center;">抵用金(元)<br/>3000000.00</div>
-                            <div class="col-33" style="text-align: center;">积分<br />900</div>
+                            <div class="col-33" style="text-align: center;">余额(元)<br/>@{{ member_bal }}</div>
+                            <div class="col-33" style="text-align: center;">抵用金(元)<br/>@{{ member_vbal }}</div>
+                            <div class="col-33" style="text-align: center;">积分<br/>@{{ member_points }}</div>
                         </div>
                     </div>
                     <div class="list-block" style="margin-top: -35px;margin-bottom: 35px;">
                         <ul>
                             <li class="item-content" style="padding-left: 45%;">
-                                <div class="item-inner" >
+                                <div class="item-inner">
                                     <div class="item-title">充值</div>
                                 </div>
                             </li>
@@ -59,7 +59,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="commonaddress?openid={!! $openid !!}" target="_blank" class="item-link item-content external">
+                                <a href="commonaddress?openid={!! $openid !!}" target="_blank"
+                                   class="item-link item-content external">
                                     <div class="item-inner">
                                         常用地址簿
                                     </div>
@@ -114,6 +115,19 @@
     var mainView = myApp.addView('.view-main', {
         // Because we use fixed-through navbar we can enable dynamic navbar
         //dynamicNavbar: true
+    });
+</script>
+<script>
+    var member = new Vue({
+        el: "#member",
+        data: {
+            member_name: '{!! $member_name !!}',
+            member_phone: '{!! $member_phone !!}',
+            member_bal: '{!! $member_bal !!}',
+            member_val: '{!! $member_vbal !!}',
+            member_vbal: '{!! $member_vbal !!}',
+            member_points: '{!! $member_points !!}'
+        }
     });
 </script>
 </body>

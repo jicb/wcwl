@@ -15,16 +15,17 @@ use App\Wechat\Order;
 class MyselfService
 {
 
-    public function orderCashPay($request){
+    /*public function orderCashPay($request){
         $order = Order::find($request->input('order_id'));
         $order->pay_status = 1;
         $order->pay_method = 1;
         $order->save();
 
 
-    }
+    }*/
 
-    public function ordersure($request){
+    public function ordersure($request)
+    {
         $order = Order::find($request->input('order_id'));
         $order->order_status = 4;
         $order->save();
@@ -59,7 +60,8 @@ class MyselfService
 
     }
 
-    public function sendedsure($request){
+    public function sendedsure($request)
+    {
         $order = Order::find($request->input('order_id'));
         $order->order_status = 5;
         $order->save();
@@ -108,7 +110,8 @@ class MyselfService
 
     }
 
-    public function quote($request){
+    public function quote($request)
+    {
         $order = Order::find($request->input('order_id'));
         $order->order_status = 3;
         $order->price = $request->input('price');
@@ -127,20 +130,21 @@ class MyselfService
 
     }
 
-    public function getOrder($request){
+    public function getOrder($request)
+    {
         $order = Order::find($request->input('order_id'));
         $order->order_status = 2;
         $order->employee_get = $request->input('member_id');
         $order->save();
 
 
-       /* $employee_get = Order::find($request->input('order_id'));
-        $member  = $order->Member;
-        $employee = $employee_get->Member;
-        $app = app('wechat');
-        $broadcast = $app->broadcast;
-        $text = "您好，您的订单已被".$employee->name."收揽,单号：".$order->order_code;
-        $broadcast->previewText($text, $member->openid);*/
+        /* $employee_get = Order::find($request->input('order_id'));
+         $member  = $order->Member;
+         $employee = $employee_get->Member;
+         $app = app('wechat');
+         $broadcast = $app->broadcast;
+         $text = "您好，您的订单已被".$employee->name."收揽,单号：".$order->order_code;
+         $broadcast->previewText($text, $member->openid);*/
 
         return "";
 
@@ -149,26 +153,26 @@ class MyselfService
     public function employee($request)
     {
 
-        $openid = CommonService::getOpenidFromCode($request->input('code'));        
+        $openid = CommonService::getOpenidFromCode($request->input('code'));
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
-        $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
-        $moneyData = Order::where('order_status','2')->where('employee_get',$member_id)->orderBy('created_at', 'desc')->get();
-        if(!empty($moneyData)){
+        $pricingData = Order::where('order_status', '1')->orderBy('created_at', 'desc')->get();
+        $moneyData = Order::where('order_status', '2')->where('employee_get', $member_id)->orderBy('created_at', 'desc')->get();
+        if (!empty($moneyData)) {
             $moneyData = $this->getPricingData($moneyData);
-        }else{
+        } else {
             $moneyData = "";
         }
-        if(!empty($pricingData)){
+        if (!empty($pricingData)) {
             $pricingData = $this->getPricingData($pricingData);
-        }else{
+        } else {
             $pricingData = "";
         }
 
         return view('wechat.myself.employee')
-            ->with('pricing',$pricingData)
-            ->with('member_id',$member_id)
-            ->with('money',$moneyData);
+            ->with('pricing', $pricingData)
+            ->with('member_id', $member_id)
+            ->with('money', $moneyData);
     }
 
     public function myOrder($request)
@@ -176,8 +180,8 @@ class MyselfService
         $member_id = $request->input('member_id');
         $orders = Member::find($member_id)->Order()->orderBy('created_at', 'desc')->get();
         $data = $this->getOrderData($orders);
-        return view('wechat.myself.myorder')->with('data',$data)
-                ->with('member_id',$member_id);
+        return view('wechat.myself.myorder')->with('data', $data)
+            ->with('member_id', $member_id);
     }
 
     private function switchOrderStatus($status)
@@ -206,10 +210,9 @@ class MyselfService
         return $data;
     }
 
-    
 
-
-    private function getPricingData($orders){
+    private function getPricingData($orders)
+    {
         $data = [];
         foreach ($orders as $order) {
             $wayBill = Order::find($order->order_id)->Waybill;
@@ -218,13 +221,13 @@ class MyselfService
             $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
             $temp['pay_status_flag'] = $order->pay_status;
-            if($order->pay_status){
-                if($order->pay_method == 1){
+            if ($order->pay_status) {
+                if ($order->pay_method == 1) {
                     $temp['pay_status'] = "已现金支付";
-                }else{
+                } else {
                     $temp['pay_status'] = "已支付";
                 }
-            }else{
+            } else {
                 $temp['pay_status'] = "未支付";
             }
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
@@ -248,26 +251,26 @@ class MyselfService
             $temp['receipt_type'] = CommonService::reSwitchReceipt($wayBill->receipt_type);
             $temp['comment'] = $wayBill->comment;
             $temp['employee_send'] = $order->employee_send;
-            $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
-            $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
+            $temp['created_at'] = date("Y-m-d H:m:s", strtotime($order->created_at));
+            $temp['end_at'] = date("Y-m-d H:m:s", strtotime($order->end_at));
             $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
             $temp['pay_flag'] = false;
             $temp['sure_flag'] = false;
             $temp['sended_flag'] = false;
 
-            if(!$temp['pay_status_flag'] &&($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)){
+            if (!$temp['pay_status_flag'] && ($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)) {
                 $temp['pay_flag'] = true;
             }
-            if($temp['order_status_id'] == 3){
+            if ($temp['order_status_id'] == 3) {
                 $temp['sure_flag'] = true;
-            }else if($temp['order_status_id'] == 4){
+            } else if ($temp['order_status_id'] == 4) {
                 $temp['sended_flag'] = true;
             }
 
             $data[] = $temp;
         }
         return json_encode($data);
-    }    
+    }
 
     private function getOrderData($orders)
     {
@@ -280,13 +283,13 @@ class MyselfService
             $temp['order_id'] = $order->order_id;
             $temp['price'] = $order->price;
             $temp['pay_status_flag'] = $order->pay_status;
-            if($order->pay_status){
-                if($order->pay_method == 1){
+            if ($order->pay_status) {
+                if ($order->pay_method == 1) {
                     $temp['pay_status'] = "已现金支付";
-                }else{
+                } else {
                     $temp['pay_status'] = "已支付";
                 }
-            }else{
+            } else {
                 $temp['pay_status'] = "未支付";
             }
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
@@ -306,34 +309,34 @@ class MyselfService
             $temp['cargo_count'] = $wayBill->cargo_count;
             $temp['cargo_volume'] = $wayBill->cargo_volume;
             $temp['cargo_insure'] = $wayBill->cargo_insure;
-            $temp['exchange_type'] = CommonService::reSwitchExchange($wayBill->exchange_type);            
+            $temp['exchange_type'] = CommonService::reSwitchExchange($wayBill->exchange_type);
             $temp['receipt_type'] = CommonService::reSwitchReceipt($wayBill->receipt_type);
             $temp['comment'] = $wayBill->comment;
             $temp['employee_send'] = $order->employee_send;
-            $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
-            $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
+            $temp['created_at'] = date("Y-m-d H:m:s", strtotime($order->created_at));
+            $temp['end_at'] = date("Y-m-d H:m:s", strtotime($order->end_at));
             $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
             $temp['pay_flag'] = false;
             $temp['sure_flag'] = false;
             $temp['sended_flag'] = false;
 
 
-            if(!$temp['pay_status_flag'] &&($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)){
+            if (!$temp['pay_status_flag'] && ($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)) {
                 $temp['pay_flag'] = true;
             }
-            if($temp['order_status_id'] == 3){
+            if ($temp['order_status_id'] == 3) {
                 $temp['sure_flag'] = true;
-            }else if($temp['order_status_id'] == 4){
+            } else if ($temp['order_status_id'] == 4) {
                 $temp['sended_flag'] = true;
             }
 
-            if($temp['order_status_id'] == 6){
+            if ($temp['order_status_id'] == 6) {
                 $ended[] = $temp;
-            }else{
+            } else {
                 $notend[] = $temp;
             }
         }
-        return json_encode(array('notend'=>$notend,'ended'=>$ended));
+        return json_encode(array('notend' => $notend, 'ended' => $ended));
     }
 
     public function myself($request)
@@ -346,12 +349,26 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
-        //$orders = Member::find($member_id)->Order;        
+        
+        $member = Member::find($member_id);
+        $member_name = $member->name;
+        $member_phone = $member->mobile;
+        $member_bal = $member->bal;
+        $member_vbal = $member->vbal;
+        $member_points = $member->points;
+
+        $member_phone = substr_replace($member_phone, '****', 3, 4);      
+        $member_name = substr_replace($member_name, '*', 0, 3);        
         return view('wechat.myself.myself')
             ->with('member_id', $member_id)
-            ->with('openid', $openid);
+            ->with('openid', $openid)
+            ->with('member_name',$member_name)
+            ->with('member_phone',$member_phone)
+            ->with('member_bal',$member_bal)
+            ->with('member_vbal',$member_vbal)
+            ->with('member_points',$member_points);
     }
 
     public function addressTotop($request)
