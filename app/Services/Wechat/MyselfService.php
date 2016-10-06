@@ -165,6 +165,8 @@ class MyselfService
             $pricingData = "";
         }
 
+        dd("nihao");
+
         return view('wechat.myself.employee')
             ->with('pricing',$pricingData)
             ->with('member_id',$member_id)
@@ -263,8 +265,6 @@ class MyselfService
             }else if($temp['order_status_id'] == 4){
                 $temp['sended_flag'] = true;
             }
-
-            dd($temp);
 
             $data[] = $temp;
         }
