@@ -213,6 +213,7 @@ class MyselfService
         $data = [];
         foreach ($orders as $order) {
             $wayBill = Order::find($order->order_id)->Waybill;
+            dd($wayBill);
             $temp = [];
             $temp['order_code'] = $order->order_code;
             $temp['order_id'] = $order->order_id;
@@ -254,7 +255,7 @@ class MyselfService
             $temp['pay_flag'] = false;
             $temp['sure_flag'] = false;
             $temp['sended_flag'] = false;
-            
+
             $data[] = $temp;
         }
         return json_encode($data);
