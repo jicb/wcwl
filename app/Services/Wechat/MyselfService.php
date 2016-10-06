@@ -154,7 +154,7 @@ class MyselfService
         $member_id = CommonService::getMemberid($openid);
         $pricingData = Order::where('order_status','1')->orderBy('created_at', 'desc')->get();
         $moneyData = Order::where('order_status','2')->where('employee_get',$member_id)->orderBy('created_at', 'desc')->get();
-        /*if(!empty($moneyData)){
+        if(!empty($moneyData)){
             $moneyData = $this->getPricingData($moneyData);
         }else{
             $moneyData = "";
@@ -163,7 +163,7 @@ class MyselfService
             $pricingData = $this->getPricingData($pricingData);
         }else{
             $pricingData = "";
-        }*/
+        }
 
         return view('wechat.myself.employee')
             ->with('pricing',$pricingData)
