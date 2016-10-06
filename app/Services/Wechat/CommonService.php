@@ -199,6 +199,7 @@ class CommonService
     public static function getMemberid($openid)
     {
         $member = Member::where('openid', $openid)->first();
+        dd($member);
         if (!$member) {
 
         }
