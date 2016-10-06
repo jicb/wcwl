@@ -213,7 +213,6 @@ class MyselfService
         $data = [];
         foreach ($orders as $order) {
             $wayBill = Order::find($order->order_id)->Waybill;
-            dd($wayBill);
             $temp = [];
             $temp['order_code'] = $order->order_code;
             $temp['order_id'] = $order->order_id;
@@ -229,7 +228,7 @@ class MyselfService
             }
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
-            $temp['employee_get'] = $wayBill->from_name;
+            $temp['employee_get'] = $order->employee_get;
             $temp['from_name'] = $wayBill->from_name;
             $temp['from_phone'] = $wayBill->from_phone;
             $temp['from_pca'] = $wayBill->from_pca;
@@ -246,7 +245,7 @@ class MyselfService
             $temp['exchange_type'] = CommonService::reSwitchExchange($wayBill->exchange_type);
             $temp['receipt_type'] = CommonService::reSwitchReceipt($wayBill->receipt_type);
             $temp['comment'] = $wayBill->comment;
-            $temp['employee_send'] = $wayBill->to_name;
+            $temp['employee_send'] = $order->employee_send;
             $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
             $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
             $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
@@ -278,7 +277,7 @@ class MyselfService
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status_id'] = $order->order_status;
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
-            $temp['employee_get'] = $wayBill->from_name;
+            $temp['employee_get'] = $order->employee_get;
             $temp['from_name'] = $wayBill->from_name;
             $temp['from_phone'] = $wayBill->from_phone;
             $temp['from_pca'] = $wayBill->from_pca;
@@ -295,7 +294,7 @@ class MyselfService
             $temp['exchange_type'] = CommonService::reSwitchExchange($wayBill->exchange_type);            
             $temp['receipt_type'] = CommonService::reSwitchReceipt($wayBill->receipt_type);
             $temp['comment'] = $wayBill->comment;
-            $temp['employee_send'] = $wayBill->to_name;
+            $temp['employee_send'] = $order->employee_send;
             $temp['created_at'] = date("Y-m-d H:m:s",strtotime($order->created_at));
             $temp['end_at'] = date("Y-m-d H:m:s",strtotime($order->end_at));
             $temp['pay_method'] = CommonService::reSwitchPayMethod($order->pay_method);
