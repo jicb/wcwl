@@ -104,7 +104,7 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "员工入口",
-                        "url" => $urlPre . "http://wx.wancheng.org/button/myself/employee" . $urlEnd,                        
+                        "url" => "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" . $config['app_id'] . "&redirect_uri=http://wx.wancheng.org/button/myself/employee&action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect",
                     ],
 
                     /*[
