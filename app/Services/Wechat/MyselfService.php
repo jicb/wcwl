@@ -149,7 +149,6 @@ class MyselfService
     public function employee($request)
     {
 
-        dd($request->input());
         $openid = CommonService::getOpenidFromCode($request->input('code'));
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
