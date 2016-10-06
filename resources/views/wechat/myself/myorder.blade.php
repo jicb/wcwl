@@ -254,29 +254,17 @@
                                                                          id="pay">40</span></div>
                                     </div>
                                 </li>
-                                <li>
-                                    <a href="#" class="item-link item-content" id="pay-method">
-                                        <div class="item-inner">
-                                            <div class="item-title">余额扣款<span style="padding-left:2em;"
-                                                                              id="pay">20</span></div>
-                                        </div>
-                                    </a>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">余额<span style="padding-left:2em;"
+                                                                         id="pay">40</span></div>
+                                    </div>
                                 </li>
-                                <li>
-                                    <a href="#" class="item-link item-content" id="pay-method">
-                                        <div class="item-inner">
-                                            <div class="item-title">付款方式<span style="padding-left:2em;"
-                                                                              id="pay">@{{paymethod}}</span></div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="item-link item-content" id="pay-method">
-                                        <div class="item-inner">
-                                            <div class="item-title">还需支付<span style="padding-left:2em;"
-                                                                              id="pay">500</span></div>
-                                        </div>
-                                    </a>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">还需支付<span style="padding-left:2em;"
+                                                                         id="pay">40</span></div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -298,6 +286,8 @@
         </div>
     </div>
 </div>
+
+
 
 <script src="{!! URL::asset('js/vue.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>

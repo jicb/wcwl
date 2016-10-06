@@ -349,7 +349,7 @@ class MyselfService
             $openid = $request->input('openid');
         }
 
-        $openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
+        //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
         
         $member = Member::find($member_id);

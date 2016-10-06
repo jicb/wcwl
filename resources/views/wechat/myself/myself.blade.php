@@ -5,8 +5,39 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>个人中心</title>
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
+    <style>
+        .col-card {
+            height: 80px;
+            border-radius: 15px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #007aff;
+            color: white;
+        }
+
+        .row-my {
+            margin-bottom: 1em;
+        }
+
+        .a-my {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .a-coupon{
+            line-height: 40px;
+        }
+
+        .card p {
+            margin: 0.1em 0;
+            font-size: 0.9em;
+        }
+    </style>
+
 </head>
-<body>
+<body style="display:none;">
 <!-- Status bar overlay for full screen mode (PhoneGap) -->
 
 <!-- Views -->
@@ -34,7 +65,7 @@
                     </div>
                     <div class="list-block" style="margin-top: -35px;margin-bottom: 35px;">
                         <ul>
-                            <li class="item-content" style="padding-left: 45%;">
+                            <li class="item-content" style="padding-left: 45%;" onclick="openRecharge()">
                                 <div class="item-inner">
                                     <div class="item-title">充值</div>
                                 </div>
@@ -52,7 +83,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="http;" class="item-link item-content" class="external">
+                                <a href="#" class="item-link item-content" class="external" onclick="openMyCoupon()">
                                     <div class="item-inner">
                                         我的优惠券
                                     </div>
@@ -69,30 +100,64 @@
                         </ul>
                     </div>
 
-                    {{--<div class="list-block">
-                        <ul>
-                            <li>
-                                <a href="http;" class="item-link item-content" class="external">
-                                    <div class="item-inner">
-                                        我的优惠券
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup-recharge">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">充值</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <!-- Pag has additional "with-subnavbar" class -->
+                <div class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="row row-my">
+                                <div class="col-50 col-card"><a href="#pricing" class="a-my">充100送10块</a></div>
+                                <div class="col-50 col-card"><a href="#money" class="a-my">充1000送200块</a></div>
+                            </div>
+                            <div class="row row-my">
+                                <div class="col-50 col-card"><a href="#pricing" class="a-my">充5000送1200块</a></div>
+                                <div class="col-50 col-card"><a href="#money" class="a-my">充10000送2500块</a></div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <div class="list-block">
-                        <ul>
-                            <li>
-                                <a href="commonaddress?openid={!! $openid !!}" target="_blank" class="item-link item-content external">
-                                    <div class="item-inner">
-                                        常用地址簿
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>--}}
-
+<div class="popup" id="popup-coupon">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">我的优惠券</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <!-- Pag has additional "with-subnavbar" class -->
+                <div class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="row row-my">
+                                <div class="col-50 col-card"><div href="#pricing" class="a-my a-coupon" disabled><span>50满1000可使用</span><br /><span>已过期</span></div></div>
+                                <div class="col-50 col-card"><a href="#money" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
+                            </div>
+                            <div class="row row-my">
+                                <div class="col-50 col-card"><a href="#pricing" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
+                                <div class="col-50 col-card"><a href="#money" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,6 +193,20 @@
             member_vbal: '{!! $member_vbal !!}',
             member_points: '{!! $member_points !!}'
         }
+    });
+</script>
+
+<script>
+    function openMyCoupon(){
+        myApp.popup('#popup-coupon');
+    }
+
+    function openRecharge(){
+        myApp.popup('#popup-recharge');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.body.style.display = 'block';
     });
 </script>
 </body>
