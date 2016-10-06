@@ -201,8 +201,7 @@ class CommonService
         $member = Member::where('openid', $openid)->first();
         if (empty($member)) {
 
-        }
-        dd($member->member_id);
+        }        
         return $member->member_id;
     }
 
