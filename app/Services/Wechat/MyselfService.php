@@ -213,7 +213,6 @@ class MyselfService
         $data = [];
         foreach ($orders as $order) {
             $wayBill = Order::find($order->order_id)->Waybill;
-            dd($wayBill);
             $temp = [];
             $temp['order_code'] = $order->order_code;
             $temp['order_id'] = $order->order_id;
@@ -231,6 +230,7 @@ class MyselfService
             //$temp['pay_status'] = $order->pay_status ? "已支付" : "未支付";
             $temp['order_status_id'] = $order->order_status;
             $temp['order_status'] = $this->switchOrderStatus($order->order_status);
+            dd($temp);
             $temp['employee_get'] = $order->employee_get;
             $temp['from_name'] = $wayBill->from_name;
             $temp['from_phone'] = $wayBill->from_phone;
