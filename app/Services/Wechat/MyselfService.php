@@ -31,6 +31,7 @@ class MyselfService
         $give = $request->give;
         $member = Member::find($member_id);
         $member->bal += $satisfied;
+        $member->vbal += $give;
         $member->save();
 
         $wechat = app('wechat');
