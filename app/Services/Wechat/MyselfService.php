@@ -12,6 +12,7 @@ use App\Wechat\Bal;
 use App\Wechat\Member;
 use App\Wechat\Order;
 use App\Wechat\RechargeRule;
+use App\Wechat\Vbal;
 use DB;
 
 class MyselfService
@@ -35,10 +36,17 @@ class MyselfService
         $member->vbal += $give;
         $member->save();
 
-        Bal::firstOrCreate([
+        $newBal = Bal::firstOrCreate([
             'member_id'=>$member_id,
             'value'=>$satisfied,
             'income_type'=>1,
+        ]);
+
+        Vbal::firstOrCreate([
+            'member_id'=>$member_id,
+            'value'=>$give,
+            'income_type'=>1,
+            'bal_id'=>$newBal->bal_id,
         ]);
 
 

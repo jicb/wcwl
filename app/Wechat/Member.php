@@ -20,4 +20,8 @@ class Member extends Model
     public function Bal(){
         return $this->hasMany('App\Wechat\Bal','member_id');
     }
+
+    public function Vbal(){
+        return $this->hasMany('App\Wechat\Vbal','member_id');
+    }
 }
