@@ -44,7 +44,7 @@ class MyselfService
         $data = array(
             "first" => "充值成功",
             "keyword1" => "123456789",
-            "keyword2" => $satisfied,
+            "keyword2" => strval($satisfied),
             "remark" => "充值成功,抵用金已存入您的账户，可在个人首页中查看！",
         );
         $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
