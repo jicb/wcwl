@@ -9,6 +9,7 @@ namespace App\Services\Wechat;
 
 use App\Wechat\Address;
 use App\Wechat\Bal;
+use App\Wechat\CouponType;
 use App\Wechat\Member;
 use App\Wechat\Order;
 use App\Wechat\RechargeRule;
@@ -403,6 +404,7 @@ class MyselfService
         $member_vbal = $member->vbal;
         $member_points = $member->points;
 
+        //充值规则
         $recharge_rules = RechargeRule::orderBy('satisfied_amount','asc')->get();
         $recharge_arr = [];
         foreach ($recharge_rules as $recharge_rule){
@@ -412,8 +414,21 @@ class MyselfService
             $temp['rg_id'] = $recharge_rule->rg_id;
             $recharge_arr[] = $temp;
         }
-
         $recharge = json_encode($recharge_arr);
+
+        //我的优惠券        
+        $coupons = Member::find($member_id)->Coupon()->where('status','<>','4')->get();
+        $coupons_data = [];
+        foreach($coupons as $coupon){
+            $couponInfo = CouponType::find($coupon->ctype_id);
+            $temp['satisfied'] = $couponInfo->satisfied_amount;
+            $temp['reduce'] = $couponInfo->reduce_amount;
+            $temp['invalid_time'] = substr($coupon->invalid_time,0,10);
+            $temp['coupon_id'] = $coupon->coupon_id;
+            $coupons_data[] = $temp;
+        }
+        $coupons = json_encode($coupons_data);
+        
 
         $member_phone = substr_replace($member_phone, '****', 3, 4);      
         $member_name = substr_replace($member_name, '*', 0, 3);        
@@ -425,7 +440,8 @@ class MyselfService
             ->with('member_bal',$member_bal)
             ->with('member_vbal',$member_vbal)
             ->with('member_points',$member_points)
-            ->with('recharge_rules',$recharge);
+            ->with('recharge_rules',$recharge)
+            ->with('coupons',$coupons);
     }
 
     public function addressTotop($request)

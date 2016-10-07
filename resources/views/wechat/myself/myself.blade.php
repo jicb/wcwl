@@ -148,11 +148,10 @@
                     <div class="page-content">
                         <div class="content-block">
                             <div class="row row-my">
-                                <div class="col-50 col-card"><div href="#pricing" class="a-my a-coupon" disabled><span>50满1000可使用</span><br /><span>已过期</span></div></div>
-                                <div class="col-50 col-card"><a href="#money" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
-
-                                <div class="col-50 col-card"><a href="#pricing" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
-
+                                <div class="col-50 col-card" v-for="item in items">
+                                    <a href="#" class="a-my a-coupon" >@{{ item.reduce }}满@{{ item.satisfied }}可使用<br />@{{ item.invalid_time }}到期
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,6 +181,7 @@
 </script>
 <script>
     var recharge_rules = eval('(' + '<?php echo $recharge_rules;?>' + ')');
+    var coupons = eval('(' + '<?php echo $coupons;?>' + ')');
     var member = new Vue({
         el: "#member",
         data: {
@@ -198,6 +198,13 @@
        el:"#popup-recharge",
         data:{
             items:recharge_rules
+        }
+    });
+
+    var popupCoupon = new Vue({
+        el:"#popup-coupon",
+        data:{
+            items:coupons
         }
     });
 </script>

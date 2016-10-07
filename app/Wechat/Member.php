@@ -24,4 +24,8 @@ class Member extends Model
     public function Vbal(){
         return $this->hasMany('App\Wechat\Vbal','member_id');
     }
+
+    public function Coupon(){
+        return $this->hasMany('App\Wechat\Coupon','bind_member','member_id');
+    }
 }
