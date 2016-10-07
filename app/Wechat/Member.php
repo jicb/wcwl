@@ -16,4 +16,8 @@ class Member extends Model
     {
         return $this->hasMany('App\Wechat\Order','member_id');
     }
+    
+    public function Bal(){
+        return $this->hasMany('App\Wechat\Bal','member_id');
+    }
 }

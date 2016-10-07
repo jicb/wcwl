@@ -8,6 +8,7 @@
 namespace App\Services\Wechat;
 
 use App\Wechat\Address;
+use App\Wechat\Bal;
 use App\Wechat\Member;
 use App\Wechat\Order;
 use App\Wechat\RechargeRule;
@@ -34,6 +35,13 @@ class MyselfService
         $member->vbal += $give;
         $member->save();
 
+        Bal::firstOrCreate([
+            'member_id'=>$member_id,
+            'value'=>$satisfied,
+            'income_type'=>1,
+        ]);
+
+
         $wechat = app('wechat');
         $notice = $wechat->notice;
 
@@ -49,6 +57,7 @@ class MyselfService
         );
         $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
 
+        return "";
     }
 
     public function ordersure($request)
