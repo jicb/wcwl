@@ -246,7 +246,6 @@
     <script src="{!! URL::asset('js/jquery.min.js') !!}"></script>
 
     <script>
-        Vue.config.async = false
         var myApp = new Framework7();
 
         // Export selectors engine

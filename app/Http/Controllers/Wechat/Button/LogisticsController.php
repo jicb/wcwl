@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class LogisticsController extends Controller
 {
@@ -27,7 +28,7 @@ class LogisticsController extends Controller
         return $service->delivery($openid);   
     }
 
-    public function createOrder(Request $request){
+    public function createOrder(Request $request){        
         $service = new LogisticsService();
         return $service->createOrder($request);
     }

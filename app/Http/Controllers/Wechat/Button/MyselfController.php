@@ -93,4 +93,9 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->orderCashPay($request);
     }
+    
+    public function recharge(Request $request){
+        $service = new MyselfService();
+        return $service->recharge($request);
+    }
 }

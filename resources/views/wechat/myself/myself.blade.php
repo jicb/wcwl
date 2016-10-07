@@ -11,9 +11,10 @@
             border-radius: 15px;
             line-height: 80px;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1em;
             background-color: #007aff;
             color: white;
+            margin-bottom:1em;
         }
 
         .row-my {
@@ -120,12 +121,10 @@
                     <div class="page-content">
                         <div class="content-block">
                             <div class="row row-my">
-                                <div class="col-50 col-card"><a href="#pricing" class="a-my">充100送10块</a></div>
-                                <div class="col-50 col-card"><a href="#money" class="a-my">充1000送200块</a></div>
-                            </div>
-                            <div class="row row-my">
+                                <div class="col-50 col-card" v-for="item in items" onclick="recharge(@{{ $index }})"><a href="#" class="a-my">充@{{ item.satisfied }}送@{{ item.give }}抵用金</a></div>
+                                {{--<div class="col-50 col-card"><a href="#money" class="a-my">充1000送200块</a></div>
                                 <div class="col-50 col-card"><a href="#pricing" class="a-my">充5000送1200块</a></div>
-                                <div class="col-50 col-card"><a href="#money" class="a-my">充10000送2500块</a></div>
+                                <div class="col-50 col-card"><a href="#money" class="a-my">充10000送2500块</a></div>--}}
                             </div>
                         </div>
                     </div>
@@ -151,10 +150,9 @@
                             <div class="row row-my">
                                 <div class="col-50 col-card"><div href="#pricing" class="a-my a-coupon" disabled><span>50满1000可使用</span><br /><span>已过期</span></div></div>
                                 <div class="col-50 col-card"><a href="#money" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
-                            </div>
-                            <div class="row row-my">
+
                                 <div class="col-50 col-card"><a href="#pricing" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
-                                <div class="col-50 col-card"><a href="#money" class="a-my a-coupon">50满1000可使用<br />2016-11-1到期</a></div>
+
                             </div>
                         </div>
                     </div>
@@ -183,6 +181,7 @@
     });
 </script>
 <script>
+    var recharge_rules = eval('(' + '<?php echo $recharge_rules;?>' + ')');
     var member = new Vue({
         el: "#member",
         data: {
@@ -194,9 +193,44 @@
             member_points: '{!! $member_points !!}'
         }
     });
+
+    var popupRecharge = new Vue({
+       el:"#popup-recharge",
+        data:{
+            items:recharge_rules
+        }
+    });
 </script>
 
 <script>
+    function recharge(index){
+        var satisfied = recharge_rules[index].satisfied;
+        var give = recharge_rules[index].give;
+        var query = {
+          satisfied:satisfied,
+            give:give,
+            member_id:'{!! $member_id !!}'
+        };
+        myApp.confirm('充'+satisfied+'送'+give+'抵用金','充值',function(){
+            $.get('recharge',query,function(res){
+                backToWechat();
+            });
+        });
+    }
+
+    function backToWechat(){
+        var readyFunc = function onBridgeReady() {
+            WeixinJSBridge.invoke('closeWindow', {}, function (res) {
+            });
+        }
+
+        if (typeof WeixinJSBridge === "undefined") {
+            document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
+        } else {
+            readyFunc();
+        }
+    }
+
     function openMyCoupon(){
         myApp.popup('#popup-coupon');
     }

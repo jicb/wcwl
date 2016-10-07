@@ -7,6 +7,8 @@
  */
 namespace App\Services\Wechat;
 
+
+use App\Exceptions\ErrorException;
 use App\Wechat\Address;
 use App\Wechat\Member;
 use App\Wechat\Order;
@@ -14,6 +16,8 @@ use App\Wechat\Waybill;
 use EasyWeChat\Foundation\Application;
 use Illuminate\Http\Request;
 use Log;
+use DB;
+
 
 class LogisticsService{
 
@@ -47,44 +51,61 @@ class LogisticsService{
     }
 
     public function createOrder($request){
+        
         //生成运单号
         $orderCode = CommonService::createOrderCode($request->input('member_id'));
 
-        //生成订单
-        Order::firstOrCreate([
-            'order_code'=>$orderCode,
-            'member_id' =>$request->input('member_id'),
-            'price'=>$request->input('cargo_fare'),
-            'order_status'=>1,
-            'pay_method'=>CommonService::switchPayMethod($request->input('pay_method')),
-        ]);
+        DB::beginTransaction();
 
-        //查找刚才生成的订单id
-        $order = Order::where('order_code',$orderCode)->first();
-        $order_id = $order->order_id;
+        // We'll simply execute the given callback within a try / catch block
+        // and if we catch any exception we can rollback the transaction
+        // so that none of the changes are persisted to the database.
+        try
+        {
+            //生成订单
+            Order::firstOrCreate([
+                'order_code'=>$orderCode,
+                'member_id' =>$request->input('member_id'),
+                'price'=>$request->input('cargo_fare'),
+                'order_status'=>1,
+                'pay_method'=>CommonService::switchPayMethod($request->input('pay_method')),
+            ]);
 
-        //生成运单
-        Waybill::firstOrCreate([
-            'waybill_code'=>date('Hms'),
-            'order_id'=>$order_id,
-            'from_name'=>$request->input('from_name'),
-            'from_phone'=>$request->input('from_phone'),
-            'from_pca'=>$request->input('from_pca'),
-            'from_street'=>$request->input('from_street'),
-            'to_name'=>$request->input('to_name'),
-            'to_phone'=>$request->input('to_phone'),
-            'to_pca'=>$request->input('to_pca'),
-            'to_street'=>$request->input('to_street'),
-            'cargo_name'=>$request->input('cargo_name'),
-            'cargo_count'=>$request->input('cargo_count'),
-            'cargo_weight'=>$request->input('cargo_weight'),
-            'cargo_volume'=>$request->input('cargo_volume'),
-            'cargo_insure'=>$request->input('cargo_insure'),
-            'exchange_type'=>CommonService::switchExchange($request->input('exchange_type')),
-            'receipt_type'=>CommonService::switchReceipt($request->input('receipt_type')),
-            'price'=>$request->input('price'),
-            'comment'=>$request->input('comment'),
-        ]);
+            //查找刚才生成的订单id
+            $order = Order::where('order_code',$orderCode)->first();
+            $order_id = $order->order_id;
+
+            //生成运单
+            Waybill::firstOrCreate([
+                'waybill_code'=>date('Hms'),
+                'order_id'=>$order_id,
+                'from_name'=>$request->input('from_name'),
+                'from_phone'=>$request->input('from_phone'),
+                'from_pca'=>$request->input('from_pca'),
+                'from_street'=>$request->input('from_street'),
+                'to_name'=>$request->input('to_name'),
+                'to_phone'=>$request->input('to_phone'),
+                'to_pca'=>$request->input('to_pca'),
+                'to_street'=>$request->input('to_street'),
+                'cargo_name'=>$request->input('cargo_name'),
+                'cargo_count'=>$request->input('cargo_count'),
+                'cargo_weight'=>$request->input('cargo_weight'),
+                'cargo_volume'=>$request->input('cargo_volume'),
+                'cargo_insure'=>$request->input('cargo_insure'),
+                'exchange_type'=>CommonService::switchExchange($request->input('exchange_type')),
+                'receipt_type'=>CommonService::switchReceipt($request->input('receipt_type')),
+                'price'=>$request->input('price'),
+                'comment'=>$request->input('comment'),
+            ]);
+
+            DB::commit();
+
+        } catch (\Exception $e)
+        {
+            DB::rollBack();
+
+            throw $e;
+        }
 
         return array('order_id'=>$order_id);
     }

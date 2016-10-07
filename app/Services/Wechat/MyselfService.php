@@ -10,7 +10,8 @@ namespace App\Services\Wechat;
 use App\Wechat\Address;
 use App\Wechat\Member;
 use App\Wechat\Order;
-
+use App\Wechat\RechargeRule;
+use DB;
 
 class MyselfService
 {
@@ -23,6 +24,31 @@ class MyselfService
 
 
     }*/
+
+    public function recharge($request){
+        $member_id = $request->member_id;
+        $satisfied = $request->satisfied;
+        $give = $request->give;
+        $member = Member::find($member_id);
+        $member->bal += $satisfied;
+        $member->save();
+
+        $wechat = app('wechat');
+        $notice = $wechat->notice;
+
+        $userId = Member::find($member_id)->openid;
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $url = 'http://wx.wancheng.org/wechat/expect';
+        $color = '#FF0000';
+        $data = array(
+            "first" => "充值成功",
+            "keyword1" => "123456789",
+            "keyword2" => "已完成",
+            "remark" => "充值成功！",
+        );
+        $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+
+    }
 
     public function ordersure($request)
     {
@@ -359,6 +385,18 @@ class MyselfService
         $member_vbal = $member->vbal;
         $member_points = $member->points;
 
+        $recharge_rules = RechargeRule::orderBy('satisfied_amount','asc')->get();
+        $recharge_arr = [];
+        foreach ($recharge_rules as $recharge_rule){
+            $temp = [];
+            $temp['satisfied'] = $recharge_rule->satisfied_amount;
+            $temp['give'] = $recharge_rule->give_amount;
+            $temp['rg_id'] = $recharge_rule->rg_id;
+            $recharge_arr[] = $temp;
+        }
+
+        $recharge = json_encode($recharge_arr);
+
         $member_phone = substr_replace($member_phone, '****', 3, 4);      
         $member_name = substr_replace($member_name, '*', 0, 3);        
         return view('wechat.myself.myself')
@@ -368,7 +406,8 @@ class MyselfService
             ->with('member_phone',$member_phone)
             ->with('member_bal',$member_bal)
             ->with('member_vbal',$member_vbal)
-            ->with('member_points',$member_points);
+            ->with('member_points',$member_points)
+            ->with('recharge_rules',$recharge);
     }
 
     public function addressTotop($request)
