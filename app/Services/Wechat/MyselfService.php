@@ -38,7 +38,7 @@ class MyselfService
         $notice = $wechat->notice;
 
         $userId = Member::find($member_id)->openid;
-        $templateId = 'AQovWp64Q-gPhttKv6R6_l565Rl6HQb0gZIfFXsnCHM';
+        $templateId = 'vgzSVOtKEy2I5oTB5baOF8WbJZ5NL95mVuquZ8hMStg';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
