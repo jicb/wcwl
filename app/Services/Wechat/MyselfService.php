@@ -38,14 +38,14 @@ class MyselfService
         $notice = $wechat->notice;
 
         $userId = Member::find($member_id)->openid;
-        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $templateId = '	jyIlOp8ixDTwGfsh2xNAU-EMjr0quH5RbLUS79UD3Fg';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
             "first" => "充值成功",
             "keyword1" => "123456789",
-            "keyword2" => "已完成",
-            "remark" => "充值成功！",
+            "keyword2" => $satisfied,
+            "remark" => "充值成功,送您抵用金".$give."已存入您的账户，可在个人首页中查看！",
         );
         $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
 
