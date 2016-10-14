@@ -38,7 +38,7 @@ class LogisticsService{
 
         $notice = $app->notice;
         $userId = 'oLsBZxNMEZQEL8STHlrEaSu5mwD8';
-        $templateId = 'ngqIpbwh8bUfcSsECmogfXcV14J0tQlEpBO27izEYtY';
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
         $url = 'http://www.baidu.com';
         $color = '#FF0000';
         $data = array(

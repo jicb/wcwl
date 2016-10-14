@@ -65,7 +65,7 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">收货人：@{{ item.employee_send }}</div>
+                                                        <div class="item-title">收货人：@{{ item.to_name }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>

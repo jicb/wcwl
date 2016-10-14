@@ -225,6 +225,7 @@ class MyselfService
         $member_id = $request->input('member_id');
         $orders = Member::find($member_id)->Order()->orderBy('created_at', 'desc')->get();
         $data = $this->getOrderData($orders);
+
         return view('wechat.myself.myorder')->with('data', $data)
             ->with('member_id', $member_id);
     }
