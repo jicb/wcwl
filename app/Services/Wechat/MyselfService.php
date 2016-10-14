@@ -9,6 +9,7 @@ namespace App\Services\Wechat;
 
 use App\Wechat\Address;
 use App\Wechat\Bal;
+use App\Wechat\Coupon;
 use App\Wechat\CouponType;
 use App\Wechat\Member;
 use App\Wechat\Order;
@@ -28,7 +29,8 @@ class MyselfService
 
     }*/
 
-    public function recharge($request){
+    public function recharge($request)
+    {
         $member_id = $request->member_id;
         $satisfied = $request->satisfied;
         $give = $request->give;
@@ -38,16 +40,16 @@ class MyselfService
         $member->save();
 
         $newBal = Bal::firstOrCreate([
-            'member_id'=>$member_id,
-            'value'=>$satisfied,
-            'income_type'=>1,
+            'member_id' => $member_id,
+            'value' => $satisfied,
+            'income_type' => 1,
         ]);
 
         Vbal::firstOrCreate([
-            'member_id'=>$member_id,
-            'value'=>$give,
-            'income_type'=>1,
-            'bal_id'=>$newBal->bal_id,
+            'member_id' => $member_id,
+            'value' => $give,
+            'income_type' => 1,
+            'bal_id' => $newBal->bal_id,
         ]);
 
 
@@ -62,7 +64,7 @@ class MyselfService
             "first" => "充值成功",
             "keyword1" => "123456789",
             "keyword2" => $satisfied,
-            "remark" => "您已充值成功，抵用金".$give."已存入您的个人账户！",
+            "remark" => "您已充值成功，抵用金" . $give . "已存入您的个人账户！",
         );
         $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
 
@@ -369,6 +371,34 @@ class MyselfService
 
             if (!$temp['pay_status_flag'] && ($temp['order_status_id'] == 4 || $temp['order_status_id'] == 5)) {
                 $temp['pay_flag'] = true;
+                $price = $temp['price'];
+                $member_id = $order->member_id;
+
+                //优惠券
+                $coupons = Member::find($member_id)->Coupon()->where('status', '1')->get();
+                $coupons_data = [];
+                foreach ($coupons as $coupon) {
+                    $couponInfo = CouponType::find($coupon->ctype_id);
+                    $invalid = strtotime($coupon->invalid_time);
+
+
+                    if ($price >= $couponInfo->satisfied_amount && $invalid >= time()) {
+                        $coupon_temp = [];
+                        $coupon_temp['satisfied'] = $couponInfo->satisfied_amount;
+                        $coupon_temp['reduce'] = $couponInfo->reduce_amount;
+                        $coupon_temp['invalid_time'] = substr($coupon->invalid_time, 0, 10);
+                        $coupon_temp['coupon_id'] = $coupon->coupon_id;
+                        $coupon_temp['discount'] = ($couponInfo->discount)*100;
+                        $coupons_data[] = $coupon_temp;
+                    }
+
+                }
+                $temp['coupons'] = $coupons_data;
+
+                //虚拟余额
+                $member =  Member::find($member_id);
+                $temp['bal'] = $member->bal;
+                $temp['vbal'] = $member->vbal;
             }
             if ($temp['order_status_id'] == 3) {
                 $temp['sure_flag'] = true;
@@ -379,9 +409,11 @@ class MyselfService
             if ($temp['order_status_id'] == 6) {
                 $ended[] = $temp;
             } else {
+
                 $notend[] = $temp;
             }
         }
+
         return json_encode(array('notend' => $notend, 'ended' => $ended));
     }
 
@@ -397,7 +429,7 @@ class MyselfService
 
         //$openid = "oLsBZxNMEZQEL8STHlrEaSu5mwD8";
         $member_id = CommonService::getMemberid($openid);
-        
+
         $member = Member::find($member_id);
         $member_name = $member->name;
         $member_phone = $member->mobile;
@@ -406,43 +438,46 @@ class MyselfService
         $member_points = $member->points;
 
         //充值规则
-        $recharge_rules = RechargeRule::orderBy('satisfied_amount','asc')->get();
+        $recharge_rules = RechargeRule::orderBy('satisfied_amount', 'asc')->get();
         $recharge_arr = [];
-        foreach ($recharge_rules as $recharge_rule){
+        foreach ($recharge_rules as $recharge_rule) {
             $temp = [];
             $temp['satisfied'] = $recharge_rule->satisfied_amount;
             $temp['give'] = $recharge_rule->give_amount;
             $temp['rg_id'] = $recharge_rule->rg_id;
+
             $recharge_arr[] = $temp;
         }
         $recharge = json_encode($recharge_arr);
 
         //我的优惠券        
-        $coupons = Member::find($member_id)->Coupon()->where('status','<>','4')->get();
+        $coupons = Member::find($member_id)->Coupon()->where('status', '<>', '4')->get();
         $coupons_data = [];
-        foreach($coupons as $coupon){
+        foreach ($coupons as $coupon) {
             $couponInfo = CouponType::find($coupon->ctype_id);
             $temp['satisfied'] = $couponInfo->satisfied_amount;
             $temp['reduce'] = $couponInfo->reduce_amount;
-            $temp['invalid_time'] = substr($coupon->invalid_time,0,10);
+            $temp['invalid_time'] = substr($coupon->invalid_time, 0, 10);
             $temp['coupon_id'] = $coupon->coupon_id;
+
+            $temp['discount'] = ($couponInfo->discount) * 100;
             $coupons_data[] = $temp;
         }
         $coupons = json_encode($coupons_data);
-        
 
-        $member_phone = substr_replace($member_phone, '****', 3, 4);      
-        $member_name = substr_replace($member_name, '*', 0, 3);        
+
+        $member_phone = substr_replace($member_phone, '****', 3, 4);
+        $member_name = substr_replace($member_name, '*', 0, 3);
         return view('wechat.myself.myself')
             ->with('member_id', $member_id)
             ->with('openid', $openid)
-            ->with('member_name',$member_name)
-            ->with('member_phone',$member_phone)
-            ->with('member_bal',$member_bal)
-            ->with('member_vbal',$member_vbal)
-            ->with('member_points',$member_points)
-            ->with('recharge_rules',$recharge)
-            ->with('coupons',$coupons);
+            ->with('member_name', $member_name)
+            ->with('member_phone', $member_phone)
+            ->with('member_bal', $member_bal)
+            ->with('member_vbal', $member_vbal)
+            ->with('member_points', $member_points)
+            ->with('recharge_rules', $recharge)
+            ->with('coupons', $coupons);
     }
 
     public function addressTotop($request)

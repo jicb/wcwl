@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
     <link rel="stylesheet" href="{!! URL::asset('css/wechat/common.css') !!}"/>
 
+    <style>
+        .col-card {
+            height: 90px;
+            border-radius: 15px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 1em;
+            background-color: #007aff;
+            color: white;
+            margin-bottom:1em;
+        }
+
+        .row-my {
+            margin-bottom: 1em;
+        }
+
+        .a-my {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .a-coupon{
+            line-height: 30px;
+        }
+
+        .card p {
+            margin: 0.1em 0;
+            font-size: 0.9em;
+        }
+    </style>
+
 </head>
 <body style="display:none;">
 <div class="views">
@@ -36,7 +68,7 @@
                                             <div class="item-content swipeout-content">
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
-                                                        <div class="item-title">收货人：@{{ item.employee_send }}</div>
+                                                        <div class="item-title">收货人：@{{item.to_name }}</div>
                                                         <div class="item-after">@{{item.order_status}}
                                                             /@{{item.pay_status}}</div>
                                                     </div>
@@ -241,10 +273,10 @@
                         <div class="list-block">
                             <ul>
                                 <li>
-                                    <a href="#" class="item-link item-content" id="pay-method">
+                                    <a href="#" class="item-link item-content"  onclick="openPayCoupon()">
                                         <div class="item-inner">
                                             <div class="item-title">优惠券<span style="padding-left:2em;"
-                                                                              id="pay">40</span></div>
+                                                                              id="pay">@{{ item.coupon_str }}</span></div>
                                         </div>
                                     </a>
                                 </li>
@@ -287,7 +319,32 @@
     </div>
 </div>
 
-
+<div class="popup" id="popup-coupon">
+    <div class="views">
+        <div class="view">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">我的优惠券</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <!-- Pag has additional "with-subnavbar" class -->
+                <div class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="row row-my">
+                                <div class="col-50 col-card" v-for="item in items">
+                                    <a href="#" class="a-my a-coupon" >@{{ item.reduce }}满@{{ item.satisfied }}可使用<br />再享@{{ item.discount }}折<br />@{{ item.invalid_time }}到期
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="{!! URL::asset('js/vue.js') !!}"></script>
 <script src="{!! URL::asset('js/framework7.min.js') !!}"></script>
@@ -345,10 +402,22 @@
             item: '',
         }
     });
+
+    var popupCoupon = new Vue({
+        el:"#popup-coupon",
+        data:{
+            items:[],
+        }
+    });
 </script>
 
 
 <script>
+
+    function openPayCoupon(){
+        popupCoupon.items = popupPay.item.coupons;
+        myApp.popup('#popup-coupon');
+    }
 
     function goingCashPay(){
         var order_code = popupPay.item.order_code;
@@ -426,6 +495,7 @@
 
     function itemPay(index) {
         popupPay.item = notend[index];
+        popupPay.item.coupon_str = "请选择优惠券";
         myApp.popup('#popup-pay');
     }
 

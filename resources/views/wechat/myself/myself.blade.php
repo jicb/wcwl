@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{!! URL::asset('css/framework7.min.css') !!}"/>
     <style>
         .col-card {
-            height: 80px;
+            height: 90px;
             border-radius: 15px;
             line-height: 80px;
             text-align: center;
@@ -28,7 +28,7 @@
         }
 
         .a-coupon{
-            line-height: 40px;
+            line-height: 30px;
         }
 
         .card p {
@@ -149,7 +149,7 @@
                         <div class="content-block">
                             <div class="row row-my">
                                 <div class="col-50 col-card" v-for="item in items">
-                                    <a href="#" class="a-my a-coupon" >@{{ item.reduce }}满@{{ item.satisfied }}可使用<br />@{{ item.invalid_time }}到期
+                                    <a href="#" class="a-my a-coupon" >@{{ item.reduce }}满@{{ item.satisfied }}可使用<br />再享@{{ item.discount }}折<br />@{{ item.invalid_time }}到期
                                     </a>
                                 </div>
                             </div>
