@@ -34,20 +34,24 @@ class LogisticsService{
                 ",运单号：".$bill->waybill_code;
         $broadcast->previewText($text, $request->input('openid'));*/
 
-        $app = app('wechat');
+        $wechat = app('wechat');
+        $notice = $wechat->notice;
 
-        $notice = $app->notice;
-        $userId = 'oLsBZxNMEZQEL8STHlrEaSu5mwD8';
+        $member_id = $request->member_id;
+        $order_code = Order::find($request->order_id);
+        $userId = Member::find($member_id)->openid;
         $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
-        $url = 'http://www.baidu.com';
+        $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
-            "first"  => "恭喜你购买成功！",
-            "name"   => "巧克力",
-            "price"  => "39.8元",
-            "remark" => "欢迎再次购买！",
+            "first" => "订单已生成",
+            "keyword1" => $order_code,
+            "keyword2" => "待揽件",
+            "remark" => "您的订单已生成，等待揽件，请耐心等待！",
         );
-        $result = $notice->uses($templateId)->withUrl($url)->andData($data)->andReceiver($userId)->send();
+        $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+
+        return "";
     }
 
     public function createOrder($request){

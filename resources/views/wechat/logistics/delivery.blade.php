@@ -995,7 +995,8 @@
 
                     var query = {
                         openid:openid,
-                        order_id:order
+                        order_id:order,
+                        member_id:member_id,
                     };
                     $.get('ordertouser',query,function(res){
                         var readyFunc = function onBridgeReady() {
@@ -1009,10 +1010,6 @@
                             readyFunc();
                         }
                     });
-
-                    //window.location.href = 'ordertouser?openid=' + openid + "&order_id=" + order;
-
-
                 })
 
             });
