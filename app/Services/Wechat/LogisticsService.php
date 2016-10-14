@@ -37,9 +37,10 @@ class LogisticsService{
         $wechat = app('wechat');
         $notice = $wechat->notice;
 
-        $member_id = $request->member_id;
+
         $order_code = Order::find($request->order_id);
-        $userId = Member::find($member_id)->openid;
+        $userId = $request->openid;
+        $member_id = CommonService::getMemberid($request->openid);
         $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';

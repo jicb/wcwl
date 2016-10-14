@@ -996,7 +996,6 @@
                     var query = {
                         openid:openid,
                         order_id:order,
-                        member_id:member_id,
                     };
                     $.get('ordertouser',query,function(res){
                         var readyFunc = function onBridgeReady() {
