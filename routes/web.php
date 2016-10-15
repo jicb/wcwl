@@ -54,7 +54,7 @@ Route::group(['as'=>'button::','prefix'=>'button','namespace'=>'Wechat\Button'],
     Route::any('myself/commonaddress',['as'=>'commonaddress','uses'=>'MyselfController@commonaddress']);
     Route::any('myself/employee',['as'=>'employee','uses'=>'MyselfController@employee']);
     Route::any('myself/recharge',['as'=>'recharge','uses'=>'MyselfController@recharge']);
-    
+    Route::any('myself/gopay',['as'=>'gopay','uses'=>'MyselfController@gopay']);
     
     Route::any('myself/address',['as'=>'address','uses'=>'MyselfController@address']);
     Route::any('myself/address/create',['as'=>'address::create','uses'=>'MyselfController@addressCreate']);

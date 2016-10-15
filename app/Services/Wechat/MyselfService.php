@@ -20,6 +20,29 @@ use DB;
 class MyselfService
 {
 
+    public function gopay($request){
+        $wechat = app('wechat');
+        $notice = $wechat->notice;
+
+
+        //$order_code = Order::find($request->order_id)->order_code;
+        $userId = Member::find($request->member_id)->openid;
+
+
+        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $url = 'http://wx.wancheng.org/wechat/expect';
+        $color = '#FF0000';
+        $data = array(
+            "first" => "订单已支付",
+            "keyword1" => "123456",
+            "keyword2" => "已支付",
+            "remark" => "您的订单已支付完成！",
+        );
+        $notice->uses($templateId)->withUrl($url)->withColor($color)->andData($data)->andReceiver($userId)->send();
+
+        return "";
+    }
+
     /*public function orderCashPay($request){
         $order = Order::find($request->input('order_id'));
         $order->pay_status = 1;

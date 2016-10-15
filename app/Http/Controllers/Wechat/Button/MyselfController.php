@@ -98,4 +98,9 @@ class MyselfController extends Controller
         $service = new MyselfService();
         return $service->recharge($request);
     }
+
+    public function gopay(Request $request){
+        $service = new MyselfService();
+        return $service->gopay($request);
+    }
 }

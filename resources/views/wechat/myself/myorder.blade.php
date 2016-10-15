@@ -276,26 +276,26 @@
                                     <a href="#" class="item-link item-content"  onclick="openPayCoupon()">
                                         <div class="item-inner">
                                             <div class="item-title">优惠券<span style="padding-left:2em;"
-                                                                              id="pay">@{{ item.coupon_str }}</span></div>
+                                                                              id="pay">@{{ coupon_str }}</span></div>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="item-content">
                                     <div class="item-inner">
                                         <div class="item-title">抵用金<span style="padding-left:2em;"
-                                                                         id="pay">40</span></div>
+                                                                         id="pay">@{{ needVbal }}</span></div>
                                     </div>
                                 </li>
                                 <li class="item-content">
                                     <div class="item-inner">
                                         <div class="item-title">余额<span style="padding-left:2em;"
-                                                                         id="pay">40</span></div>
+                                                                         id="pay">@{{ needBal }}</span></div>
                                     </div>
                                 </li>
                                 <li class="item-content">
                                     <div class="item-inner">
                                         <div class="item-title">还需支付<span style="padding-left:2em;"
-                                                                         id="pay">40</span></div>
+                                                                         id="pay">@{{ needPay }}</span></div>
                                     </div>
                                 </li>
                             </ul>
@@ -334,7 +334,7 @@
                         <div class="content-block">
                             <div class="row row-my">
                                 <div class="col-50 col-card" v-for="item in items">
-                                    <a href="#" class="a-my a-coupon" >@{{ item.reduce }}满@{{ item.satisfied }}可使用<br />再享@{{ item.discount }}折<br />@{{ item.invalid_time }}到期
+                                    <a href="#" class="a-my a-coupon" onclick="selectCoupon(@{{ $index }})">@{{ item.reduce }}满@{{ item.satisfied }}可使用<br />再享@{{ item.discount }}折<br />@{{ item.invalid_time }}到期
                                     </a>
                                 </div>
                             </div>
@@ -400,6 +400,13 @@
         el: "#popup-pay",
         data: {
             item: '',
+            coupon_str:'',
+            needVbal:'',
+            needBal:'',
+            needPay:'',
+            reduce:0,
+            price:0,
+            discount:0,
         }
     });
 
@@ -413,6 +420,44 @@
 
 
 <script>
+
+    function goingPay(){
+        $.get('gopay?member_id='+'{!! $member_id !!}');
+        backToWechat();
+    }
+
+    function selectCoupon(index){
+        var coupon = popupCoupon.items[index];
+        popupPay.coupon_str = "满"+coupon.satisfied+"减"+coupon.reduce+"再享"+coupon.discount;
+        popupPay.reduce = coupon.reduce;
+        popupPay.reduce = (popupPay.price - popupPay.reduce)*(100 - coupon.discount)/100;
+
+        var price = popupPay.price - popupPay.reduce;
+
+
+        var bal = popupPay.item.bal;
+        var vbal = popupPay.item.vbal;
+        if(price>vbal){
+            popupPay.needVbal = vbal;
+        }else{
+            popupPay.needVbal = price;
+        }
+
+        price = price - popupPay.needVbal;
+
+        if(price >0){
+            if(price>bal){
+                popupPay.needBal = bal;
+            }else{
+                popupPay.needBal = price;
+            }
+        }
+        price = price - popupPay.needBal;
+
+        popupPay.needPay = price;
+
+        myApp.closeModal('#popup-coupon');
+    }
 
     function openPayCoupon(){
         popupCoupon.items = popupPay.item.coupons;
@@ -495,7 +540,31 @@
 
     function itemPay(index) {
         popupPay.item = notend[index];
-        popupPay.item.coupon_str = "请选择优惠券";
+        popupPay.coupon_str = "请选择优惠券";
+        var price = popupPay.item.price;
+        popupPay.price = price;
+        popupPay.discount = popupPay.item.discount;
+
+        var bal = popupPay.item.bal;
+        var vbal = popupPay.item.vbal;
+        if(price>vbal){
+            popupPay.needVbal = vbal;
+        }else{
+            popupPay.needVbal = price;
+        }
+
+        price = price - popupPay.needVbal;
+
+        if(price >0){
+            if(price>bal){
+                popupPay.needBal = bal;
+            }else{
+                popupPay.needBal = price;
+            }
+        }
+        price = price - popupPay.needBal;
+
+        popupPay.needPay = price;
         myApp.popup('#popup-pay');
     }
 
