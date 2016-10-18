@@ -6950,7 +6950,7 @@
       <file leaf-file-name="LogisticsService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="621">
               <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="55" selection-end-column="18" />
               <folding>
                 <element signature="e#2498#3679#1#PHP" expanded="false" />
@@ -6962,21 +6962,8 @@
       <file leaf-file-name="myself.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/myself.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="2187">
               <caret line="81" column="42" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="42" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CouponType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Wechat/CouponType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -6985,8 +6972,8 @@
       <file leaf-file-name="MyselfService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="442" column="20" selection-start-line="442" selection-start-column="20" selection-end-line="442" selection-end-column="20" />
+            <state relative-caret-position="346">
+              <caret line="160" column="27" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="27" />
               <folding>
                 <element signature="e#118#141#0#PHP" expanded="true" />
               </folding>
@@ -6994,10 +6981,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="wechat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/wechat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WechatController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="delivery.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="26919">
               <caret line="997" column="39" selection-start-line="997" selection-start-column="39" selection-end-line="997" selection-end-column="39" />
               <folding />
             </state>
@@ -7007,7 +7014,7 @@
       <file leaf-file-name="LogisticsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="351">
               <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding />
             </state>
@@ -7017,20 +7024,9 @@
       <file leaf-file-name="myorder.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/myorder.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
+            <state relative-caret-position="11502">
               <caret line="426" column="5" selection-start-line="426" selection-start-column="5" selection-end-line="426" selection-end-column="5" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#20064#20160#0#HTML" expanded="false" />
-                <element signature="e#20189#20603#0#HTML" expanded="false" />
-                <element signature="e#20632#21285#0#HTML" expanded="false" />
-                <element signature="e#21314#21970#0#HTML" expanded="false" />
-                <element signature="e#21999#22339#0#HTML" expanded="false" />
                 <marker date="1476502825763" expanded="true" signature="23529:23615" placeholder="..." />
                 <marker date="1476502825763" expanded="true" signature="23562:23614" placeholder="..." />
               </folding>
@@ -7041,18 +7037,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
+            <state relative-caret-position="1269">
               <caret line="56" column="76" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Coupon.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Wechat/Coupon.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -7061,7 +7047,7 @@
       <file leaf-file-name="MyselfController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="1215">
               <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding />
             </state>
@@ -7108,7 +7094,6 @@
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/address.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/ToPinyin.php" />
-        <option value="$PROJECT_DIR$/config/wechat.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PaytestController.php" />
         <option value="$PROJECT_DIR$/app/Wechat/Waybill.php" />
         <option value="$PROJECT_DIR$/app/Wechat/Order.php" />
@@ -7117,7 +7102,6 @@
         <option value="$PROJECT_DIR$/storage/framework/cache/f2/19/f2198b4d33266569922e891e6e2eb1703808c18d" />
         <option value="$PROJECT_DIR$/storage/framework/sessions/9BISHvXWkCjAirmlEKaWyr7uRRRR9cI3Rr2d9uPU" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/CommonService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/ErrorException.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
@@ -7135,6 +7119,8 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php" />
         <option value="$PROJECT_DIR$/resources/views/wechat/myself/myorder.blade.php" />
+        <option value="$PROJECT_DIR$/config/wechat.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php" />
         <option value="$PROJECT_DIR$/app/Services/Wechat/MyselfService.php" />
       </list>
     </option>
@@ -7151,10 +7137,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="12" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="28" />
+    <option name="y" value="66" />
+    <option name="width" value="1918" />
+    <option name="height" value="1078" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -7181,7 +7167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -7257,126 +7242,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Button" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wcwl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exceptions" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -7384,7 +7256,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workgroup/tvcms" />
+    <property name="last_opened_file_path" value="F:/大神崛起/前端/js" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -7460,22 +7332,24 @@
       <workItem from="1476015612570" duration="7298000" />
       <workItem from="1476065740113" duration="94988000" />
       <workItem from="1476430204151" duration="10188000" />
-      <workItem from="1476453503327" duration="16307000" />
+      <workItem from="1476453503327" duration="17535000" />
+      <workItem from="1476693875363" duration="1771000" />
+      <workItem from="1476782466507" duration="1042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="453455000" />
+    <option name="totallyTimeSpent" value="457496000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="12" width="1936" height="1056" extended-state="0" />
+    <frame x="28" y="66" width="1918" height="1078" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21030495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -7510,13 +7384,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/BenefitController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/framework7.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-243">
@@ -7585,9 +7452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#85#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -7595,7 +7459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="586" column="9" selection-start-line="586" selection-start-column="9" selection-end-line="586" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7669,13 +7532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -7737,7 +7593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7047">
           <caret line="261" column="65" selection-start-line="261" selection-start-column="65" selection-end-line="261" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7745,7 +7600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="185" column="27" selection-start-line="185" selection-start-column="27" selection-end-line="185" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7753,7 +7607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7768,7 +7621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7776,7 +7628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="28" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7784,7 +7635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7792,7 +7642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7814,7 +7663,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/logistics/delivery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="26919">
           <caret line="997" column="39" selection-start-line="997" selection-start-column="39" selection-end-line="997" selection-end-column="39" />
           <folding />
         </state>
@@ -7822,18 +7671,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/myself.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="2187">
           <caret line="81" column="42" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="42" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
+        <state relative-caret-position="1269">
           <caret line="56" column="76" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
           <folding />
         </state>
@@ -7841,20 +7687,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wechat/myself/myorder.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
+        <state relative-caret-position="11502">
           <caret line="426" column="5" selection-start-line="426" selection-start-column="5" selection-end-line="426" selection-end-column="5" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#20064#20160#0#HTML" expanded="false" />
-            <element signature="e#20189#20603#0#HTML" expanded="false" />
-            <element signature="e#20632#21285#0#HTML" expanded="false" />
-            <element signature="e#21314#21970#0#HTML" expanded="false" />
-            <element signature="e#21999#22339#0#HTML" expanded="false" />
             <marker date="1476502825763" expanded="true" signature="23529:23615" placeholder="..." />
             <marker date="1476502825763" expanded="true" signature="23562:23614" placeholder="..." />
           </folding>
@@ -7863,7 +7698,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/LogisticsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="351">
           <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
         </state>
@@ -7871,7 +7706,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Wechat/LogisticsService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="621">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="55" selection-end-column="18" />
           <folding>
             <element signature="e#2498#3679#1#PHP" expanded="false" />
@@ -7881,16 +7716,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/Button/MyselfController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="1215">
           <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/wechat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Wechat/WechatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Wechat/MyselfService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="442" column="20" selection-start-line="442" selection-start-column="20" selection-end-line="442" selection-end-column="20" />
+        <state relative-caret-position="346">
+          <caret line="160" column="27" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="27" />
           <folding>
             <element signature="e#118#141#0#PHP" expanded="true" />
           </folding>

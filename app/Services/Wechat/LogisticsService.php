@@ -42,7 +42,7 @@ class LogisticsService{
         $userId = $request->openid;
 
 
-        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $templateId = 'waQfGFsYkAkn3o-601lZ4oohHIIMet30Lod5vIWgGKo';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(

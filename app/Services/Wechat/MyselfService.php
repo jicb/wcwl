@@ -29,7 +29,7 @@ class MyselfService
         $userId = Member::find($request->member_id)->openid;
 
 
-        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $templateId = 'waQfGFsYkAkn3o-601lZ4oohHIIMet30Lod5vIWgGKo';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
@@ -80,7 +80,7 @@ class MyselfService
         $notice = $wechat->notice;
 
         $userId = Member::find($member_id)->openid;
-        $templateId = 'vgzSVOtKEy2I5oTB5baOF8WbJZ5NL95mVuquZ8hMStg';
+        $templateId = '6jTgOiP_n56lga5Ucw2wwt3u47vU-eQme5XEuXSQ4Lg';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
@@ -106,7 +106,7 @@ class MyselfService
         $member_id = $request->member_id;
         $order_code = $request->order_code;
         $userId = Member::find($member_id)->openid;
-        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $templateId = 'waQfGFsYkAkn3o-601lZ4oohHIIMet30Lod5vIWgGKo';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
@@ -142,7 +142,7 @@ class MyselfService
         $member_id = $request->member_id;
         $order_code = $request->order_code;
         $userId = Member::find($member_id)->openid;
-        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $templateId = 'waQfGFsYkAkn3o-601lZ4oohHIIMet30Lod5vIWgGKo';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
@@ -156,7 +156,7 @@ class MyselfService
         //通知揽件员
 
         $userId = Member::find($order->employee_get)->openid;
-        $templateId = 'SlhSxAy5WvFB02h9EO7ivzlFAMmv0KwF7XraZbldrGA';
+        $templateId = 'waQfGFsYkAkn3o-601lZ4oohHIIMet30Lod5vIWgGKo';
         $url = 'http://wx.wancheng.org/wechat/expect';
         $color = '#FF0000';
         $data = array(
